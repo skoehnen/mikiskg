@@ -108,3 +108,34 @@ C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\Pr
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\obj\Debug\PrototypMIS.exe
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\obj\Debug\PrototypMIS.pdb
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Main.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Aufgabe.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Kunde.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Kunden.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Kontakte.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Notizen.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Properties.Resources.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Suchen.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Termin.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Termine.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.exe
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.pdb
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\AppDatabase1.sdf
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\PrototypMIS.exe
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\PrototypMIS.pdb
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.dll
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.dll
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.dll
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources

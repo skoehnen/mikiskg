@@ -50,5 +50,10 @@ namespace PrototypMIS
         {
             new Fotos().Show();
         }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+            new Suchen().Show();
+        }
     }
 }
