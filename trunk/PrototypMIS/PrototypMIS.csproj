@@ -1,0 +1,255 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D15E259-C253-4D4E-8537-52BBCF1AE320}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrototypMIS</RootNamespace>
+    <AssemblyName>PrototypMIS</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <DeployDirSuffix>PrototypMIS</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.Status, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aufgaben.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aufgaben.Designer.cs">
+      <DependentUpon>Aufgaben.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auftraege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auftraege.Designer.cs">
+      <DependentUpon>Auftraege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auftrag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auftrag.Designer.cs">
+      <DependentUpon>Auftrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontakt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kontakt.Designer.cs">
+      <DependentUpon>Kontakt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fotos.Designer.cs">
+      <DependentUpon>Fotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aufgabe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aufgabe.Designer.cs">
+      <DependentUpon>Aufgabe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kunde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kunde.Designer.cs">
+      <DependentUpon>Kunde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kunden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kunden.Designer.cs">
+      <DependentUpon>Kunden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontakte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kontakte.Designer.cs">
+      <DependentUpon>Kontakte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miki_DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Miki_DB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Notizen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notizen.Designer.cs">
+      <DependentUpon>Notizen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Aufgaben.resx">
+      <DependentUpon>Aufgaben.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auftraege.resx">
+      <DependentUpon>Auftraege.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auftrag.resx">
+      <DependentUpon>Auftrag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fotos.resx">
+      <DependentUpon>Fotos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontakt.resx">
+      <DependentUpon>Kontakt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aufgabe.resx">
+      <DependentUpon>Aufgabe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kunde.resx">
+      <DependentUpon>Kunde.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kunden.resx">
+      <DependentUpon>Kunden.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontakte.resx">
+      <DependentUpon>Kontakte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notizen.resx">
+      <DependentUpon>Notizen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suchen.resx">
+      <DependentUpon>Suchen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Termin.resx">
+      <DependentUpon>Termin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Termine.resx">
+      <DependentUpon>Termine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Suchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suchen.Designer.cs">
+      <DependentUpon>Suchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Termin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Termin.Designer.cs">
+      <DependentUpon>Termin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Termine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Termine.Designer.cs">
+      <DependentUpon>Termine.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppDatabase1.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Miki_DB.xsc">
+      <DependentUpon>Miki_DB.xsd</DependentUpon>
+    </None>
+    <None Include="Miki_DB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Miki_DB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Miki_DB.xss">
+      <DependentUpon>Miki_DB.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

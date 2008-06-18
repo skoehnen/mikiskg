@@ -1,0 +1,50 @@
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\PrototypMIS.exe
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\PrototypMIS.pdb
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Main.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Aufgabe.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kunde.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kunden.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kontakte.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Notizen.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Properties.Resources.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Termin.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Termine.resources
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.exe
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.pdb
+C:\Users\sk\Documents\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Main.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Aufgabe.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kunde.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kunden.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Kontakte.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Notizen.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Properties.Resources.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Suchen.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Termin.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.Termine.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.exe
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\obj\Debug\PrototypMIS.pdb
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\AppDatabase1.sdf
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\PrototypMIS.exe
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\PrototypMIS.pdb
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
