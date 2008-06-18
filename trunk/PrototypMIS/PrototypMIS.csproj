@@ -80,6 +80,7 @@
     <Compile Include="Auftrag.Designer.cs">
       <DependentUpon>Auftrag.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB_Verarbeitung.cs" />
     <Compile Include="Kontakt.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -10,7 +10,7 @@ namespace PrototypMIS
     {
         private SqlCeConnection DBVerbindung()
         {
-            return conn = new SqlCeConnection("Data Source = //AppDatabase1.sdf");
+            return conn = new SqlCeConnection("Data Source = " + System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\AppDatabase1.sdf");
         }
 
         public Boolean verknuepfung_eintragen(ItemId QuellID, ItemId ZielID)
