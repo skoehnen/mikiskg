@@ -30,29 +30,39 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.menuItemZurueck = new System.Windows.Forms.MenuItem();
+            this.dataGridLinks = new System.Windows.Forms.DataGrid();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.menuItemZurueck = new System.Windows.Forms.MenuItem();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.Add(this.menuItemZurueck);
+            this.mainMenu1.MenuItems.Add(this.menuItemMenu);
             // 
-            // dataGrid1
+            // menuItemZurueck
             // 
-            this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid1.Location = new System.Drawing.Point(0, 135);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(240, 107);
-            this.dataGrid1.TabIndex = 20;
+            this.menuItemZurueck.Text = "zurück";
+            this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZurueck_Click);
+            // 
+            // dataGridLinks
+            // 
+            this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.Location = new System.Drawing.Point(0, 135);
+            this.dataGridLinks.Name = "dataGridLinks";
+            this.dataGridLinks.Size = new System.Drawing.Size(240, 107);
+            this.dataGridLinks.TabIndex = 20;
             // 
             // label4
             // 
@@ -61,12 +71,12 @@
             this.label4.Size = new System.Drawing.Size(100, 20);
             this.label4.Text = "E-Mail";
             // 
-            // textBox4
+            // textBoxMail
             // 
-            this.textBox4.Location = new System.Drawing.Point(123, 108);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 21);
-            this.textBox4.TabIndex = 19;
+            this.textBoxMail.Location = new System.Drawing.Point(123, 108);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(100, 25);
+            this.textBoxMail.TabIndex = 19;
             // 
             // label3
             // 
@@ -89,31 +99,47 @@
             this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.Text = "Name";
             // 
-            // textBox3
+            // textBoxPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 18;
+            this.textBoxPhone.Location = new System.Drawing.Point(123, 81);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
+            this.textBoxPhone.TabIndex = 18;
             // 
-            // textBox2
+            // textBoxFirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 17;
+            this.textBoxFirstName.Location = new System.Drawing.Point(123, 54);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxFirstName.TabIndex = 17;
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 16;
+            this.textBoxName.Location = new System.Drawing.Point(123, 27);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxName.TabIndex = 16;
             // 
-            // menuItemZurueck
+            // menuItemMenu
             // 
-            this.menuItemZurueck.Text = "zurück";
-            this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZurueck_Click);
+            this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
+            this.menuItemMenu.MenuItems.Add(this.menuItemLink);
+            this.menuItemMenu.MenuItems.Add(this.menuItemSave);
+            this.menuItemMenu.Text = "Menü";
+            // 
+            // menuItemSave
+            // 
+            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "Löschen";
+            // 
+            // menuItemLink
+            // 
+            this.menuItemLink.Text = "Verknüpfen";
+            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // Kontakt
             // 
@@ -121,15 +147,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
-            this.Controls.Add(this.dataGrid1);
+            this.Controls.Add(this.dataGridLinks);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxMail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPhone);
+            this.Controls.Add(this.textBoxFirstName);
+            this.Controls.Add(this.textBoxName);
             this.Menu = this.mainMenu1;
             this.Name = "Kontakt";
             this.Text = "Kontakt";
@@ -139,15 +165,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.DataGrid dataGridLinks;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxMail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPhone;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.MenuItem menuItemZurueck;
+        private System.Windows.Forms.MenuItem menuItemMenu;
+        private System.Windows.Forms.MenuItem menuItemSave;
+        private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemLink;
     }
 }

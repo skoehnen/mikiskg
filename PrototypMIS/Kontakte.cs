@@ -20,5 +20,12 @@ namespace PrototypMIS
         {
             Dispose();
         }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+            new Kontakt().Show();
+        }
+
+        
     }
 }

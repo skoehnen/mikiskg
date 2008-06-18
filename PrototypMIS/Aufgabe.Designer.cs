@@ -32,13 +32,14 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
-            this.menuItem3 = new System.Windows.Forms.MenuItem();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.dataGridLinkedItems = new System.Windows.Forms.DataGrid();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -53,24 +54,31 @@
             // 
             // menuItem2
             // 
-            this.menuItem2.MenuItems.Add(this.menuItem3);
-            this.menuItem2.MenuItems.Add(this.menuItem4);
+            this.menuItem2.MenuItems.Add(this.menuItemDelete);
+            this.menuItem2.MenuItems.Add(this.menuItemLink);
+            this.menuItem2.MenuItems.Add(this.menuItemSave);
             this.menuItem2.Text = "Menü";
             // 
-            // menuItem3
+            // menuItemDelete
             // 
-            this.menuItem3.Text = "Löschen";
+            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
-            // menuItem4
+            // menuItemLink
             // 
-            this.menuItem4.Text = "Anhängen";
+            this.menuItemLink.Text = "Anhängen";
             // 
-            // textBox1
+            // menuItemSave
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 21);
-            this.textBox1.TabIndex = 0;
+            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
+            // 
+            // textBoxTitle
+            // 
+            this.textBoxTitle.Location = new System.Drawing.Point(90, 3);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(133, 25);
+            this.textBoxTitle.TabIndex = 0;
             // 
             // label1
             // 
@@ -86,27 +94,27 @@
             this.label3.Size = new System.Drawing.Size(100, 20);
             this.label3.Text = "Fällig";
             // 
-            // textBox4
+            // textBoxDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(3, 60);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 67);
-            this.textBox4.TabIndex = 9;
+            this.textBoxDescription.Location = new System.Drawing.Point(3, 60);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(234, 67);
+            this.textBoxDescription.TabIndex = 9;
             // 
-            // dataGrid1
+            // dataGridLinkedItems
             // 
-            this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid1.Location = new System.Drawing.Point(0, 133);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(240, 132);
-            this.dataGrid1.TabIndex = 11;
+            this.dataGridLinkedItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinkedItems.Location = new System.Drawing.Point(0, 133);
+            this.dataGridLinkedItems.Name = "dataGridLinkedItems";
+            this.dataGridLinkedItems.Size = new System.Drawing.Size(240, 132);
+            this.dataGridLinkedItems.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(90, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(133, 26);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // Aufgabe
@@ -116,11 +124,11 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGrid1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dataGridLinkedItems);
+            this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTitle);
             this.Menu = this.mainMenu1;
             this.Name = "Aufgabe";
             this.Text = "Aufgabe";
@@ -130,15 +138,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem menuItem2;
-        private System.Windows.Forms.MenuItem menuItem3;
-        private System.Windows.Forms.MenuItem menuItem4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemLink;
+        private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.DataGrid dataGridLinkedItems;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MenuItem menuItemSave;
     }
 }
