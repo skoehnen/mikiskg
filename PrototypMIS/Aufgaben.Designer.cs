@@ -34,7 +34,7 @@
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
             this.menuItemAufgabeAnlegen = new System.Windows.Forms.MenuItem();
             this.menuItemSuchen = new System.Windows.Forms.MenuItem();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.dataGridAufgaben = new System.Windows.Forms.DataGrid();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -62,13 +62,14 @@
             // 
             this.menuItemSuchen.Text = "Suchen";
             // 
-            // dataGrid1
+            // dataGridAufgaben
             // 
-            this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid1.Location = new System.Drawing.Point(0, 0);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(240, 265);
-            this.dataGrid1.TabIndex = 0;
+            this.dataGridAufgaben.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridAufgaben.Location = new System.Drawing.Point(0, 0);
+            this.dataGridAufgaben.Name = "dataGridAufgaben";
+            this.dataGridAufgaben.Size = new System.Drawing.Size(240, 265);
+            this.dataGridAufgaben.TabIndex = 0;
+            this.dataGridAufgaben.CurrentCellChanged += new System.EventHandler(this.dataGrid1_CurrentCellChanged);
             // 
             // Aufgaben
             // 
@@ -76,7 +77,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
-            this.Controls.Add(this.dataGrid1);
+            this.Controls.Add(this.dataGridAufgaben);
             this.Menu = this.mainMenu1;
             this.Name = "Aufgaben";
             this.Text = "Aufgaben";
@@ -86,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.DataGrid dataGridAufgaben;
         private System.Windows.Forms.MenuItem menuItemZurueck;
         private System.Windows.Forms.MenuItem menuItemMenu;
         private System.Windows.Forms.MenuItem menuItemAufgabeAnlegen;

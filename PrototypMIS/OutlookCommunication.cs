@@ -38,5 +38,10 @@ namespace PrototypMIS
             contact.Email1Address = mail;
             mySession.Contacts.Items.Add(contact);
         }
+
+        public OutlookSession getOutlookSession()
+        {
+            return mySession;
+        }
     }
 }

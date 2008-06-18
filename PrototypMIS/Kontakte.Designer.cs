@@ -56,6 +56,7 @@
             // menuItem1
             // 
             this.menuItem1.Text = "Suchen";
+            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
             // 
             // menuItem2
             // 
@@ -70,6 +71,7 @@
             this.dataGridKontakte.RowHeadersVisible = false;
             this.dataGridKontakte.Size = new System.Drawing.Size(240, 265);
             this.dataGridKontakte.TabIndex = 0;
+            this.dataGridKontakte.CurrentCellChanged += new System.EventHandler(this.dataGridKontakte_CurrentCellChanged);
             // 
             // Kontakte
             // 

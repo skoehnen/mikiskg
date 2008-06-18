@@ -20,5 +20,10 @@ namespace PrototypMIS
         {
             Dispose();
         }
+
+        private void dataGrid1_CurrentCellChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

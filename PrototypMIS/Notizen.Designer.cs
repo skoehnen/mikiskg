@@ -31,22 +31,22 @@
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.Add(this.menuItemZurueck);
-            this.mainMenu1.MenuItems.Add(this.menuItem2);
+            this.mainMenu1.MenuItems.Add(this.menuItemMenu);
             // 
             // menuItemZurueck
             // 
             this.menuItemZurueck.Text = "zurück";
             this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZurueck_Click);
             // 
-            // menuItem2
+            // menuItemMenu
             // 
-            this.menuItem2.Text = "suchen";
+            this.menuItemMenu.Text = "Menü";
             // 
             // Notizen
             // 
@@ -64,6 +64,6 @@
         #endregion
 
         private System.Windows.Forms.MenuItem menuItemZurueck;
-        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem menuItemMenu;
     }
 }

@@ -185,6 +185,10 @@
       <DependentUpon>Suchen.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuchErgebnis.resx">
+      <DependentUpon>SuchErgebnis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Termin.resx">
       <DependentUpon>Termin.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -202,6 +206,12 @@
     </Compile>
     <Compile Include="Suchen.Designer.cs">
       <DependentUpon>Suchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuchErgebnis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuchErgebnis.Designer.cs">
+      <DependentUpon>SuchErgebnis.cs</DependentUpon>
     </Compile>
     <Compile Include="Termin.cs">
       <SubType>Form</SubType>

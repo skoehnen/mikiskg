@@ -53,6 +53,7 @@
             // menuItem2
             // 
             this.menuItem2.Text = "Suchen";
+            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // buttonNotizen
             // 

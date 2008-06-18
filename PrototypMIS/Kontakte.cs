@@ -6,14 +6,20 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.WindowsMobile.PocketOutlook;
 
 namespace PrototypMIS
 {
     public partial class Kontakte : Form
     {
+
         public Kontakte()
         {
             InitializeComponent();
+            ContactCollection collection;
+            collection = new OutlookCommunication().getOutlookSession().Contacts.Items;
+            dataGridKontakte.DataSource = collection;
+            dataGridKontakte.Update();
         }
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
@@ -25,6 +31,18 @@ namespace PrototypMIS
         {
             new Kontakt().Show();
         }
+
+        private void dataGridKontakte_CurrentCellChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItem1_Click(object sender, EventArgs e)
+        {
+            new Suchen().Show();
+        }
+
+        
 
         
     }
