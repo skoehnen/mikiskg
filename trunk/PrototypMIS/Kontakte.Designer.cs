@@ -60,6 +60,7 @@
             // menuItem2
             // 
             this.menuItem2.Text = "Kontakt anlegen";
+            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // dataGridKontakte
             // 

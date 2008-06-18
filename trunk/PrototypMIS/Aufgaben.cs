@@ -20,5 +20,10 @@ namespace PrototypMIS
         {
             Dispose();
         }
+
+        private void menuItemAufgabeAnlegen_Click(object sender, EventArgs e)
+        {
+            new Aufgabe().Show();
+        }
     }
 }
