@@ -122,11 +122,6 @@
     <Compile Include="Kontakte.Designer.cs">
       <DependentUpon>Kontakte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Miki_DB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Miki_DB.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Notizen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,19 +218,6 @@
     <Content Include="AppDatabase1.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Miki_DB.xsc">
-      <DependentUpon>Miki_DB.xsd</DependentUpon>
-    </None>
-    <None Include="Miki_DB.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Miki_DB.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Miki_DB.xss">
-      <DependentUpon>Miki_DB.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>
