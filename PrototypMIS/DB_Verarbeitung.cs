@@ -20,7 +20,9 @@ namespace PrototypMIS
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke) VALUES ('" + QuellID + "','" + ZielID + "')";
+            int quelle = int.Parse(QuellID.ToString());
+            int ziel = int.Parse(ZielID.ToString());
+            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke) VALUES ('" + quelle + "','" + ziel+ "')";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
         }
@@ -47,15 +49,20 @@ namespace PrototypMIS
 
         }
 
-        public void abfrage(ItemId Quelle)
+        public LinkedList<ItemId> abfrage(ItemId Quelle)
         {
+            LinkedList<ItemId> liste = new LinkedList<ItemId>();
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
             sqlcommand.CommandText = "SELECT * from Verknüpfung where ItemID_Quelle = '" + Quelle + "'";
             SqlCeDataReader ResultSet;
             ResultSet = sqlcommand.ExecuteReader();
-            
+            while (ResultSet.Read())
+            {
+                //liste.addResultSet["ItemID_Senke"];
+            }
+            //ItemId back = new ItemId(int);
             conn.Close();
         }
     }
