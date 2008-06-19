@@ -32,6 +32,7 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemCreateNote = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -46,7 +47,13 @@
             // 
             // menuItemMenu
             // 
+            this.menuItemMenu.MenuItems.Add(this.menuItemCreateNote);
             this.menuItemMenu.Text = "Menü";
+            // 
+            // menuItemCreateNote
+            // 
+            this.menuItemCreateNote.Text = "Notiz anlegen";
+            this.menuItemCreateNote.Click += new System.EventHandler(this.menuItemCreateNote_Click);
             // 
             // Notizen
             // 
@@ -65,5 +72,6 @@
 
         private System.Windows.Forms.MenuItem menuItemZurueck;
         private System.Windows.Forms.MenuItem menuItemMenu;
+        private System.Windows.Forms.MenuItem menuItemCreateNote;
     }
 }

@@ -20,5 +20,10 @@ namespace PrototypMIS
         {
             Dispose();
         }
+
+        private void menuItemCreateNote_Click(object sender, EventArgs e)
+        {
+            new Notiz().Show();
+        }
     }
 }
