@@ -29,6 +29,11 @@ namespace PrototypMIS
             myCommunication.deleteTask();
         }
 
+        private void menuItem1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
                 
     }
 }

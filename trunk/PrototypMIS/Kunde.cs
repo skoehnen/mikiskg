@@ -15,5 +15,10 @@ namespace PrototypMIS
         {
             InitializeComponent();
         }
+
+        private void menuItemBack_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

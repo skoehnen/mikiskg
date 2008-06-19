@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItemShutApplication = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.buttonNotizen = new System.Windows.Forms.Button();
             this.buttonTermine = new System.Windows.Forms.Button();
@@ -43,12 +43,13 @@
             // 
             // mainMenu1
             // 
-            this.mainMenu1.MenuItems.Add(this.menuItem1);
+            this.mainMenu1.MenuItems.Add(this.menuItemShutApplication);
             this.mainMenu1.MenuItems.Add(this.menuItem2);
             // 
-            // menuItem1
+            // menuItemShutApplication
             // 
-            this.menuItem1.Text = "Beenden";
+            this.menuItemShutApplication.Text = "Beenden";
+            this.menuItemShutApplication.Click += new System.EventHandler(this.menuItemShutApplication_Click);
             // 
             // menuItem2
             // 
@@ -145,7 +146,7 @@
         private System.Windows.Forms.Button buttonKontakte;
         private System.Windows.Forms.Button buttonKunden;
         private System.Windows.Forms.Button buttonAuftraege;
-        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItemShutApplication;
         private System.Windows.Forms.MenuItem menuItem2;
         private System.Windows.Forms.Button buttonFotos;
         private System.Windows.Forms.Button buttonAufgaben;

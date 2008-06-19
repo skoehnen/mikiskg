@@ -30,8 +30,8 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItemBack = new System.Windows.Forms.MenuItem();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.menuItemSave = new System.Windows.Forms.MenuItem();
@@ -45,19 +45,20 @@
             // 
             // mainMenu1
             // 
-            this.mainMenu1.MenuItems.Add(this.menuItem1);
-            this.mainMenu1.MenuItems.Add(this.menuItem2);
+            this.mainMenu1.MenuItems.Add(this.menuItemBack);
+            this.mainMenu1.MenuItems.Add(this.menuItemMenu);
             // 
-            // menuItem1
+            // menuItemBack
             // 
-            this.menuItem1.Text = "zurück";
+            this.menuItemBack.Text = "zurück";
+            this.menuItemBack.Click += new System.EventHandler(this.menuItem1_Click);
             // 
-            // menuItem2
+            // menuItemMenu
             // 
-            this.menuItem2.MenuItems.Add(this.menuItemDelete);
-            this.menuItem2.MenuItems.Add(this.menuItemLink);
-            this.menuItem2.MenuItems.Add(this.menuItemSave);
-            this.menuItem2.Text = "Menü";
+            this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
+            this.menuItemMenu.MenuItems.Add(this.menuItemLink);
+            this.menuItemMenu.MenuItems.Add(this.menuItemSave);
+            this.menuItemMenu.Text = "Menü";
             // 
             // menuItemDelete
             // 
@@ -141,8 +142,8 @@
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MenuItem menuItem1;
-        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem menuItemBack;
+        private System.Windows.Forms.MenuItem menuItemMenu;
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.MenuItem menuItemLink;
         private System.Windows.Forms.TextBox textBoxDescription;

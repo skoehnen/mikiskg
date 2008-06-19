@@ -39,6 +39,20 @@ namespace PrototypMIS
             mySession.Contacts.Items.Add(contact);
         }
 
+        public void addAppointment(string title, string location, string startTime, DateTime startDate, string endTime, DateTime endDate){
+            Appointment appointment = new Appointment();
+            appointment.Start = Convert.ToDateTime(startDate);
+            appointment.End = Convert.ToDateTime(endTime);
+            // Uhrzeit läuft noch nicht ganz koorekt
+            appointment.Start.AddHours(Convert.ToDouble(startTime[0] + startTime[1]));
+            appointment.Start.AddMinutes(Convert.ToDouble(startTime[3] + startTime[4]));
+            appointment.End.AddHours(Convert.ToDouble(endTime[0] + endTime[1]));
+            appointment.End.AddMinutes(Convert.ToDouble(endTime[3] + endTime[4]));
+            appointment.Location = location;
+            appointment.Subject = title;
+            mySession.Appointments.Items.Add(appointment);
+        }
+
         public OutlookSession getOutlookSession()
         {
             return mySession;
