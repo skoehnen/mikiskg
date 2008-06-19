@@ -30,19 +30,19 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.menuItemZueruck = new System.Windows.Forms.MenuItem();
+            this.menuItemZurueck = new System.Windows.Forms.MenuItem();
             this.menuItemFoto = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
             // 
-            this.mainMenu1.MenuItems.Add(this.menuItemZueruck);
+            this.mainMenu1.MenuItems.Add(this.menuItemZurueck);
             this.mainMenu1.MenuItems.Add(this.menuItemFoto);
             // 
-            // menuItemZueruck
+            // menuItemZurueck
             // 
-            this.menuItemZueruck.Text = "zurück";
-            this.menuItemZueruck.Click += new System.EventHandler(this.menuItemZueruck_Click);
+            this.menuItemZurueck.Text = "zurück";
+            this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZueruck_Click);
             // 
             // menuItemFoto
             // 
@@ -64,7 +64,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuItem menuItemZueruck;
+        private System.Windows.Forms.MenuItem menuItemZurueck;
         private System.Windows.Forms.MenuItem menuItemFoto;
     }
 }

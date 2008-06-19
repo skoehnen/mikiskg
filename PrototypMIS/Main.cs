@@ -55,5 +55,10 @@ namespace PrototypMIS
         {
             new Suchen().Show();
         }
+
+        private void menuItemShutApplication_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

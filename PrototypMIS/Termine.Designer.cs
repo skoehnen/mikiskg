@@ -30,17 +30,37 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
             this.menuItemTerminAnlegen = new System.Windows.Forms.MenuItem();
             this.menuItemSuchen = new System.Windows.Forms.MenuItem();
+            this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.SuspendLayout();
             // 
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.Add(this.menuItemZurueck);
-            this.mainMenu1.MenuItems.Add(this.menuItem2);
+            this.mainMenu1.MenuItems.Add(this.menuItemMenu);
+            // 
+            // menuItemZurueck
+            // 
+            this.menuItemZurueck.Text = "zurück";
+            this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZurueck_Click);
+            // 
+            // menuItemMenu
+            // 
+            this.menuItemMenu.MenuItems.Add(this.menuItemTerminAnlegen);
+            this.menuItemMenu.MenuItems.Add(this.menuItemSuchen);
+            this.menuItemMenu.Text = "Menü";
+            // 
+            // menuItemTerminAnlegen
+            // 
+            this.menuItemTerminAnlegen.Text = "Termin anlegen";
+            this.menuItemTerminAnlegen.Click += new System.EventHandler(this.menuItemTerminAnlegen_Click);
+            // 
+            // menuItemSuchen
+            // 
+            this.menuItemSuchen.Text = "Suchen";
             // 
             // dataGrid1
             // 
@@ -49,25 +69,6 @@
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.Size = new System.Drawing.Size(240, 262);
             this.dataGrid1.TabIndex = 0;
-            // 
-            // menuItemZurueck
-            // 
-            this.menuItemZurueck.Text = "zurück";
-            this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZurueck_Click);
-            // 
-            // menuItem2
-            // 
-            this.menuItem2.MenuItems.Add(this.menuItemTerminAnlegen);
-            this.menuItem2.MenuItems.Add(this.menuItemSuchen);
-            this.menuItem2.Text = "Menü";
-            // 
-            // menuItemTerminAnlegen
-            // 
-            this.menuItemTerminAnlegen.Text = "Termin anlegen";
-            // 
-            // menuItemSuchen
-            // 
-            this.menuItemSuchen.Text = "Suchen";
             // 
             // Termine
             // 
@@ -87,7 +88,7 @@
 
         private System.Windows.Forms.DataGrid dataGrid1;
         private System.Windows.Forms.MenuItem menuItemZurueck;
-        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem menuItemMenu;
         private System.Windows.Forms.MenuItem menuItemTerminAnlegen;
         private System.Windows.Forms.MenuItem menuItemSuchen;
     }

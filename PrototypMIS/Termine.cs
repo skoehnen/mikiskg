@@ -20,5 +20,10 @@ namespace PrototypMIS
         {
             Dispose();
         }
+
+        private void menuItemTerminAnlegen_Click(object sender, EventArgs e)
+        {
+            new Termin().Show();
+        }
     }
 }
