@@ -44,7 +44,7 @@ namespace PrototypMIS
             // Konvertierungsproblem: kann nicht nach ItemId konvertieren!!!
             //ItemId target = (ItemId) dataGridSearchResults[rowIndex, dataGridSearchResults.VisibleColumnCount-1];
             DB_Verarbeitung db = new DB_Verarbeitung();
-            db.verknuepfung_eintragen(source, target);
+            //db.verknuepfung_eintragen(source, target);
         }
     }
 }
