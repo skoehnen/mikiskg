@@ -32,6 +32,10 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemBack = new System.Windows.Forms.MenuItem();
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
+            this.menuItemSearch = new System.Windows.Forms.MenuItem();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,10 +52,6 @@
             this.dateTimePickerStartDate = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
-            this.menuItemSave = new System.Windows.Forms.MenuItem();
-            this.menuItemSearch = new System.Windows.Forms.MenuItem();
-            this.menuItemDelete = new System.Windows.Forms.MenuItem();
-            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -74,6 +74,25 @@
             this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
             this.menuItemMenu.MenuItems.Add(this.menuItemSave);
             this.menuItemMenu.Text = "Menü";
+            
+            // 
+            // menuItemLink
+            // 
+            this.menuItemLink.Text = "Verlinken";
+            // 
+            // menuItemSearch
+            // 
+            this.menuItemSearch.Text = "Suchen";
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "Löschen";
+            
+            // 
+            // menuItemSave
+            // 
+            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
             // 
             // tabControl1
             // 
@@ -193,7 +212,7 @@
             this.tabPage2.Controls.Add(this.dataGrid1);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(240, 241);
+            this.tabPage2.Size = new System.Drawing.Size(232, 239);
             this.tabPage2.Text = "Verknüpfte Objekt";
             // 
             // dataGrid1
@@ -203,23 +222,6 @@
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.Size = new System.Drawing.Size(240, 200);
             this.dataGrid1.TabIndex = 0;
-            // 
-            // menuItemSave
-            // 
-            this.menuItemSave.Text = "Speichern";
-            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
-            // 
-            // menuItemSearch
-            // 
-            this.menuItemSearch.Text = "Suchen";
-            // 
-            // menuItemDelete
-            // 
-            this.menuItemDelete.Text = "Löschen";
-            // 
-            // menuItemLink
-            // 
-            this.menuItemLink.Text = "Verlinken";
             // 
             // Termin
             // 

@@ -27,6 +27,9 @@ namespace PrototypMIS
         private void menuItemSave_Click(object sender, EventArgs e)
         {
             outlookCom.addAppointment(textBoxTitle.Text, textBoxLocation.Text, textBoxStartTime.Text, dateTimePickerStartDate.Value, textBoxEndTime.Text, dateTimePickerEndDate.Value);
+            Dispose();
+            new Termin();
         }
+
     }
 }

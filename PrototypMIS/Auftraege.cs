@@ -14,6 +14,7 @@ namespace PrototypMIS
         public Auftraege()
         {
             InitializeComponent();
+
         }
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
