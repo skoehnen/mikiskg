@@ -29,21 +29,24 @@ namespace PrototypMIS
 
         public void einzelverknuepfung_loeschen(ItemId Quelle, ItemId Ziel)
         {
+            int quelle = int.Parse(Quelle.ToString());
+            int ziel = int.Parse(Ziel.ToString());
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + Quelle + "' AND ItemId_Senke = '" + Ziel + "'" ;
+            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + quelle + "' AND ItemId_Senke = '" + ziel + "'" ;
             sqlcommand.ExecuteNonQuery();
             conn.Close();
 
         }
 
-        public void gesamtverknuepfung_loeschen(ItemId Quelle, ItemId Ziel)
+        public void gesamtverknuepfung_loeschen(ItemId Quelle)
         {
             SqlCeConnection conn = DBVerbindung();
+            int quelle = int.Parse(Quelle.ToString());
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + Quelle + "'";
+            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + quelle + "'";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
 
@@ -58,12 +61,15 @@ namespace PrototypMIS
             sqlcommand.CommandText = "SELECT * from Verknüpfung where ItemID_Quelle = '" + Quelle + "'";
             SqlCeDataReader ResultSet;
             ResultSet = sqlcommand.ExecuteReader();
+            int i ;
             while (ResultSet.Read())
             {
-                //liste.addResultSet["ItemID_Senke"];
+                i = (int)  ResultSet["ItemID_Senke"];
+                liste.AddLast(new ItemId(i));
             }
             //ItemId back = new ItemId(int);
             conn.Close();
+            return liste;
         }
     }
 }
