@@ -139,3 +139,4 @@ D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Micros
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
