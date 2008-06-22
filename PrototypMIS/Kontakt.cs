@@ -31,7 +31,7 @@ namespace PrototypMIS
 
         private void menuItemLink_Click(object sender, EventArgs e)
         {
-
+            new Suchen().Show();
         }
     }
 }

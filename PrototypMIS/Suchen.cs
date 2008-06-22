@@ -36,11 +36,9 @@ namespace PrototypMIS
             new SuchErgebnis(kontaktSuche(textBoxSuchen.Text)).Show();
         }
 
-        private ContactCollection kontaktSuche(string name)
+        private TaskCollection kontaktSuche(string name)
         {
-            return new OutlookCommunication().getOutlookSession().Contacts.Items.Restrict("[LastName]=\"" + name + "\"");  
-            
+            return new OutlookCommunication().getOutlookSession().Tasks.Items.Restrict("[Subject]=\"" + name + "\"");
         }
-
     }
 }

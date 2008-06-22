@@ -48,36 +48,6 @@ C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projec
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\Visual Studio 2008\Projects\PrototypMIS\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\AppDatabase1.sdf
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\PrototypMIS.exe
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\PrototypMIS.pdb
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.dll
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.dll
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.dll
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Main.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Aufgabe.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kunde.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kunden.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kontakte.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Notizen.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Properties.Resources.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Suchen.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Termin.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Termine.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.exe
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.pdb
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\bin\Debug\AppDatabase1.sdf
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\bin\Debug\PrototypMIS.exe
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\bin\Debug\PrototypMIS.pdb
@@ -139,7 +109,37 @@ D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Micros
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Main.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Aufgabe.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kunde.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kunden.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Kontakte.resources
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Notiz.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Notizen.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Properties.Resources.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Suchen.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Termin.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Termine.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\AppDatabase1.sdf
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\PrototypMIS.exe
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\PrototypMIS.pdb
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.dll
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.dll
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.dll
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\OpenNETCF.WindowsMobile.Ink.dll
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.exe
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.pdb

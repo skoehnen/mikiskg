@@ -31,6 +31,10 @@
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
             this.dataGridLinks = new System.Windows.Forms.DataGrid();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxMail = new System.Windows.Forms.TextBox();
@@ -40,10 +44,6 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.menuItemMenu = new System.Windows.Forms.MenuItem();
-            this.menuItemSave = new System.Windows.Forms.MenuItem();
-            this.menuItemDelete = new System.Windows.Forms.MenuItem();
-            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -55,6 +55,27 @@
             // 
             this.menuItemZurueck.Text = "zurück";
             this.menuItemZurueck.Click += new System.EventHandler(this.menuItemZurueck_Click);
+            // 
+            // menuItemMenu
+            // 
+            this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
+            this.menuItemMenu.MenuItems.Add(this.menuItemLink);
+            this.menuItemMenu.MenuItems.Add(this.menuItemSave);
+            this.menuItemMenu.Text = "Menü";
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "Löschen";
+            // 
+            // menuItemLink
+            // 
+            this.menuItemLink.Text = "Verknüpfen";
+            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
+            // 
+            // menuItemSave
+            // 
+            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
             // 
             // dataGridLinks
             // 
@@ -75,7 +96,7 @@
             // 
             this.textBoxMail.Location = new System.Drawing.Point(123, 108);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(100, 25);
+            this.textBoxMail.Size = new System.Drawing.Size(100, 21);
             this.textBoxMail.TabIndex = 19;
             // 
             // label3
@@ -103,43 +124,22 @@
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(123, 81);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
+            this.textBoxPhone.Size = new System.Drawing.Size(100, 21);
             this.textBoxPhone.TabIndex = 18;
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.Location = new System.Drawing.Point(123, 54);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxFirstName.Size = new System.Drawing.Size(100, 21);
             this.textBoxFirstName.TabIndex = 17;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(123, 27);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxName.Size = new System.Drawing.Size(100, 21);
             this.textBoxName.TabIndex = 16;
-            // 
-            // menuItemMenu
-            // 
-            this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
-            this.menuItemMenu.MenuItems.Add(this.menuItemLink);
-            this.menuItemMenu.MenuItems.Add(this.menuItemSave);
-            this.menuItemMenu.Text = "Menü";
-            // 
-            // menuItemSave
-            // 
-            this.menuItemSave.Text = "Speichern";
-            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
-            // 
-            // menuItemDelete
-            // 
-            this.menuItemDelete.Text = "Löschen";
-            // 
-            // menuItemLink
-            // 
-            this.menuItemLink.Text = "Verknüpfen";
-            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // Kontakt
             // 

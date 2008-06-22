@@ -34,6 +34,11 @@ namespace PrototypMIS
             Dispose();
         }
 
+        private void menuItemLink_Click(object sender, EventArgs e)
+        {
+
+        }
+
                 
     }
 }
