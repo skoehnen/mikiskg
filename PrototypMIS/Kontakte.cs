@@ -45,9 +45,9 @@ namespace PrototypMIS
         private void menuItemShow_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridKontakte.CurrentRowIndex;
-            int columnIndex = 60;
+            int columnIndex = 62;
             object oid = dataGridKontakte[rowIndex, columnIndex];
-            new Kontakt(MikiConverter.objectToItemId(oid));
+            new Kontakt(MikiConverter.objectToItemId(oid)).Show();
         }
     }
 }
