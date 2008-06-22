@@ -26,7 +26,7 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            myCommunication.deleteTask();
+            
         }
 
         private void menuItem1_Click(object sender, EventArgs e)
