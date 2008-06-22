@@ -40,10 +40,12 @@ namespace PrototypMIS
 
         private void menuItemLink_Click(object sender, EventArgs e)
         {
+            DB_Verarbeitung db = new DB_Verarbeitung();
             int rowIndex = dataGridSearchResults.CurrentRowIndex;
             int columnIndex = 21;
             Object oid = dataGridSearchResults[rowIndex,columnIndex];
             ItemId id = MikiConverter.objectToItemId(oid);
+            db.verknuepfung_eintragen(source, id);
         }
     }
 }
