@@ -35,6 +35,8 @@
             this.menuItemAufgabeAnlegen = new System.Windows.Forms.MenuItem();
             this.menuItemSuchen = new System.Windows.Forms.MenuItem();
             this.dataGridAufgaben = new System.Windows.Forms.DataGrid();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -65,11 +67,21 @@
             // dataGridAufgaben
             // 
             this.dataGridAufgaben.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridAufgaben.ContextMenu = this.contextMenu1;
             this.dataGridAufgaben.Location = new System.Drawing.Point(0, 0);
             this.dataGridAufgaben.Name = "dataGridAufgaben";
             this.dataGridAufgaben.Size = new System.Drawing.Size(240, 265);
             this.dataGridAufgaben.TabIndex = 0;
             this.dataGridAufgaben.CurrentCellChanged += new System.EventHandler(this.dataGrid1_CurrentCellChanged);
+            // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.menuItemDelete);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // Aufgaben
             // 
@@ -92,5 +104,7 @@
         private System.Windows.Forms.MenuItem menuItemMenu;
         private System.Windows.Forms.MenuItem menuItemAufgabeAnlegen;
         private System.Windows.Forms.MenuItem menuItemSuchen;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem menuItemDelete;
     }
 }

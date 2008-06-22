@@ -143,3 +143,4 @@ C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.exe
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.pdb
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Notiz.resources
