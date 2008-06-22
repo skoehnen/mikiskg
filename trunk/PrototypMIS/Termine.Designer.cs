@@ -35,6 +35,8 @@
             this.menuItemTerminAnlegen = new System.Windows.Forms.MenuItem();
             this.menuItemSuchen = new System.Windows.Forms.MenuItem();
             this.dataGridAppointments = new System.Windows.Forms.DataGrid();
+            this.contextMenuTermine = new System.Windows.Forms.ContextMenu();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -65,10 +67,20 @@
             // dataGridAppointments
             // 
             this.dataGridAppointments.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridAppointments.ContextMenu = this.contextMenuTermine;
             this.dataGridAppointments.Location = new System.Drawing.Point(0, 3);
             this.dataGridAppointments.Name = "dataGridAppointments";
             this.dataGridAppointments.Size = new System.Drawing.Size(240, 262);
             this.dataGridAppointments.TabIndex = 0;
+            // 
+            // contextMenuTermine
+            // 
+            this.contextMenuTermine.MenuItems.Add(this.menuItemDelete);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // Termine
             // 
@@ -77,9 +89,11 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
             this.Controls.Add(this.dataGridAppointments);
+            this.KeyPreview = true;
             this.Menu = this.mainMenu1;
             this.Name = "Termine";
             this.Text = "Termine";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Termine_KeyDown);
             this.ResumeLayout(false);
 
         }
@@ -91,5 +105,7 @@
         private System.Windows.Forms.MenuItem menuItemMenu;
         private System.Windows.Forms.MenuItem menuItemTerminAnlegen;
         private System.Windows.Forms.MenuItem menuItemSuchen;
+        private System.Windows.Forms.ContextMenu contextMenuTermine;
+        private System.Windows.Forms.MenuItem menuItemDelete;
     }
 }
