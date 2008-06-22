@@ -12,10 +12,10 @@ namespace PrototypMIS
 {
     public partial class SuchErgebnis : Form
     {
-        ContactCollection collection;
+        TaskCollection collection;
         ItemId source;
 
-        public SuchErgebnis(ContactCollection collection)
+        public SuchErgebnis(TaskCollection collection)
         {
             InitializeComponent();
             this.collection = collection;
@@ -23,7 +23,7 @@ namespace PrototypMIS
             dataGridSearchResults.Update();
         }
 
-        public SuchErgebnis(ContactCollection collection, ItemId source)
+        public SuchErgebnis(TaskCollection collection, ItemId source)
         {
             InitializeComponent();
             this.collection = collection;
@@ -41,10 +41,9 @@ namespace PrototypMIS
         private void menuItemLink_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridSearchResults.CurrentRowIndex;
-            // Konvertierungsproblem: kann nicht nach ItemId konvertieren!!!
-            //ItemId target = (ItemId) dataGridSearchResults[rowIndex, dataGridSearchResults.VisibleColumnCount-1];
-            DB_Verarbeitung db = new DB_Verarbeitung();
-            //db.verknuepfung_eintragen(source, target);
+            int columnIndex = 21;
+            Object oid = dataGridSearchResults[rowIndex,columnIndex];
+            ItemId id = MikiConverter.objectToItemId(oid);
         }
     }
 }

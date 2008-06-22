@@ -125,6 +125,7 @@
     <Compile Include="Kontakte.Designer.cs">
       <DependentUpon>Kontakte.cs</DependentUpon>
     </Compile>
+    <Compile Include="MikiConverter.cs" />
     <Compile Include="Notiz.cs">
       <SubType>Form</SubType>
     </Compile>
