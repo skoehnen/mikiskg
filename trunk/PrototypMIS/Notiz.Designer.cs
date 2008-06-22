@@ -29,14 +29,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.Menu = this.mainMenu1;
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.SuspendLayout();
+            // 
+            // mainMenu1
+            // 
+            this.mainMenu1.MenuItems.Add(this.menuItem1);
+            this.mainMenu1.MenuItems.Add(this.menuItem2);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Text = "zurück";
+            // 
+            // menuItem2
+            // 
+            this.menuItem2.Text = "Menü";
+            // 
+            // Notiz
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Text = "Notiz";
             this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Menu = this.mainMenu1;
+            this.Name = "Notiz";
+            this.Text = "Notiz";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItem2;
     }
 }
