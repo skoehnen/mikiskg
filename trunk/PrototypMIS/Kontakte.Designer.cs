@@ -35,6 +35,9 @@
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.dataGridKontakte = new System.Windows.Forms.DataGrid();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemShow = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -66,12 +69,27 @@
             // dataGridKontakte
             // 
             this.dataGridKontakte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridKontakte.ContextMenu = this.contextMenu1;
             this.dataGridKontakte.Location = new System.Drawing.Point(0, 0);
             this.dataGridKontakte.Name = "dataGridKontakte";
             this.dataGridKontakte.RowHeadersVisible = false;
             this.dataGridKontakte.Size = new System.Drawing.Size(240, 265);
             this.dataGridKontakte.TabIndex = 0;
             this.dataGridKontakte.CurrentCellChanged += new System.EventHandler(this.dataGridKontakte_CurrentCellChanged);
+            // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.menuItemDelete);
+            this.contextMenu1.MenuItems.Add(this.menuItemShow);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "löschen";
+            // 
+            // menuItemShow
+            // 
+            this.menuItemShow.Text = "anzeigen";
+            this.menuItemShow.Click += new System.EventHandler(this.menuItemShow_Click);
             // 
             // Kontakte
             // 
@@ -94,5 +112,8 @@
         private System.Windows.Forms.DataGrid dataGridKontakte;
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemShow;
     }
 }

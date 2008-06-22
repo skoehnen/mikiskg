@@ -42,8 +42,12 @@ namespace PrototypMIS
             new Suchen().Show();
         }
 
-        
-
-        
+        private void menuItemShow_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridKontakte.CurrentRowIndex;
+            int columnIndex = 60;
+            object oid = dataGridKontakte[rowIndex, columnIndex];
+            new Kontakt(MikiConverter.objectToItemId(oid));
+        }
     }
 }

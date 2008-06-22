@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.WindowsMobile.PocketOutlook;
 
 namespace PrototypMIS
 {
@@ -17,6 +18,16 @@ namespace PrototypMIS
         {
             InitializeComponent();
             objOutlook = new OutlookCommunication();
+        }
+
+        public Kontakt(ItemId id)
+        {
+            InitializeComponent();
+            Contact kontakt = new Contact(id);
+            textBoxFirstName.Text = kontakt.FirstName;
+            textBoxMail.Text = kontakt.Email1Address;
+            textBoxName.Text = kontakt.LastName;
+            textBoxPhone.Text = kontakt.HomeTelephoneNumber;
         }
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
