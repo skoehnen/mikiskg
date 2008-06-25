@@ -84,6 +84,13 @@
       <DependentUpon>Auftrag.cs</DependentUpon>
     </Compile>
     <Compile Include="DB_Verarbeitung.cs" />
+    <Compile Include="Foto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foto.Designer.cs">
+      <DependentUpon>Foto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FotoInfo.cs" />
     <Compile Include="Kontakt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +159,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Auftrag.resx">
       <DependentUpon>Auftrag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foto.resx">
+      <DependentUpon>Foto.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Fotos.resx">

@@ -41,7 +41,7 @@ namespace PrototypMIS
                 }
                 else
                 {
-                    MessageBox.Show(reader.r);
+                    //MessageBox.Show(reader.r);
                     
                 }
             } while (reader.NextResult());
