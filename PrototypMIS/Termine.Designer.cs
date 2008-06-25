@@ -37,6 +37,7 @@
             this.dataGridAppointments = new System.Windows.Forms.DataGrid();
             this.contextMenuTermine = new System.Windows.Forms.ContextMenu();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemAnzeigen = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -76,11 +77,17 @@
             // contextMenuTermine
             // 
             this.contextMenuTermine.MenuItems.Add(this.menuItemDelete);
+            this.contextMenuTermine.MenuItems.Add(this.menuItemAnzeigen);
             // 
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "Löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
+            // 
+            // menuItemAnzeigen
+            // 
+            this.menuItemAnzeigen.Text = "anzeigen";
+            this.menuItemAnzeigen.Click += new System.EventHandler(this.menuItemAnzeigen_Click);
             // 
             // Termine
             // 
@@ -93,7 +100,6 @@
             this.Menu = this.mainMenu1;
             this.Name = "Termine";
             this.Text = "Termine";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Termine_KeyDown);
             this.ResumeLayout(false);
 
         }
@@ -107,5 +113,6 @@
         private System.Windows.Forms.MenuItem menuItemSuchen;
         private System.Windows.Forms.ContextMenu contextMenuTermine;
         private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemAnzeigen;
     }
 }
