@@ -69,5 +69,59 @@ namespace PrototypMIS
             conn.Close();
             return liste;
         }
+
+        public bool fotoEinfuegen(String pfad, String beschreibung, String titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "INSERT INTO Fotos (id, pfad, beschreibung, titel) VALUES (1, '" + pfad + "', '" + beschreibung + "', " + titel + "')";
+            command.ExecuteNonQuery();
+            return true;
+        }
+
+        public int fotoIDholen(string titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT id FROM Fotos WHERE titel = '" + titel + "'";
+            command.ExecuteNonQuery();
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            int i = -1;
+
+            while (ResultSet.Read())
+            {
+                i = (int)ResultSet["id"];
+            }
+
+            return i;
+        }
+
+        public FotoInfo fotoHolen(String titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT id FROM Fotos WHERE titel = '" + titel + "'";
+            command.ExecuteNonQuery();
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            int id = -1;
+            String beschreibung = "";
+            String pfad = "";
+
+            while (ResultSet.Read())
+            {
+                id = (int)ResultSet["id"];
+                beschreibung = (String)ResultSet["beschreibung"];
+                pfad = (String)ResultSet["pfad"];
+            }
+
+            return new FotoInfo(titel, pfad, beschreibung, id);
+        }
     }
 }

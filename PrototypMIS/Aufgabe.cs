@@ -33,7 +33,7 @@ namespace PrototypMIS
         private void menuItemSave_Click(object sender, EventArgs e)
         {
             myCommunication.addTask(textBoxTitle.Text, dateTimePicker1.Value, textBoxDescription.Text);
-            Dispose;
+            //Dispose;
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
