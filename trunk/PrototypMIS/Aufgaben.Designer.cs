@@ -37,6 +37,7 @@
             this.dataGridAufgaben = new System.Windows.Forms.DataGrid();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemShowEntry = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -77,11 +78,17 @@
             // contextMenu1
             // 
             this.contextMenu1.MenuItems.Add(this.menuItemDelete);
+            this.contextMenu1.MenuItems.Add(this.menuItemShowEntry);
             // 
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "Löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
+            // 
+            // menuItemShowEntry
+            // 
+            this.menuItemShowEntry.Text = "Anzeigen";
+            this.menuItemShowEntry.Click += new System.EventHandler(this.menuItemShowEntry_Click);
             // 
             // Aufgaben
             // 
@@ -106,5 +113,6 @@
         private System.Windows.Forms.MenuItem menuItemSuchen;
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemShowEntry;
     }
 }
