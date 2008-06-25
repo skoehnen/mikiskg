@@ -18,19 +18,36 @@ namespace PrototypMIS
         }
 
         DataSet kunde;
-
+        String username;
+        Boolean menue;
         public Kunde(String uname,Boolean combo)
         {
             DataSet kunde = new DataSet();
+            this.username = uname;
+            this.menue = combo;
+            
             Referenz_Kunden.Service1 webkunde = new PrototypMIS.Referenz_Kunden.Service1();
             if (combo == true)
                 kunde = webkunde.getCustomerByName(uname);
             else
                 kunde = webkunde.getCustomerByRef(uname);
 
+            DataTableReader reader = kunde.Tables[0].CreateDataReader();
+            do
+            {
+                if (!reader.HasRows)
+                {
+                    Console.WriteLine("Empty Rows");
+                }
+                else
+                {
+                    MessageBox.Show(reader.r);
+                    
+                }
+            } while (reader.NextResult());
             if (kunde != null)
             {
-                textBox_anrede.Text = kunde.Tables[0].Columns[0].ToString();
+                
             }
 
             InitializeComponent();
