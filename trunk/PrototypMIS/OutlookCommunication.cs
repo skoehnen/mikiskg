@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.WindowsMobile.PocketOutlook;
+using System.Diagnostics;
 
 namespace PrototypMIS
 {

@@ -39,29 +39,13 @@ namespace PrototypMIS
             outlookCom.deleteAppointment(MikiConverter.objectToItemId(Id));
         }
 
-        private void Termine_KeyDown(object sender, KeyEventArgs e)
+        private void menuItemAnzeigen_Click(object sender, EventArgs e)
         {
-            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
-            {
-                // Up
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
-            {
-                // Down
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
-            {
-                // Left
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
-            {
-                // Right
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
-            {
-                // Enter
-            }
-
+            int rowIndex = dataGridAppointments.CurrentRowIndex;
+            int columnIndex = 23;
+            MessageBox.Show(columnIndex.ToString());
+            object oid = dataGridAppointments[rowIndex, columnIndex];
+            new Termin(MikiConverter.objectToItemId(oid)).Show();
         }
 
         
