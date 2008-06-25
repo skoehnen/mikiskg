@@ -6,7 +6,14 @@ using Microsoft.WindowsMobile.PocketOutlook;
 
 namespace PrototypMIS
 {
-
+    /// <summary>
+    /// Die Klasse OutlookCommunication dient als Schnittstelle für die
+    /// Kommunikation mit Outlook.
+    /// 
+    /// <methods>
+    /// </methods>
+    /// </summary>
+    
     class OutlookCommunication
     {
         private OutlookSession mySession;
@@ -48,6 +55,12 @@ namespace PrototypMIS
             contact.HomeTelephoneNumber = phone;
             contact.Email1Address = mail;
             mySession.Contacts.Items.Add(contact);
+        }
+
+        public void deleteContact(ItemId id)
+        {
+            Contact contact = new Contact(id);
+            contact.Delete();
         }
 /// <summary>
 /// Ende Methoden für Kontakte

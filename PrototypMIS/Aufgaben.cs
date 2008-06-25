@@ -43,5 +43,13 @@ namespace PrototypMIS
             object Id = dataGridAufgaben[index, 21]; // weil in Spalte 21 die ID des Tasks steht
             outlookCom.deleteTask(MikiConverter.objectToItemId(Id));
         }
+
+        private void menuItemShowEntry_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridAufgaben.CurrentRowIndex;
+            int columnIndex = 21;
+            object oid = dataGridAufgaben[rowIndex, columnIndex];
+            new Aufgabe(MikiConverter.objectToItemId(oid)).Show();
+        }
     }
 }
