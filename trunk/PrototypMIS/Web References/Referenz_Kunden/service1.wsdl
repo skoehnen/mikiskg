@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerByNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerByRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerByRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerByRefResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSalesPersonByRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSalesPersonByRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSalesPersonByRefResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsByCustomerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getConstructionSites">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getConstructionSitesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getConstructionSitesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsHeadsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsHeadsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsHeadsByCustomerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsDetailsByHeadID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUATNR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsDetailsByHeadIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsDetailsByHeadIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsBySalesPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsBySalesPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsBySalesPersonResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSalesMeetingReports">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSalesMeetingReportsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSalesMeetingReportsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsFormatsBonus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjRef" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsFormatsBonusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsFormatsBonusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsObjects">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAddsObjectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsObjectsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsPageFormats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjRef" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsPageFormatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAddsPageFormatsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsFormatsPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VLOJNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FORUNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FOFONR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsFormatsPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getAddsFormatsPriceResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsFormatsBonusPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FOFONR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsFormatsBonusPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getAddsFormatsBonusPriceResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsStatistics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAddsStatisticsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getAddsStatisticsResult" type="tns:AddsStatistics" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddsStatistics">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="total_sales_number" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="total_sales_vol" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCustomerStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KNDNR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KNDNR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ABONR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertCustomerStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveSalesMeetingReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="report" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ERREFN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveSalesMeetingReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="saveSalesMeetingReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="float" type="s:float" />
+      <s:element name="AddsStatistics" type="tns:AddsStatistics" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerByName" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByRefSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerByRef" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByRefSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerByRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSalesPersonByRefSoapIn">
+    <wsdl:part name="parameters" element="tns:getSalesPersonByRef" />
+  </wsdl:message>
+  <wsdl:message name="getSalesPersonByRefSoapOut">
+    <wsdl:part name="parameters" element="tns:getSalesPersonByRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="getAddsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConstructionSitesSoapIn">
+    <wsdl:part name="parameters" element="tns:getConstructionSites" />
+  </wsdl:message>
+  <wsdl:message name="getConstructionSitesSoapOut">
+    <wsdl:part name="parameters" element="tns:getConstructionSitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsHeadsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsHeadsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="getAddsHeadsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsHeadsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsDetailsByHeadIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsDetailsByHeadID" />
+  </wsdl:message>
+  <wsdl:message name="getAddsDetailsByHeadIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsDetailsByHeadIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsBySalesPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsBySalesPerson" />
+  </wsdl:message>
+  <wsdl:message name="getAddsBySalesPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsBySalesPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSalesMeetingReportsSoapIn">
+    <wsdl:part name="parameters" element="tns:getSalesMeetingReports" />
+  </wsdl:message>
+  <wsdl:message name="getSalesMeetingReportsSoapOut">
+    <wsdl:part name="parameters" element="tns:getSalesMeetingReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsFormatsBonus" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsFormatsBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsObjectsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsObjects" />
+  </wsdl:message>
+  <wsdl:message name="getAddsObjectsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsPageFormatsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsPageFormats" />
+  </wsdl:message>
+  <wsdl:message name="getAddsPageFormatsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsPageFormatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsFormatsPrice" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsFormatsPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsFormatsBonusPrice" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsFormatsBonusPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAddsStatisticsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAddsStatistics" />
+  </wsdl:message>
+  <wsdl:message name="getAddsStatisticsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAddsStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerStatus" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCustomerStatus" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCustomerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveSalesMeetingReportSoapIn">
+    <wsdl:part name="parameters" element="tns:saveSalesMeetingReport" />
+  </wsdl:message>
+  <wsdl:message name="saveSalesMeetingReportSoapOut">
+    <wsdl:part name="parameters" element="tns:saveSalesMeetingReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByNameHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByRefHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByRefHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getSalesPersonByRefHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getSalesPersonByRefHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsByCustomerHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsByCustomerHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getConstructionSitesHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getConstructionSitesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsHeadsByCustomerHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsHeadsByCustomerHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsDetailsByHeadIDHttpGetIn">
+    <wsdl:part name="AUATNR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsDetailsByHeadIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsBySalesPersonHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsBySalesPersonHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getSalesMeetingReportsHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getSalesMeetingReportsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusHttpGetIn">
+    <wsdl:part name="ObjRef" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsObjectsHttpGetIn" />
+  <wsdl:message name="getAddsObjectsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsPageFormatsHttpGetIn">
+    <wsdl:part name="ObjRef" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsPageFormatsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsPriceHttpGetIn">
+    <wsdl:part name="VLOJNR" type="s:string" />
+    <wsdl:part name="FORUNR" type="s:string" />
+    <wsdl:part name="FOFONR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsPriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:float" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusPriceHttpGetIn">
+    <wsdl:part name="FOFONR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusPriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:float" />
+  </wsdl:message>
+  <wsdl:message name="getAddsStatisticsHttpGetIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsStatisticsHttpGetOut">
+    <wsdl:part name="Body" element="tns:AddsStatistics" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerStatusHttpGetIn">
+    <wsdl:part name="KNDNR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerStatusHttpGetIn">
+    <wsdl:part name="KNDNR" type="s:string" />
+    <wsdl:part name="ABONR" type="s:string" />
+    <wsdl:part name="comment" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="saveSalesMeetingReportHttpGetIn">
+    <wsdl:part name="report" type="s1:StringArray" />
+    <wsdl:part name="ERREFN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="saveSalesMeetingReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByNameHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByRefHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerByRefHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getSalesPersonByRefHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getSalesPersonByRefHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsByCustomerHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsByCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getConstructionSitesHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getConstructionSitesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsHeadsByCustomerHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsHeadsByCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsDetailsByHeadIDHttpPostIn">
+    <wsdl:part name="AUATNR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsDetailsByHeadIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsBySalesPersonHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsBySalesPersonHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getSalesMeetingReportsHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getSalesMeetingReportsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusHttpPostIn">
+    <wsdl:part name="ObjRef" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsObjectsHttpPostIn" />
+  <wsdl:message name="getAddsObjectsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsPageFormatsHttpPostIn">
+    <wsdl:part name="ObjRef" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsPageFormatsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsPriceHttpPostIn">
+    <wsdl:part name="VLOJNR" type="s:string" />
+    <wsdl:part name="FORUNR" type="s:string" />
+    <wsdl:part name="FOFONR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsPriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:float" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusPriceHttpPostIn">
+    <wsdl:part name="FOFONR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsFormatsBonusPriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:float" />
+  </wsdl:message>
+  <wsdl:message name="getAddsStatisticsHttpPostIn">
+    <wsdl:part name="Ref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAddsStatisticsHttpPostOut">
+    <wsdl:part name="Body" element="tns:AddsStatistics" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerStatusHttpPostIn">
+    <wsdl:part name="KNDNR" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerStatusHttpPostIn">
+    <wsdl:part name="KNDNR" type="s:string" />
+    <wsdl:part name="ABONR" type="s:string" />
+    <wsdl:part name="comment" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="saveSalesMeetingReportHttpPostIn">
+    <wsdl:part name="report" type="s1:StringArray" />
+    <wsdl:part name="ERREFN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="saveSalesMeetingReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByName">
+      <wsdl:input message="tns:getCustomerByNameSoapIn" />
+      <wsdl:output message="tns:getCustomerByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByRef">
+      <wsdl:input message="tns:getCustomerByRefSoapIn" />
+      <wsdl:output message="tns:getCustomerByRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesPersonByRef">
+      <wsdl:input message="tns:getSalesPersonByRefSoapIn" />
+      <wsdl:output message="tns:getSalesPersonByRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsByCustomer">
+      <wsdl:input message="tns:getAddsByCustomerSoapIn" />
+      <wsdl:output message="tns:getAddsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getConstructionSites">
+      <wsdl:input message="tns:getConstructionSitesSoapIn" />
+      <wsdl:output message="tns:getConstructionSitesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsHeadsByCustomer">
+      <wsdl:input message="tns:getAddsHeadsByCustomerSoapIn" />
+      <wsdl:output message="tns:getAddsHeadsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsDetailsByHeadID">
+      <wsdl:input message="tns:getAddsDetailsByHeadIDSoapIn" />
+      <wsdl:output message="tns:getAddsDetailsByHeadIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsBySalesPerson">
+      <wsdl:input message="tns:getAddsBySalesPersonSoapIn" />
+      <wsdl:output message="tns:getAddsBySalesPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesMeetingReports">
+      <wsdl:input message="tns:getSalesMeetingReportsSoapIn" />
+      <wsdl:output message="tns:getSalesMeetingReportsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonus">
+      <wsdl:input message="tns:getAddsFormatsBonusSoapIn" />
+      <wsdl:output message="tns:getAddsFormatsBonusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsObjects">
+      <wsdl:input message="tns:getAddsObjectsSoapIn" />
+      <wsdl:output message="tns:getAddsObjectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsPageFormats">
+      <wsdl:input message="tns:getAddsPageFormatsSoapIn" />
+      <wsdl:output message="tns:getAddsPageFormatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsPrice">
+      <wsdl:input message="tns:getAddsFormatsPriceSoapIn" />
+      <wsdl:output message="tns:getAddsFormatsPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonusPrice">
+      <wsdl:input message="tns:getAddsFormatsBonusPriceSoapIn" />
+      <wsdl:output message="tns:getAddsFormatsBonusPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsStatistics">
+      <wsdl:input message="tns:getAddsStatisticsSoapIn" />
+      <wsdl:output message="tns:getAddsStatisticsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerStatus">
+      <wsdl:input message="tns:getCustomerStatusSoapIn" />
+      <wsdl:output message="tns:getCustomerStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerStatus">
+      <wsdl:input message="tns:InsertCustomerStatusSoapIn" />
+      <wsdl:output message="tns:InsertCustomerStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveSalesMeetingReport">
+      <wsdl:input message="tns:saveSalesMeetingReportSoapIn" />
+      <wsdl:output message="tns:saveSalesMeetingReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByName">
+      <wsdl:input message="tns:getCustomerByNameHttpGetIn" />
+      <wsdl:output message="tns:getCustomerByNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByRef">
+      <wsdl:input message="tns:getCustomerByRefHttpGetIn" />
+      <wsdl:output message="tns:getCustomerByRefHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesPersonByRef">
+      <wsdl:input message="tns:getSalesPersonByRefHttpGetIn" />
+      <wsdl:output message="tns:getSalesPersonByRefHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsByCustomer">
+      <wsdl:input message="tns:getAddsByCustomerHttpGetIn" />
+      <wsdl:output message="tns:getAddsByCustomerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getConstructionSites">
+      <wsdl:input message="tns:getConstructionSitesHttpGetIn" />
+      <wsdl:output message="tns:getConstructionSitesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsHeadsByCustomer">
+      <wsdl:input message="tns:getAddsHeadsByCustomerHttpGetIn" />
+      <wsdl:output message="tns:getAddsHeadsByCustomerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsDetailsByHeadID">
+      <wsdl:input message="tns:getAddsDetailsByHeadIDHttpGetIn" />
+      <wsdl:output message="tns:getAddsDetailsByHeadIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsBySalesPerson">
+      <wsdl:input message="tns:getAddsBySalesPersonHttpGetIn" />
+      <wsdl:output message="tns:getAddsBySalesPersonHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesMeetingReports">
+      <wsdl:input message="tns:getSalesMeetingReportsHttpGetIn" />
+      <wsdl:output message="tns:getSalesMeetingReportsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonus">
+      <wsdl:input message="tns:getAddsFormatsBonusHttpGetIn" />
+      <wsdl:output message="tns:getAddsFormatsBonusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsObjects">
+      <wsdl:input message="tns:getAddsObjectsHttpGetIn" />
+      <wsdl:output message="tns:getAddsObjectsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsPageFormats">
+      <wsdl:input message="tns:getAddsPageFormatsHttpGetIn" />
+      <wsdl:output message="tns:getAddsPageFormatsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsPrice">
+      <wsdl:input message="tns:getAddsFormatsPriceHttpGetIn" />
+      <wsdl:output message="tns:getAddsFormatsPriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonusPrice">
+      <wsdl:input message="tns:getAddsFormatsBonusPriceHttpGetIn" />
+      <wsdl:output message="tns:getAddsFormatsBonusPriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsStatistics">
+      <wsdl:input message="tns:getAddsStatisticsHttpGetIn" />
+      <wsdl:output message="tns:getAddsStatisticsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerStatus">
+      <wsdl:input message="tns:getCustomerStatusHttpGetIn" />
+      <wsdl:output message="tns:getCustomerStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerStatus">
+      <wsdl:input message="tns:InsertCustomerStatusHttpGetIn" />
+      <wsdl:output message="tns:InsertCustomerStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveSalesMeetingReport">
+      <wsdl:input message="tns:saveSalesMeetingReportHttpGetIn" />
+      <wsdl:output message="tns:saveSalesMeetingReportHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByName">
+      <wsdl:input message="tns:getCustomerByNameHttpPostIn" />
+      <wsdl:output message="tns:getCustomerByNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByRef">
+      <wsdl:input message="tns:getCustomerByRefHttpPostIn" />
+      <wsdl:output message="tns:getCustomerByRefHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesPersonByRef">
+      <wsdl:input message="tns:getSalesPersonByRefHttpPostIn" />
+      <wsdl:output message="tns:getSalesPersonByRefHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsByCustomer">
+      <wsdl:input message="tns:getAddsByCustomerHttpPostIn" />
+      <wsdl:output message="tns:getAddsByCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getConstructionSites">
+      <wsdl:input message="tns:getConstructionSitesHttpPostIn" />
+      <wsdl:output message="tns:getConstructionSitesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsHeadsByCustomer">
+      <wsdl:input message="tns:getAddsHeadsByCustomerHttpPostIn" />
+      <wsdl:output message="tns:getAddsHeadsByCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsDetailsByHeadID">
+      <wsdl:input message="tns:getAddsDetailsByHeadIDHttpPostIn" />
+      <wsdl:output message="tns:getAddsDetailsByHeadIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsBySalesPerson">
+      <wsdl:input message="tns:getAddsBySalesPersonHttpPostIn" />
+      <wsdl:output message="tns:getAddsBySalesPersonHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesMeetingReports">
+      <wsdl:input message="tns:getSalesMeetingReportsHttpPostIn" />
+      <wsdl:output message="tns:getSalesMeetingReportsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonus">
+      <wsdl:input message="tns:getAddsFormatsBonusHttpPostIn" />
+      <wsdl:output message="tns:getAddsFormatsBonusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsObjects">
+      <wsdl:input message="tns:getAddsObjectsHttpPostIn" />
+      <wsdl:output message="tns:getAddsObjectsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsPageFormats">
+      <wsdl:input message="tns:getAddsPageFormatsHttpPostIn" />
+      <wsdl:output message="tns:getAddsPageFormatsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsPrice">
+      <wsdl:input message="tns:getAddsFormatsPriceHttpPostIn" />
+      <wsdl:output message="tns:getAddsFormatsPriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonusPrice">
+      <wsdl:input message="tns:getAddsFormatsBonusPriceHttpPostIn" />
+      <wsdl:output message="tns:getAddsFormatsBonusPriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddsStatistics">
+      <wsdl:input message="tns:getAddsStatisticsHttpPostIn" />
+      <wsdl:output message="tns:getAddsStatisticsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerStatus">
+      <wsdl:input message="tns:getCustomerStatusHttpPostIn" />
+      <wsdl:output message="tns:getCustomerStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerStatus">
+      <wsdl:input message="tns:InsertCustomerStatusHttpPostIn" />
+      <wsdl:output message="tns:InsertCustomerStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveSalesMeetingReport">
+      <wsdl:input message="tns:saveSalesMeetingReportHttpPostIn" />
+      <wsdl:output message="tns:saveSalesMeetingReportHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByName">
+      <soap:operation soapAction="http://tempuri.org/getCustomerByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByRef">
+      <soap:operation soapAction="http://tempuri.org/getCustomerByRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesPersonByRef">
+      <soap:operation soapAction="http://tempuri.org/getSalesPersonByRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/getAddsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConstructionSites">
+      <soap:operation soapAction="http://tempuri.org/getConstructionSites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsHeadsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/getAddsHeadsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsDetailsByHeadID">
+      <soap:operation soapAction="http://tempuri.org/getAddsDetailsByHeadID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsBySalesPerson">
+      <soap:operation soapAction="http://tempuri.org/getAddsBySalesPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesMeetingReports">
+      <soap:operation soapAction="http://tempuri.org/getSalesMeetingReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonus">
+      <soap:operation soapAction="http://tempuri.org/getAddsFormatsBonus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsObjects">
+      <soap:operation soapAction="http://tempuri.org/getAddsObjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsPageFormats">
+      <soap:operation soapAction="http://tempuri.org/getAddsPageFormats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsPrice">
+      <soap:operation soapAction="http://tempuri.org/getAddsFormatsPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonusPrice">
+      <soap:operation soapAction="http://tempuri.org/getAddsFormatsBonusPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsStatistics">
+      <soap:operation soapAction="http://tempuri.org/getAddsStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerStatus">
+      <soap:operation soapAction="http://tempuri.org/getCustomerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerStatus">
+      <soap:operation soapAction="http://tempuri.org/InsertCustomerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveSalesMeetingReport">
+      <soap:operation soapAction="http://tempuri.org/saveSalesMeetingReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByName">
+      <http:operation location="/getCustomerByName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByRef">
+      <http:operation location="/getCustomerByRef" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesPersonByRef">
+      <http:operation location="/getSalesPersonByRef" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsByCustomer">
+      <http:operation location="/getAddsByCustomer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConstructionSites">
+      <http:operation location="/getConstructionSites" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsHeadsByCustomer">
+      <http:operation location="/getAddsHeadsByCustomer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsDetailsByHeadID">
+      <http:operation location="/getAddsDetailsByHeadID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsBySalesPerson">
+      <http:operation location="/getAddsBySalesPerson" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesMeetingReports">
+      <http:operation location="/getSalesMeetingReports" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonus">
+      <http:operation location="/getAddsFormatsBonus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsObjects">
+      <http:operation location="/getAddsObjects" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsPageFormats">
+      <http:operation location="/getAddsPageFormats" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsPrice">
+      <http:operation location="/getAddsFormatsPrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonusPrice">
+      <http:operation location="/getAddsFormatsBonusPrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsStatistics">
+      <http:operation location="/getAddsStatistics" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerStatus">
+      <http:operation location="/getCustomerStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerStatus">
+      <http:operation location="/InsertCustomerStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveSalesMeetingReport">
+      <http:operation location="/saveSalesMeetingReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByName">
+      <http:operation location="/getCustomerByName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerByRef">
+      <http:operation location="/getCustomerByRef" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesPersonByRef">
+      <http:operation location="/getSalesPersonByRef" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsByCustomer">
+      <http:operation location="/getAddsByCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConstructionSites">
+      <http:operation location="/getConstructionSites" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsHeadsByCustomer">
+      <http:operation location="/getAddsHeadsByCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsDetailsByHeadID">
+      <http:operation location="/getAddsDetailsByHeadID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsBySalesPerson">
+      <http:operation location="/getAddsBySalesPerson" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesMeetingReports">
+      <http:operation location="/getSalesMeetingReports" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonus">
+      <http:operation location="/getAddsFormatsBonus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsObjects">
+      <http:operation location="/getAddsObjects" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsPageFormats">
+      <http:operation location="/getAddsPageFormats" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsPrice">
+      <http:operation location="/getAddsFormatsPrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsFormatsBonusPrice">
+      <http:operation location="/getAddsFormatsBonusPrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddsStatistics">
+      <http:operation location="/getAddsStatistics" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerStatus">
+      <http:operation location="/getCustomerStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerStatus">
+      <http:operation location="/InsertCustomerStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveSalesMeetingReport">
+      <http:operation location="/saveSalesMeetingReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://149.201.44.80/V4YOU/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://149.201.44.80/V4YOU/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://149.201.44.80/V4YOU/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
