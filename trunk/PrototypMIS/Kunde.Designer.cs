@@ -40,13 +40,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_hausnr = new System.Windows.Forms.TextBox();
+            this.textBox_knr = new System.Windows.Forms.TextBox();
+            this.textBox_straße = new System.Windows.Forms.TextBox();
+            this.textBox_plz = new System.Windows.Forms.TextBox();
+            this.textBox_nachname = new System.Windows.Forms.TextBox();
+            this.textBox_vorname = new System.Windows.Forms.TextBox();
+            this.textBox_anrede = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.verknuepfte = new System.Windows.Forms.ContextMenu();
@@ -84,16 +84,16 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.textBox_hausnr);
+            this.tabPage1.Controls.Add(this.textBox_knr);
+            this.tabPage1.Controls.Add(this.textBox_straße);
+            this.tabPage1.Controls.Add(this.textBox_plz);
+            this.tabPage1.Controls.Add(this.textBox_nachname);
+            this.tabPage1.Controls.Add(this.textBox_vorname);
+            this.tabPage1.Controls.Add(this.textBox_anrede);
             this.tabPage1.Location = new System.Drawing.Point(0, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(240, 238);
+            this.tabPage1.Size = new System.Drawing.Size(240, 242);
             this.tabPage1.Text = "Kundendaten";
             // 
             // label7
@@ -145,68 +145,69 @@
             this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.Text = "Anrede";
             // 
-            // textBox7
+            // textBox_hausnr
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(93, 166);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 25);
-            this.textBox7.TabIndex = 6;
+            this.textBox_hausnr.Enabled = false;
+            this.textBox_hausnr.Location = new System.Drawing.Point(93, 166);
+            this.textBox_hausnr.Name = "textBox_hausnr";
+            this.textBox_hausnr.Size = new System.Drawing.Size(140, 21);
+            this.textBox_hausnr.TabIndex = 6;
             // 
-            // textBox6
+            // textBox_knr
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(93, 193);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 25);
-            this.textBox6.TabIndex = 5;
+            this.textBox_knr.Enabled = false;
+            this.textBox_knr.Location = new System.Drawing.Point(93, 193);
+            this.textBox_knr.Name = "textBox_knr";
+            this.textBox_knr.Size = new System.Drawing.Size(140, 21);
+            this.textBox_knr.TabIndex = 5;
             // 
-            // textBox5
+            // textBox_straße
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(93, 139);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(140, 25);
-            this.textBox5.TabIndex = 4;
+            this.textBox_straße.Enabled = false;
+            this.textBox_straße.Location = new System.Drawing.Point(93, 139);
+            this.textBox_straße.Name = "textBox_straße";
+            this.textBox_straße.Size = new System.Drawing.Size(140, 21);
+            this.textBox_straße.TabIndex = 4;
             // 
-            // textBox4
+            // textBox_plz
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(93, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 25);
-            this.textBox4.TabIndex = 3;
+            this.textBox_plz.Enabled = false;
+            this.textBox_plz.Location = new System.Drawing.Point(93, 112);
+            this.textBox_plz.Name = "textBox_plz";
+            this.textBox_plz.Size = new System.Drawing.Size(140, 21);
+            this.textBox_plz.TabIndex = 3;
             // 
-            // textBox3
+            // textBox_nachname
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(93, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 25);
-            this.textBox3.TabIndex = 2;
+            this.textBox_nachname.Enabled = false;
+            this.textBox_nachname.Location = new System.Drawing.Point(93, 85);
+            this.textBox_nachname.Name = "textBox_nachname";
+            this.textBox_nachname.Size = new System.Drawing.Size(140, 21);
+            this.textBox_nachname.TabIndex = 2;
             // 
-            // textBox2
+            // textBox_vorname
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(93, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 25);
-            this.textBox2.TabIndex = 1;
+            this.textBox_vorname.Enabled = false;
+            this.textBox_vorname.Location = new System.Drawing.Point(93, 58);
+            this.textBox_vorname.Name = "textBox_vorname";
+            this.textBox_vorname.Size = new System.Drawing.Size(140, 21);
+            this.textBox_vorname.TabIndex = 1;
             // 
-            // textBox1
+            // textBox_anrede
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(93, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 25);
-            this.textBox1.TabIndex = 0;
+            this.textBox_anrede.Enabled = false;
+            this.textBox_anrede.Location = new System.Drawing.Point(93, 31);
+            this.textBox_anrede.Name = "textBox_anrede";
+            this.textBox_anrede.Size = new System.Drawing.Size(140, 21);
+            this.textBox_anrede.TabIndex = 0;
+            this.textBox_anrede.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGrid1);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(232, 236);
+            this.tabPage2.Size = new System.Drawing.Size(232, 239);
             this.tabPage2.Text = "Verknüpfte Objekte";
             // 
             // dataGrid1
@@ -257,13 +258,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_hausnr;
+        private System.Windows.Forms.TextBox textBox_knr;
+        private System.Windows.Forms.TextBox textBox_straße;
+        private System.Windows.Forms.TextBox textBox_plz;
+        private System.Windows.Forms.TextBox textBox_nachname;
+        private System.Windows.Forms.TextBox textBox_vorname;
+        private System.Windows.Forms.TextBox textBox_anrede;
         private System.Windows.Forms.ContextMenu verknuepfte;
         private System.Windows.Forms.MenuItem menuItem2;
     }

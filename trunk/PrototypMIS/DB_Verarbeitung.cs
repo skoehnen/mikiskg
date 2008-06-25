@@ -49,7 +49,6 @@ namespace PrototypMIS
             sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + quelle + "'";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
-
         }
 
         public LinkedList<ItemId> abfrage(ItemId Quelle)
@@ -67,7 +66,6 @@ namespace PrototypMIS
                 i = (int)  ResultSet["ItemID_Senke"];
                 liste.AddLast(new ItemId(i));
             }
-            //ItemId back = new ItemId(int);
             conn.Close();
             return liste;
         }
