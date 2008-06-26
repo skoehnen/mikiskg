@@ -12,44 +12,27 @@ namespace PrototypMIS
 {
     public partial class Kunde : Form
     {
+
+        
+        
         public Kunde()
         {
             InitializeComponent();
         }
 
-        DataSet kunde;
-        String username;
-        Boolean menue;
-        public Kunde(String uname,Boolean combo)
+        public Kunde(string auswahl)
         {
-            DataSet kunde = new DataSet();
-            this.username = uname;
-            this.menue = combo;
-            
+            DataSet kunde;
             Referenz_Kunden.Service1 webkunde = new PrototypMIS.Referenz_Kunden.Service1();
-            if (combo == true)
-                kunde = webkunde.getCustomerByName(uname);
-            else
-                kunde = webkunde.getCustomerByRef(uname);
+            this.kunde = webkunde.getCustomerByRef(auswahl);
+            //textBox_anrede.Text = kunde.
+        }
 
-            DataTableReader reader = kunde.Tables[0].CreateDataReader();
-            do
-            {
-                if (!reader.HasRows)
-                {
-                    Console.WriteLine("Empty Rows");
-                }
-                else
-                {
-                    //MessageBox.Show(reader.r);
-                    
-                }
-            } while (reader.NextResult());
-            if (kunde != null)
-            {
-                
-            }
-
+        public Kunde(DataSet ukunde)
+        {
+            DataSet kunde;
+            this.kunde = ukunde;
+            
             InitializeComponent();
             
         }

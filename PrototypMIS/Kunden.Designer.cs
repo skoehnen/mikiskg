@@ -39,6 +39,8 @@
             this.comboBox_Kundeneingabe = new System.Windows.Forms.ComboBox();
             this.textBox_kundendaten = new System.Windows.Forms.TextBox();
             this.button_suche = new System.Windows.Forms.Button();
+            this.listBox_kunden = new System.Windows.Forms.ListBox();
+            this.button_uebernahme = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -67,14 +69,14 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(72, 15);
+            this.label1.Location = new System.Drawing.Point(72, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.Text = "Kundensuche";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(6, 38);
+            this.label2.Location = new System.Drawing.Point(6, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 39);
             this.label2.Text = "Kundenummer oder Kundennamen eingeben";
@@ -82,8 +84,8 @@
             // comboBox_Kundeneingabe
             // 
             this.comboBox_Kundeneingabe.Items.Add("Kundennummer");
-            this.comboBox_Kundeneingabe.Items.Add("Kunenname");
-            this.comboBox_Kundeneingabe.Location = new System.Drawing.Point(6, 81);
+            this.comboBox_Kundeneingabe.Items.Add("Kundenname");
+            this.comboBox_Kundeneingabe.Location = new System.Drawing.Point(6, 58);
             this.comboBox_Kundeneingabe.Name = "comboBox_Kundeneingabe";
             this.comboBox_Kundeneingabe.Size = new System.Drawing.Size(107, 22);
             this.comboBox_Kundeneingabe.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             // textBox_kundendaten
             // 
-            this.textBox_kundendaten.Location = new System.Drawing.Point(120, 81);
+            this.textBox_kundendaten.Location = new System.Drawing.Point(120, 58);
             this.textBox_kundendaten.Name = "textBox_kundendaten";
             this.textBox_kundendaten.Size = new System.Drawing.Size(100, 21);
             this.textBox_kundendaten.TabIndex = 5;
@@ -99,12 +101,30 @@
             // 
             // button_suche
             // 
-            this.button_suche.Location = new System.Drawing.Point(84, 110);
+            this.button_suche.Location = new System.Drawing.Point(84, 89);
             this.button_suche.Name = "button_suche";
             this.button_suche.Size = new System.Drawing.Size(72, 20);
             this.button_suche.TabIndex = 6;
             this.button_suche.Text = "suchen";
             this.button_suche.Click += new System.EventHandler(this.button_suche_Click);
+            // 
+            // listBox_kunden
+            // 
+            this.listBox_kunden.Location = new System.Drawing.Point(6, 118);
+            this.listBox_kunden.Name = "listBox_kunden";
+            this.listBox_kunden.Size = new System.Drawing.Size(231, 100);
+            this.listBox_kunden.TabIndex = 9;
+            this.listBox_kunden.Visible = false;
+            this.listBox_kunden.SelectedIndexChanged += new System.EventHandler(this.listBox_kunden_SelectedIndexChanged);
+            // 
+            // button_uebernahme
+            // 
+            this.button_uebernahme.Location = new System.Drawing.Point(75, 225);
+            this.button_uebernahme.Name = "button_uebernahme";
+            this.button_uebernahme.Size = new System.Drawing.Size(84, 20);
+            this.button_uebernahme.TabIndex = 12;
+            this.button_uebernahme.Text = "übernehmen";
+            this.button_uebernahme.Click += new System.EventHandler(this.button_uebernahme_Click);
             // 
             // Kunden
             // 
@@ -112,6 +132,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Controls.Add(this.button_uebernahme);
+            this.Controls.Add(this.listBox_kunden);
             this.Controls.Add(this.button_suche);
             this.Controls.Add(this.textBox_kundendaten);
             this.Controls.Add(this.comboBox_Kundeneingabe);
@@ -135,5 +157,7 @@
         private System.Windows.Forms.ComboBox comboBox_Kundeneingabe;
         private System.Windows.Forms.TextBox textBox_kundendaten;
         private System.Windows.Forms.Button button_suche;
+        private System.Windows.Forms.ListBox listBox_kunden;
+        private System.Windows.Forms.Button button_uebernahme;
     }
 }
