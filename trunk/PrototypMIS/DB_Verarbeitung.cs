@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlServerCe;
 using Microsoft.WindowsMobile.PocketOutlook;
+using System.IO;
 
 namespace PrototypMIS
 {
@@ -75,7 +76,7 @@ namespace PrototypMIS
             SqlCeConnection conn = this.DBVerbindung();
             conn.Open();
             SqlCeCommand command = conn.CreateCommand();
-            command.CommandText = "INSERT INTO Fotos (id, pfad, beschreibung, titel) VALUES (1, '" + pfad + "', '" + beschreibung + "', " + titel + "')";
+            command.CommandText = "INSERT INTO Fotos (pfad, beschreibung, titel) VALUES ('" + pfad + "', '" + beschreibung + "', '" + titel + "')";
             command.ExecuteNonQuery();
             return true;
         }
@@ -97,6 +98,8 @@ namespace PrototypMIS
                 i = (int)ResultSet["id"];
             }
 
+            conn.Close();
+
             return i;
         }
 
@@ -105,7 +108,7 @@ namespace PrototypMIS
             SqlCeConnection conn = this.DBVerbindung();
             conn.Open();
             SqlCeCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT id FROM Fotos WHERE titel = '" + titel + "'";
+            command.CommandText = "SELECT id, beschreibung, pfad, titel FROM Fotos WHERE titel = '" + titel + "'";
             command.ExecuteNonQuery();
 
             SqlCeDataReader ResultSet = command.ExecuteReader();
@@ -117,11 +120,24 @@ namespace PrototypMIS
             while (ResultSet.Read())
             {
                 id = (int)ResultSet["id"];
-                beschreibung = (String)ResultSet["beschreibung"];
-                pfad = (String)ResultSet["pfad"];
+                beschreibung = ResultSet["beschreibung"].ToString();
+                pfad = ResultSet["pfad"].ToString();
             }
 
+            conn.Close();
+
             return new FotoInfo(titel, pfad, beschreibung, id);
+        }
+
+        public void fotoLoeschen(FotoInfo foto)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM Fotos WHERE id = '" + foto.getId() + "'";
+            command.ExecuteNonQuery();
+            File.Delete(foto.getPfad());
+            conn.Close();
         }
     }
 }

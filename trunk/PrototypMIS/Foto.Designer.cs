@@ -30,16 +30,32 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
+            this.menuItemAbbrechen = new System.Windows.Forms.MenuItem();
+            this.menuItemSpeichern = new System.Windows.Forms.MenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageFoto = new System.Windows.Forms.TabPage();
-            this.tabPageBeschreibung = new System.Windows.Forms.TabPage();
-            this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxTitel = new System.Windows.Forms.TextBox();
+            this.tabPageBeschreibung = new System.Windows.Forms.TabPage();
             this.textBoxBeschreibung = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageFoto.SuspendLayout();
             this.tabPageBeschreibung.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // mainMenu1
+            // 
+            this.mainMenu1.MenuItems.Add(this.menuItemAbbrechen);
+            this.mainMenu1.MenuItems.Add(this.menuItemSpeichern);
+            // 
+            // menuItemAbbrechen
+            // 
+            this.menuItemAbbrechen.Text = "abbrechen";
+            this.menuItemAbbrechen.Click += new System.EventHandler(this.menuItemAbbrechen_Click);
+            // 
+            // menuItemSpeichern
+            // 
+            this.menuItemSpeichern.Text = "speichern";
             // 
             // tabControl1
             // 
@@ -60,13 +76,11 @@
             this.tabPageFoto.Size = new System.Drawing.Size(240, 245);
             this.tabPageFoto.Text = "Foto";
             // 
-            // tabPageBeschreibung
+            // pictureBox1
             // 
-            this.tabPageBeschreibung.Controls.Add(this.textBoxBeschreibung);
-            this.tabPageBeschreibung.Location = new System.Drawing.Point(0, 0);
-            this.tabPageBeschreibung.Name = "tabPageBeschreibung";
-            this.tabPageBeschreibung.Size = new System.Drawing.Size(240, 245);
-            this.tabPageBeschreibung.Text = "Beschreibung";
+            this.pictureBox1.Location = new System.Drawing.Point(3, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 212);
             // 
             // textBoxTitel
             // 
@@ -75,11 +89,13 @@
             this.textBoxTitel.Size = new System.Drawing.Size(234, 21);
             this.textBoxTitel.TabIndex = 0;
             // 
-            // pictureBox1
+            // tabPageBeschreibung
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 212);
+            this.tabPageBeschreibung.Controls.Add(this.textBoxBeschreibung);
+            this.tabPageBeschreibung.Location = new System.Drawing.Point(0, 0);
+            this.tabPageBeschreibung.Name = "tabPageBeschreibung";
+            this.tabPageBeschreibung.Size = new System.Drawing.Size(240, 245);
+            this.tabPageBeschreibung.Text = "Beschreibung";
             // 
             // textBoxBeschreibung
             // 
@@ -114,6 +130,8 @@
         private System.Windows.Forms.TextBox textBoxTitel;
         private System.Windows.Forms.TabPage tabPageBeschreibung;
         private System.Windows.Forms.TextBox textBoxBeschreibung;
+        private System.Windows.Forms.MenuItem menuItemAbbrechen;
+        private System.Windows.Forms.MenuItem menuItemSpeichern;
 
     }
 }

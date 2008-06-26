@@ -17,12 +17,14 @@ namespace PrototypMIS
         {
             InitializeComponent();
             this.foto = foto;
-
-            textBoxBeschreibung.Text = foto.getBeschreibung();
-            textBoxBeschreibung.Text = foto.getTitel();
+            
             pictureBox1.Image = new Bitmap(foto.getPfad());
         }
 
+        private void menuItemAbbrechen_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
