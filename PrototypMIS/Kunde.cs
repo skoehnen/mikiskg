@@ -12,9 +12,8 @@ namespace PrototypMIS
 {
     public partial class Kunde : Form
     {
-
-        
-        
+        DataSet kunde;
+        DataTable customertable;
         public Kunde()
         {
             InitializeComponent();
@@ -22,17 +21,20 @@ namespace PrototypMIS
 
         public Kunde(string auswahl)
         {
-            DataSet kunde;
+            
             Referenz_Kunden.Service1 webkunde = new PrototypMIS.Referenz_Kunden.Service1();
             this.kunde = webkunde.getCustomerByRef(auswahl);
-            //textBox_anrede.Text = kunde.
+            customertable = kunde.Tables[0];
+            foreach (DataRow dataRow in customertable.Rows)
+            {
+                listBox1.Items.Add(dataRow["NATITL"]);
+            }
+            InitializeComponent();
         }
 
         public Kunde(DataSet ukunde)
         {
-            DataSet kunde;
             this.kunde = ukunde;
-            
             InitializeComponent();
             
         }
@@ -45,9 +47,6 @@ namespace PrototypMIS
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-
-        
+        }       
     }
 }

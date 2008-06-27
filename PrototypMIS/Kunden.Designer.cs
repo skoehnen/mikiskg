@@ -124,6 +124,7 @@
             this.button_uebernahme.Size = new System.Drawing.Size(84, 20);
             this.button_uebernahme.TabIndex = 12;
             this.button_uebernahme.Text = "übernehmen";
+            this.button_uebernahme.Visible = false;
             this.button_uebernahme.Click += new System.EventHandler(this.button_uebernahme_Click);
             // 
             // Kunden
