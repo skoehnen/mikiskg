@@ -28,19 +28,20 @@ namespace PrototypMIS
             Referenz_Kunden.Service1 webkunde = new PrototypMIS.Referenz_Kunden.Service1();
             if (comboBox_Kundeneingabe.Text == "Kundennummer")
             {
-                //kunde = textBox_kundendaten.Text;
                 ergebnis = webkunde.getCustomerByRef(textBox_kundendaten.Text);
                 new Kunde(ergebnis).Show();
             }
             else
             {
-                //kunde = textBox_kundendaten.Text;
                 ergebnis = webkunde.getCustomerByName(textBox_kundendaten.Text);
                 listBox_kunden.Visible = true;
                 button_uebernahme.Visible = true;
-                listBox_kunden.DisplayMember = "NANAM2";
-                listBox_kunden.ValueMember = "ERREFN";
-                listBox_kunden.DataSource = ergebnis.Tables[0];
+                DataTable dataTable = ergebnis.Tables[0];
+                foreach (DataRow dataRow in dataTable.Rows)
+                {
+                    listBox_kunden.Items.Add(dataRow["NANAM1"] + ", " + dataRow["NANAM2"] + ", " + dataRow["ANSTRA"]);
+                    listBox_kunden.ValueMember = dataRow["ERREFN"].ToString();
+                }
             }
             
         }
