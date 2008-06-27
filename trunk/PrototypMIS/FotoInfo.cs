@@ -39,5 +39,15 @@ namespace PrototypMIS
         {
             return beschreibung;
         }
+
+        public void setTitel(String titel)
+        {
+            this.titel = titel;
+        }
+
+        public void setBeschreibung(String beschreibung)
+        {
+            this.beschreibung = beschreibung;
+        }
     }
 }

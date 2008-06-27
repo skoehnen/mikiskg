@@ -56,6 +56,7 @@
             // menuItemSpeichern
             // 
             this.menuItemSpeichern.Text = "speichern";
+            this.menuItemSpeichern.Click += new System.EventHandler(this.menuItemSpeichern_Click);
             // 
             // tabControl1
             // 

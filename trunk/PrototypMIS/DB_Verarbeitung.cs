@@ -139,5 +139,15 @@ namespace PrototypMIS
             File.Delete(foto.getPfad());
             conn.Close();
         }
+
+        public void fotoAendern(FotoInfo foto)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "UPDATE Fotos SET titel = '" + foto.getTitel() + "', beschreibung = '" + foto.getBeschreibung() + "' WHERE id = " + foto.getId();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

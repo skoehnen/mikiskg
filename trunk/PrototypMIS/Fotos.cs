@@ -33,7 +33,7 @@ namespace PrototypMIS
             String bildPfad = fotoMachen();
             String titel = Guid.NewGuid().ToString();
             db.fotoEinfuegen(bildPfad, "", titel);
-            new Foto(db.fotoHolen(titel)).Show();
+            new Foto(db.fotoHolen(titel),true).Show();
         }
 
         private String fotoMachen()
