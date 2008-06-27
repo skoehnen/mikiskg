@@ -49,5 +49,13 @@ namespace PrototypMIS
             object oid = dataGridKontakte[rowIndex, columnIndex];
             new Kontakt(MikiConverter.objectToItemId(oid)).Show();
         }
+
+        private void menuItemDelete_Click(object sender, EventArgs e)
+        {
+            int index = dataGridKontakte.CurrentRowIndex;
+            OutlookCommunication outlookCom = new OutlookCommunication();
+            object Id = dataGridKontakte[index, 62]; // weil in Spalte 62 die ID des Kontakts steht
+            outlookCom.deleteContact(MikiConverter.objectToItemId(Id));
+        }
     }
 }

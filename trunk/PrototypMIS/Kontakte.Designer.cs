@@ -32,8 +32,8 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
             this.Menue = new System.Windows.Forms.MenuItem();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItemSearch = new System.Windows.Forms.MenuItem();
+            this.menuItemCreateContact = new System.Windows.Forms.MenuItem();
             this.dataGridKontakte = new System.Windows.Forms.DataGrid();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
@@ -52,19 +52,19 @@
             // 
             // Menue
             // 
-            this.Menue.MenuItems.Add(this.menuItem1);
-            this.Menue.MenuItems.Add(this.menuItem2);
+            this.Menue.MenuItems.Add(this.menuItemSearch);
+            this.Menue.MenuItems.Add(this.menuItemCreateContact);
             this.Menue.Text = "Menü";
             // 
-            // menuItem1
+            // menuItemSearch
             // 
-            this.menuItem1.Text = "Suchen";
-            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
+            this.menuItemSearch.Text = "Suchen";
+            this.menuItemSearch.Click += new System.EventHandler(this.menuItem1_Click);
             // 
-            // menuItem2
+            // menuItemCreateContact
             // 
-            this.menuItem2.Text = "Kontakt anlegen";
-            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
+            this.menuItemCreateContact.Text = "Kontakt anlegen";
+            this.menuItemCreateContact.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // dataGridKontakte
             // 
@@ -85,6 +85,7 @@
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemShow
             // 
@@ -110,8 +111,8 @@
         private System.Windows.Forms.MenuItem menuItemZurueck;
         private System.Windows.Forms.MenuItem Menue;
         private System.Windows.Forms.DataGrid dataGridKontakte;
-        private System.Windows.Forms.MenuItem menuItem1;
-        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem menuItemSearch;
+        private System.Windows.Forms.MenuItem menuItemCreateContact;
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.MenuItem menuItemShow;

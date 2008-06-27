@@ -38,6 +38,7 @@ namespace PrototypMIS
         private void menuItemSave_Click(object sender, EventArgs e)
         {
             objOutlook.addContact(textBoxName.Text, textBoxFirstName.Text, textBoxPhone.Text, textBoxMail.Text);
+            this.Close();
         }
 
         private void menuItemLink_Click(object sender, EventArgs e)
