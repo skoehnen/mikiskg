@@ -51,6 +51,7 @@
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.verknuepfte = new System.Windows.Forms.ContextMenu();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -77,6 +78,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -227,6 +229,13 @@
             // 
             this.menuItem2.Text = "Anzeigen";
             // 
+            // listBox1
+            // 
+            this.listBox1.Location = new System.Drawing.Point(26, 4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(188, 156);
+            this.listBox1.TabIndex = 7;
+            // 
             // Kunde
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -267,5 +276,6 @@
         private System.Windows.Forms.TextBox textBox_anrede;
         private System.Windows.Forms.ContextMenu verknuepfte;
         private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

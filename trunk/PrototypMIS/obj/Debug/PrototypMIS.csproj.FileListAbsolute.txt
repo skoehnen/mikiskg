@@ -146,3 +146,36 @@ C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.pdb
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Notiz.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\obj\Debug\PrototypMIS.Notiz.resources
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Foto.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Foto.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Main.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Aufgabe.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Kunde.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Kunden.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Kontakte.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Notiz.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Notizen.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Properties.Resources.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Suchen.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Termin.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Termine.resources
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.exe
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\AppDatabase1.sdf
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\PrototypMIS.exe
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\PrototypMIS.pdb
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.dll
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
+C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.pdb

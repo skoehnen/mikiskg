@@ -37,6 +37,7 @@ namespace PrototypMIS
                 //kunde = textBox_kundendaten.Text;
                 ergebnis = webkunde.getCustomerByName(textBox_kundendaten.Text);
                 listBox_kunden.Visible = true;
+                button_uebernahme.Visible = true;
                 listBox_kunden.DisplayMember = "NANAM2";
                 listBox_kunden.ValueMember = "ERREFN";
                 listBox_kunden.DataSource = ergebnis.Tables[0];
@@ -64,6 +65,7 @@ namespace PrototypMIS
             string auswahl;
             auswahl = (string)listBox_kunden.SelectedValue;
             new Kunde(auswahl).Show();
+            
         }
 
     }
