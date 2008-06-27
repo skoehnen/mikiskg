@@ -32,6 +32,7 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
             this.menuItemFoto = new System.Windows.Forms.MenuItem();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -49,12 +50,20 @@
             this.menuItemFoto.Text = "Foto";
             this.menuItemFoto.Click += new System.EventHandler(this.menuItemFoto_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(234, 262);
+            this.listView1.TabIndex = 0;
+            // 
             // Fotos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Controls.Add(this.listView1);
             this.Menu = this.mainMenu1;
             this.Name = "Fotos";
             this.Text = "Fotos";
@@ -66,5 +75,6 @@
 
         private System.Windows.Forms.MenuItem menuItemZurueck;
         private System.Windows.Forms.MenuItem menuItemFoto;
+        private System.Windows.Forms.ListView listView1;
     }
 }
