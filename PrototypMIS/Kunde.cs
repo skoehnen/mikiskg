@@ -22,8 +22,7 @@ namespace PrototypMIS
         
 
         public Kunde(DataSet ukunde)
-        {
-            
+        {    
             customertable = ukunde.Tables[0];
             foreach (DataRow dataRow in customertable.Rows)
             {
@@ -43,6 +42,25 @@ namespace PrototypMIS
             textBox_hausnr.Text = hausnr;
             textBox_plz.Text = plz;
             textBox_knr.Text = kdnr;
+            //AUATNR
+            DataTable auftrag_table = new DataTable("Auftragsnummer");
+            DataColumn auftrag_column = new DataColumn();
+            Referenz_Kunden.Service1 webauftrag = new PrototypMIS.Referenz_Kunden.Service1();
+            DataSet auftrag_w = webauftrag.getAddsByCustomer(kdnr);
+            int menge = auftrag_w.Tables[0].Rows.Count;
+
+            auftrag_column.ColumnName = "Auftrag-Nr";
+            //auftrag_column.DataType = System.Type.GetType("System.Double");
+            //auftrag_column.AutoIncrement = true;
+            auftrag_table.Columns.Add(auftrag_column);
+            DataRow row = auftrag_table.NewRow();
+            foreach (DataRow dataRow2 in auftrag_w.Tables[0].Rows)
+            {
+                //auftragnummer[counter++] =  (double) dataRow2["AUATNR"];
+                row["Auftrag-Nr"] = dataRow2["AUATNR"].ToString();
+            }
+
+            dataGrid_kundenauftraege.DataSource =  auftrag_table;
         }
 
         private void menuItemBack_Click(object sender, EventArgs e)
@@ -56,6 +74,11 @@ namespace PrototypMIS
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGrid_kundenauftraege_CurrentCellChanged(object sender, EventArgs e)
         {
 
         }       

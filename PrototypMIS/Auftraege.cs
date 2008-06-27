@@ -11,6 +11,12 @@ namespace PrototypMIS
 {
     public partial class Auftraege : Form
     {
+        public Auftraege(string kunde)
+        {
+
+            InitializeComponent();
+        }
+
         public Auftraege()
         {
             InitializeComponent();
@@ -24,7 +30,7 @@ namespace PrototypMIS
 
         private void dataGrid1_CurrentCellChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

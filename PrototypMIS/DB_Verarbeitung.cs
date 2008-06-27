@@ -79,6 +79,7 @@ namespace PrototypMIS
             SqlCeCommand command = conn.CreateCommand();
             command.CommandText = "INSERT INTO Fotos (pfad, beschreibung, titel) VALUES ('" + pfad + "', '" + beschreibung + "', '" + titel + "')";
             command.ExecuteNonQuery();
+            conn.Close();
             return true;
         }
 
