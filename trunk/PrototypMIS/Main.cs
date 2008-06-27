@@ -41,11 +41,6 @@ namespace PrototypMIS
             new Kunden().Show();
         }
 
-        private void buttonAuftraege_Click(object sender, EventArgs e)
-        {
-            new Auftraege().Show();
-        }
-
         private void buttonFotos_Click(object sender, EventArgs e)
         {
             new Fotos().Show();

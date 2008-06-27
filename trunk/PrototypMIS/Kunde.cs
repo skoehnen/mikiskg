@@ -48,16 +48,23 @@ namespace PrototypMIS
             Referenz_Kunden.Service1 webauftrag = new PrototypMIS.Referenz_Kunden.Service1();
             DataSet auftrag_w = webauftrag.getAddsByCustomer(kdnr);
             int menge = auftrag_w.Tables[0].Rows.Count;
-
-            auftrag_column.ColumnName = "Auftrag-Nr";
-            //auftrag_column.DataType = System.Type.GetType("System.Double");
-            //auftrag_column.AutoIncrement = true;
+            /*
+            auftrag_column.ColumnName = "Nr";
+            auftrag_column.DataType = System.Type.GetType("String.Int16");
+            auftrag_column.AutoIncrement = true;
             auftrag_table.Columns.Add(auftrag_column);
-            DataRow row = auftrag_table.NewRow();
+            */
+            auftrag_column.ColumnName = "Auftrag-Nr";
+            auftrag_column.DataType = System.Type.GetType("System.Double");
+            auftrag_table.Columns.Add(auftrag_column);
+            //auftrag_column.AutoIncrement = true;
+            DataRow row ;
             foreach (DataRow dataRow2 in auftrag_w.Tables[0].Rows)
             {
+                row = auftrag_table.NewRow();
                 //auftragnummer[counter++] =  (double) dataRow2["AUATNR"];
                 row["Auftrag-Nr"] = dataRow2["AUATNR"].ToString();
+                auftrag_table.Rows.Add(row);
             }
 
             dataGrid_kundenauftraege.DataSource =  auftrag_table;
