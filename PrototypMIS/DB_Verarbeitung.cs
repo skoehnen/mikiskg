@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.SqlServerCe;
 using Microsoft.WindowsMobile.PocketOutlook;
 using System.IO;
+using System.Windows.Forms;
 
 namespace PrototypMIS
 {
@@ -146,7 +147,14 @@ namespace PrototypMIS
             conn.Open();
             SqlCeCommand command = conn.CreateCommand();
             command.CommandText = "UPDATE Fotos SET titel = '" + foto.getTitel() + "', beschreibung = '" + foto.getBeschreibung() + "' WHERE id = " + foto.getId();
-            command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Titel bereits vergeben");
+            }
             conn.Close();
         }
     }

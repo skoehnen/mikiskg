@@ -29,7 +29,7 @@ namespace PrototypMIS
             {
                 db.fotoLoeschen(foto);
             }
-
+            
             this.Dispose();
             this.Close(); 
 
