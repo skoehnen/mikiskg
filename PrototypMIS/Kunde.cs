@@ -13,25 +13,13 @@ namespace PrototypMIS
     public partial class Kunde : Form
     {
         string anrede,vorname,nachname,strasse,hausnr,plz,kdnr;
-        DataSet kunde;
         DataTable customertable;
         public Kunde()
         {
             InitializeComponent();
         }
 
-        public Kunde(string auswahl)
-        {
-            
-            Referenz_Kunden.Service1 webkunde = new PrototypMIS.Referenz_Kunden.Service1();
-            this.kunde = webkunde.getCustomerByRef(auswahl);
-            customertable = kunde.Tables[0];
-            foreach (DataRow dataRow in customertable.Rows)
-            {
-                
-            }
-            InitializeComponent();
-        }
+        
 
         public Kunde(DataSet ukunde)
         {
