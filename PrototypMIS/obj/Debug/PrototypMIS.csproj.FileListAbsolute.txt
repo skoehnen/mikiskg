@@ -148,8 +148,6 @@ C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\Pr
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Foto.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
-C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Auftraege.resources
-C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Auftrag.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Foto.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Fotos.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.Kontakt.resources
