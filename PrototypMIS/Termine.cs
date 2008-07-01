@@ -12,12 +12,53 @@ namespace PrototypMIS
 {
     public partial class Termine : Form
     {
+        DataGrid gridAppointments = new DataGrid();
         
         public Termine()
         {
             InitializeComponent();
+            DataTable table = new DataTable("Termine");
+            DataColumn column = new DataColumn();
+            DataRow row ;
+            // Subject,Location,Start,End
             AppointmentCollection appointments = new OutlookCommunication().getOutlookSession().Appointments.Items;
-            dataGridAppointments.DataSource=appointments;
+            // Spalte 1
+            column.ColumnName = "Subject";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            // Spalte 2
+            column = new DataColumn();
+            column.ColumnName = "Ort";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            // Spalte 3
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "Start";
+            table.Columns.Add(column);
+            // Spalte 4
+            column = new DataColumn();
+            column.ColumnName = "Ende";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            // Spalte 5
+            /*column = new DataColumn();
+            column.ColumnName = "ItemID";
+            column.DataType = System.Type.GetType("System.GlobalObjectId");
+            table.Columns.Add(column);*/
+            foreach (PimItem item in appointments)
+            {
+                row = table.NewRow();
+                row["Subject"] = item.Properties[AppointmentProperty.Subject];
+                row["Ort"] = item.Properties[AppointmentProperty.Location];
+                row["Start"] = item.Properties[AppointmentProperty.Start];
+                row["Ende"] = item.Properties[AppointmentProperty.End];
+                //row["ItemID"] = item.Properties[AppointmentProperty.GlobalObjectId];
+                table.Rows.Add(row);
+            }
+            
+            gridAppointments.DataSource = appointments;
+            dataGridAppointments.DataSource = table;//appointments;
             dataGridAppointments.Update();
         }
 
@@ -43,9 +84,14 @@ namespace PrototypMIS
         {
             int rowIndex = dataGridAppointments.CurrentRowIndex;
             int columnIndex = 23;
-            MessageBox.Show(columnIndex.ToString());
-            object oid = dataGridAppointments[rowIndex, columnIndex];
+            MessageBox.Show(rowIndex.ToString());
+            object oid = gridAppointments[rowIndex, columnIndex];
             new Termin(MikiConverter.objectToItemId(oid)).Show();
+        }
+
+        private void dataGridAppointments_CurrentCellChanged(object sender, EventArgs e)
+        {
+
         }
 
         

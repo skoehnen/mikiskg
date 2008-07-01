@@ -17,9 +17,33 @@ namespace PrototypMIS
             InitializeComponent();
             TaskCollection collection;
             collection = new OutlookCommunication().getOutlookSession().Tasks.Items;
-            dataGridAufgaben.DataSource = collection;
+            DataTable table = new DataTable("Aufgaben");
+            DataColumn column = new DataColumn();
+            DataRow row;
+            column.ColumnName = "Titel";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.ColumnName = "Subject";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.ColumnName = "Datum";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            foreach (PimItem item in collection)
+            {
+                row = table.NewRow();
+                row["Titel"] = item.Properties[TaskProperty.Subject];
+                row["Subject"] = item.Properties[TaskProperty.Body];
+                row["Datum"] = item.Properties[TaskProperty.DueDate];
+                table.Rows.Add(row);
+            }
+            dataGridAufgaben.DataSource = table;
             dataGridAufgaben.Update();
         }
+
+        
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
         {
@@ -33,7 +57,7 @@ namespace PrototypMIS
 
         private void dataGrid1_CurrentCellChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)

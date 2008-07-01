@@ -73,6 +73,7 @@
             this.dataGridAppointments.Name = "dataGridAppointments";
             this.dataGridAppointments.Size = new System.Drawing.Size(240, 262);
             this.dataGridAppointments.TabIndex = 0;
+            this.dataGridAppointments.CurrentCellChanged += new System.EventHandler(this.dataGridAppointments_CurrentCellChanged);
             // 
             // contextMenuTermine
             // 
