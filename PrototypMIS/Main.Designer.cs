@@ -57,6 +57,7 @@
             // 
             // buttonNotizen
             // 
+            this.buttonNotizen.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
             this.buttonNotizen.Location = new System.Drawing.Point(3, 47);
             this.buttonNotizen.Name = "buttonNotizen";
             this.buttonNotizen.Size = new System.Drawing.Size(234, 40);
@@ -66,6 +67,7 @@
             // 
             // buttonTermine
             // 
+            this.buttonTermine.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
             this.buttonTermine.Location = new System.Drawing.Point(3, 90);
             this.buttonTermine.Name = "buttonTermine";
             this.buttonTermine.Size = new System.Drawing.Size(234, 40);
@@ -75,6 +77,7 @@
             // 
             // buttonKontakte
             // 
+            this.buttonKontakte.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
             this.buttonKontakte.Location = new System.Drawing.Point(3, 133);
             this.buttonKontakte.Name = "buttonKontakte";
             this.buttonKontakte.Size = new System.Drawing.Size(234, 40);
@@ -84,6 +87,7 @@
             // 
             // buttonKunden
             // 
+            this.buttonKunden.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
             this.buttonKunden.Location = new System.Drawing.Point(3, 176);
             this.buttonKunden.Name = "buttonKunden";
             this.buttonKunden.Size = new System.Drawing.Size(234, 40);
@@ -93,6 +97,7 @@
             // 
             // buttonFotos
             // 
+            this.buttonFotos.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
             this.buttonFotos.Location = new System.Drawing.Point(3, 219);
             this.buttonFotos.Name = "buttonFotos";
             this.buttonFotos.Size = new System.Drawing.Size(234, 40);
@@ -102,6 +107,7 @@
             // 
             // buttonAufgaben
             // 
+            this.buttonAufgaben.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
             this.buttonAufgaben.Location = new System.Drawing.Point(3, 5);
             this.buttonAufgaben.Name = "buttonAufgaben";
             this.buttonAufgaben.Size = new System.Drawing.Size(234, 40);
