@@ -33,6 +33,10 @@
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
             this.menuItemFoto = new System.Windows.Forms.MenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.menuItemShow = new System.Windows.Forms.MenuItem();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -52,10 +56,31 @@
             // 
             // listView1
             // 
+            this.listView1.ContextMenu = this.contextMenu1;
+            this.listView1.LargeImageList = this.imageList1;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(234, 262);
             this.listView1.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageSize = new System.Drawing.Size(64, 64);
+            // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.menuItemShow);
+            this.contextMenu1.MenuItems.Add(this.menuItemDelete);
+            // 
+            // menuItemShow
+            // 
+            this.menuItemShow.Text = "anzeigen";
+            this.menuItemShow.Click += new System.EventHandler(this.menuItemShow_Click);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // Fotos
             // 
@@ -76,5 +101,9 @@
         private System.Windows.Forms.MenuItem menuItemZurueck;
         private System.Windows.Forms.MenuItem menuItemFoto;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem menuItemShow;
+        private System.Windows.Forms.MenuItem menuItemDelete;
     }
 }

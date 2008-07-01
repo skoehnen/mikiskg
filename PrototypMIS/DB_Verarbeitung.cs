@@ -142,6 +142,29 @@ namespace PrototypMIS
             conn.Close();
         }
 
+        public void fotoLoeschen(String titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command1 = conn.CreateCommand();
+            command1.CommandText = "SELECT pfad FROM Fotos WHERE titel = '" + titel + "'";
+
+            SqlCeDataReader rs = command1.ExecuteReader();
+            
+            String pfad = "";
+
+            while (rs.Read())
+            {
+                pfad = rs["pfad"].ToString();
+            }
+            SqlCeCommand command = new SqlCeCommand();
+            command.CommandText = "DELETE FROM Fotos WHERE titel = '" + titel + "'";
+            command.ExecuteNonQuery();
+
+            File.Delete(pfad);
+            conn.Close();
+        }
+
         public void fotoAendern(FotoInfo foto)
         {
             SqlCeConnection conn = this.DBVerbindung();
