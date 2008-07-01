@@ -134,6 +134,7 @@
     <Compile Include="Notizen.Designer.cs">
       <DependentUpon>Notizen.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotizInfo.cs" />
     <Compile Include="OutlookCommunication.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
