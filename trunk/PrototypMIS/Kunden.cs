@@ -75,6 +75,7 @@ namespace PrototypMIS
             Referenz_Kunden.Service1 webkunde = new PrototypMIS.Referenz_Kunden.Service1();
             auswahl = listBox_kunden.SelectedIndex;
             netzkunde = webkunde.getCustomerByRef(kundennr[auswahl].ToString());
+            listBox_kunden.Items.Clear();
             new Kunde(netzkunde).Show();
         }
 
