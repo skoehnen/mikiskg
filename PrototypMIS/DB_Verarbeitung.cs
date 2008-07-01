@@ -234,5 +234,30 @@ namespace PrototypMIS
 
             return new NotizInfo(titel, text);
         }
+
+        public void notizLoeschenTitel(String titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM Notizen WHERE titel = '" + titel + "'";
+
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        public void notizUpdateTitel(String titel, NotizInfo notiz)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "UPDATE Notizen SET titel = '" + notiz.getTitel() + "', text = '" + notiz.getText() + "' WHERE titel = '" + titel + "'";
+
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
     }
 }

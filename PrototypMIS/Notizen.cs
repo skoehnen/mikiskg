@@ -12,6 +12,7 @@ namespace PrototypMIS
     public partial class Notizen : Form
     {
         DB_Verarbeitung db = new DB_Verarbeitung();
+
         public Notizen()
         {
             InitializeComponent();
@@ -36,6 +37,17 @@ namespace PrototypMIS
         }
 
         private void gotFocus(object sender, EventArgs e)
+        {
+            this.updateGrid();
+        }
+
+        private void menuItemDelete_Click(object sender, EventArgs e)
+        {
+            db.notizLoeschenTitel(dataGrid1[dataGrid1.CurrentCell.RowNumber, dataGrid1.CurrentCell.ColumnNumber].ToString());
+            updateGrid();
+        }
+
+        private void updateGrid()
         {
             dataGrid1.DataSource = db.notizListe().Tables[0];
         }

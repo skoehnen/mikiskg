@@ -32,10 +32,12 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemBack = new System.Windows.Forms.MenuItem();
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
             this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxText = new System.Windows.Forms.TextBox();
-            this.menuItemSave = new System.Windows.Forms.MenuItem();
+            this.dataGridLink = new System.Windows.Forms.DataGrid();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -51,7 +53,13 @@
             // menuItemMenu
             // 
             this.menuItemMenu.MenuItems.Add(this.menuItemSave);
+            this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
             this.menuItemMenu.Text = "Menü";
+            // 
+            // menuItemSave
+            // 
+            this.menuItemSave.Text = "speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
             // 
             // textBoxTitel
             // 
@@ -72,13 +80,21 @@
             this.textBoxText.Location = new System.Drawing.Point(3, 35);
             this.textBoxText.Multiline = true;
             this.textBoxText.Name = "textBoxText";
-            this.textBoxText.Size = new System.Drawing.Size(234, 230);
+            this.textBoxText.Size = new System.Drawing.Size(234, 129);
             this.textBoxText.TabIndex = 2;
             // 
-            // menuItemSave
+            // dataGridLink
             // 
-            this.menuItemSave.Text = "speichern";
-            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
+            this.dataGridLink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLink.Location = new System.Drawing.Point(3, 170);
+            this.dataGridLink.Name = "dataGridLink";
+            this.dataGridLink.Size = new System.Drawing.Size(234, 95);
+            this.dataGridLink.TabIndex = 4;
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // Notiz
             // 
@@ -86,6 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Controls.Add(this.dataGridLink);
             this.Controls.Add(this.textBoxText);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxTitel);
@@ -104,5 +121,7 @@
         private System.Windows.Forms.TextBox textBoxTitel;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxText;
+        private System.Windows.Forms.DataGrid dataGridLink;
+        private System.Windows.Forms.MenuItem menuItemDelete;
     }
 }
