@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.WindowsMobile.Forms;
-using OpenNETCF.WindowsMobile.Ink.Interfaces;
 
 namespace PrototypMIS
 {
@@ -40,14 +39,33 @@ namespace PrototypMIS
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
-            db.notizSpeichern(new NotizInfo(textBoxTitel.Text, textBoxText.Text));
-            fensterSchliessen();
+            if (notiz == null)
+            {
+                db.notizSpeichern(new NotizInfo(textBoxTitel.Text, textBoxText.Text));
+            }
+            else
+            {
+                db.notizUpdateTitel(this.notiz.getTitel(),new NotizInfo(textBoxTitel.Text,textBoxText.Text));
+            }
+            this.fensterSchliessen();
         }
 
         private void fensterSchliessen()
         {
             Dispose();
             this.Close();
+        }
+
+        private void menuItemDelete_Click(object sender, EventArgs e)
+        {
+            if (this.notiz == null)
+            {
+                MessageBox.Show("Notiz nicht gespeichert");
+            }
+            else
+            {
+                db.notizLoeschenTitel(notiz.getTitel());
+            }
         }
     }
 }

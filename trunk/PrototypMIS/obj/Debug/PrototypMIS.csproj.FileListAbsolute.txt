@@ -134,7 +134,6 @@ C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.dll
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.dll
-C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\OpenNETCF.WindowsMobile.Ink.dll
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml

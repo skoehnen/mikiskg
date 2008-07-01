@@ -81,6 +81,7 @@
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // Notizen
             // 
