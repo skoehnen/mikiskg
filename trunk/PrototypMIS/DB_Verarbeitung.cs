@@ -152,11 +152,87 @@ namespace PrototypMIS
             {
                 command.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Titel bereits vergeben");
             }
             conn.Close();
+        }
+
+        public void notizSpeichern(NotizInfo notiz)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "INSERT INTO Notizen (text, titel) VALUES ('" + notiz.getText() + "', '" + notiz.getTitel() + "')";
+           
+            command.ExecuteNonQuery();
+            
+            conn.Close();
+        }
+
+        public NotizInfo notizHolen(int id)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT titel, text FROM notizen WHERE id = " + id;
+
+            String text = null;
+            String titel = null;
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            while (ResultSet.Read())
+            {
+                text = ResultSet["text"].ToString();
+                titel = ResultSet["titel"].ToString();
+            }
+
+            conn.Close();
+
+            return new NotizInfo(titel, text);
+        }
+
+        public System.Data.DataSet notizListe()
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT titel FROM Notizen";
+
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
+        }
+
+        public NotizInfo notizHolenTitel(String titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT titel, text FROM notizen WHERE titel = '" + titel + "'";
+
+            String text = null;
+            titel = null;
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            while (ResultSet.Read())
+            {
+                text = ResultSet["text"].ToString();
+                titel = ResultSet["titel"].ToString();
+            }
+
+            conn.Close();
+
+            return new NotizInfo(titel, text);
         }
     }
 }

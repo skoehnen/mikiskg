@@ -32,6 +32,10 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemBack = new System.Windows.Forms.MenuItem();
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.textBoxTitel = new System.Windows.Forms.TextBox();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.textBoxText = new System.Windows.Forms.TextBox();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -46,7 +50,35 @@
             // 
             // menuItemMenu
             // 
+            this.menuItemMenu.MenuItems.Add(this.menuItemSave);
             this.menuItemMenu.Text = "Menü";
+            // 
+            // textBoxTitel
+            // 
+            this.textBoxTitel.Location = new System.Drawing.Point(39, 8);
+            this.textBoxTitel.Name = "textBoxTitel";
+            this.textBoxTitel.Size = new System.Drawing.Size(198, 21);
+            this.textBoxTitel.TabIndex = 0;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Location = new System.Drawing.Point(3, 9);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(30, 20);
+            this.labelTitle.Text = "Titel";
+            // 
+            // textBoxText
+            // 
+            this.textBoxText.Location = new System.Drawing.Point(3, 35);
+            this.textBoxText.Multiline = true;
+            this.textBoxText.Name = "textBoxText";
+            this.textBoxText.Size = new System.Drawing.Size(234, 230);
+            this.textBoxText.TabIndex = 2;
+            // 
+            // menuItemSave
+            // 
+            this.menuItemSave.Text = "speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
             // 
             // Notiz
             // 
@@ -54,6 +86,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Controls.Add(this.textBoxText);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.textBoxTitel);
             this.Menu = this.mainMenu1;
             this.Name = "Notiz";
             this.Text = "Notiz";
@@ -65,5 +100,9 @@
 
         private System.Windows.Forms.MenuItem menuItemBack;
         private System.Windows.Forms.MenuItem menuItemMenu;
+        private System.Windows.Forms.MenuItem menuItemSave;
+        private System.Windows.Forms.TextBox textBoxTitel;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.TextBox textBoxText;
     }
 }

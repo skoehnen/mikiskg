@@ -13,14 +13,41 @@ namespace PrototypMIS
 {
     public partial class Notiz : Form
     {
+        NotizInfo notiz;
+        DB_Verarbeitung  db = null;
+
         public Notiz()
         {
             InitializeComponent();
+            db = new DB_Verarbeitung();
+            
+        }
+
+        public Notiz(NotizInfo notiz)
+        {
+            InitializeComponent();
+            this.notiz = notiz;
+            db = new DB_Verarbeitung();
+
+            textBoxText.Text = this.notiz.getText();
+            textBoxTitel.Text = this.notiz.getTitel();
         }
 
         private void menuItem1_Click(object sender, EventArgs e)
         {
+            fensterSchliessen();
+        }
+
+        private void menuItemSave_Click(object sender, EventArgs e)
+        {
+            db.notizSpeichern(new NotizInfo(textBoxTitel.Text, textBoxText.Text));
+            fensterSchliessen();
+        }
+
+        private void fensterSchliessen()
+        {
             Dispose();
+            this.Close();
         }
     }
 }

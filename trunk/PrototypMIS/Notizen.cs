@@ -11,6 +11,7 @@ namespace PrototypMIS
 {
     public partial class Notizen : Form
     {
+        DB_Verarbeitung db = new DB_Verarbeitung();
         public Notizen()
         {
             InitializeComponent();
@@ -19,11 +20,24 @@ namespace PrototypMIS
         private void menuItemZurueck_Click(object sender, EventArgs e)
         {
             Dispose();
+            this.Close();
         }
 
         private void menuItemCreateNote_Click(object sender, EventArgs e)
         {
             new Notiz().Show();
+        }
+
+        private void menuItemShow_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGrid1.CurrentCell.ColumnNumber;
+            int columnIndex = dataGrid1.CurrentCell.ColumnNumber;
+            new Notiz(db.notizHolenTitel(dataGrid1[rowIndex,columnIndex].ToString())).Show();
+        }
+
+        private void gotFocus(object sender, EventArgs e)
+        {
+            dataGrid1.DataSource = db.notizListe().Tables[0];
         }
     }
 }
