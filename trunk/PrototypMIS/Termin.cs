@@ -35,14 +35,15 @@ namespace PrototypMIS
 
         private void menuItemBack_Click(object sender, EventArgs e)
         {
+            new Termine().Show();
             Dispose();
         }
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
             outlookCom.addAppointment(textBoxTitle.Text, textBoxLocation.Text, textBoxStartTime.Text, dateTimePickerStartDate.Value, textBoxEndTime.Text, dateTimePickerEndDate.Value);
+            new Termine().Show();
             Dispose();
-            new Termin();
         }
 
     }

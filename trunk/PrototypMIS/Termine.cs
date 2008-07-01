@@ -12,7 +12,6 @@ namespace PrototypMIS
 {
     public partial class Termine : Form
     {
-        DataGrid gridAppointments = new DataGrid();
         
         public Termine()
         {
@@ -22,6 +21,7 @@ namespace PrototypMIS
             DataRow row ;
             // Subject,Location,Start,End
             AppointmentCollection appointments = new OutlookCommunication().getOutlookSession().Appointments.Items;
+            dataGrid_temp_Termine.DataSource = appointments;
             // Spalte 1
             column.ColumnName = "Subject";
             column.DataType = System.Type.GetType("System.String");
@@ -44,7 +44,7 @@ namespace PrototypMIS
             // Spalte 5
             /*column = new DataColumn();
             column.ColumnName = "ItemID";
-            column.DataType = System.Type.GetType("System.GlobalObjectId");
+            column.DataType = System.Type.GetType("System.String");
             table.Columns.Add(column);*/
             foreach (PimItem item in appointments)
             {
@@ -53,11 +53,11 @@ namespace PrototypMIS
                 row["Ort"] = item.Properties[AppointmentProperty.Location];
                 row["Start"] = item.Properties[AppointmentProperty.Start];
                 row["Ende"] = item.Properties[AppointmentProperty.End];
-                //row["ItemID"] = item.Properties[AppointmentProperty.GlobalObjectId];
+                //row["ItemID"] = item.ItemId.ToString();
                 table.Rows.Add(row);
             }
             
-            gridAppointments.DataSource = appointments;
+            
             dataGridAppointments.DataSource = table;//appointments;
             dataGridAppointments.Update();
         }
@@ -66,6 +66,7 @@ namespace PrototypMIS
         {
             Dispose();
         }
+
 
         private void menuItemTerminAnlegen_Click(object sender, EventArgs e)
         {
@@ -76,17 +77,22 @@ namespace PrototypMIS
         {
             int index = dataGridAppointments.CurrentRowIndex;
             OutlookCommunication outlookCom = new OutlookCommunication();
-            object Id = dataGridAppointments[index, 23]; // weil in Spalte 23 die ID des Termins steht
+//            object Id = dataGridAppointments[index, 23]; // weil in Spalte 23 die ID des Termins steht
+            object Id = dataGrid_temp_Termine[index, 23]; // weil in Spalte 23 die ID des Termins steht
             outlookCom.deleteAppointment(MikiConverter.objectToItemId(Id));
+            Dispose();
+            new Termine().Show();
         }
 
         private void menuItemAnzeigen_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridAppointments.CurrentRowIndex;
             int columnIndex = 23;
-            MessageBox.Show(rowIndex.ToString());
-            object oid = gridAppointments[rowIndex, columnIndex];
+            //object oid = dataGridAppointments[rowIndex, columnIndex];
+            object oid = dataGrid_temp_Termine[rowIndex, columnIndex];
+            Dispose();
             new Termin(MikiConverter.objectToItemId(oid)).Show();
+            
         }
 
         private void dataGridAppointments_CurrentCellChanged(object sender, EventArgs e)
