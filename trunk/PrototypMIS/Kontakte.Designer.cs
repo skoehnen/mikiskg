@@ -38,6 +38,7 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.menuItemShow = new System.Windows.Forms.MenuItem();
+            this.menuItemFitColumnWidth = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -54,6 +55,7 @@
             // 
             this.Menue.MenuItems.Add(this.menuItemSearch);
             this.Menue.MenuItems.Add(this.menuItemCreateContact);
+            this.Menue.MenuItems.Add(this.menuItemFitColumnWidth);
             this.Menue.Text = "Menü";
             // 
             // menuItemSearch
@@ -92,6 +94,11 @@
             this.menuItemShow.Text = "anzeigen";
             this.menuItemShow.Click += new System.EventHandler(this.menuItemShow_Click);
             // 
+            // menuItemFitColumnWidth
+            // 
+            this.menuItemFitColumnWidth.Text = "Spaltenbreite anpassen";
+            this.menuItemFitColumnWidth.Click += new System.EventHandler(this.menuItemFitColumnWidth_Click);
+            // 
             // Kontakte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -116,5 +123,6 @@
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.MenuItem menuItemShow;
+        private System.Windows.Forms.MenuItem menuItemFitColumnWidth;
     }
 }

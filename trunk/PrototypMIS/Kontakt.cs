@@ -33,12 +33,14 @@ namespace PrototypMIS
         private void menuItemZurueck_Click(object sender, EventArgs e)
         {
             Dispose();
+            new Kontakte().Show();
         }
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
             objOutlook.addContact(textBoxName.Text, textBoxFirstName.Text, textBoxPhone.Text, textBoxMail.Text);
-            this.Close();
+            Dispose();
+            new Kontakte().Show();
         }
 
         private void menuItemLink_Click(object sender, EventArgs e)
