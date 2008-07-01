@@ -38,6 +38,7 @@
             this.contextMenuTermine = new System.Windows.Forms.ContextMenu();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.menuItemAnzeigen = new System.Windows.Forms.MenuItem();
+            this.dataGrid_temp_Termine = new System.Windows.Forms.DataGrid();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -90,12 +91,22 @@
             this.menuItemAnzeigen.Text = "anzeigen";
             this.menuItemAnzeigen.Click += new System.EventHandler(this.menuItemAnzeigen_Click);
             // 
+            // dataGrid_temp_Termine
+            // 
+            this.dataGrid_temp_Termine.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGrid_temp_Termine.Location = new System.Drawing.Point(4, 37);
+            this.dataGrid_temp_Termine.Name = "dataGrid_temp_Termine";
+            this.dataGrid_temp_Termine.Size = new System.Drawing.Size(224, 200);
+            this.dataGrid_temp_Termine.TabIndex = 1;
+            this.dataGrid_temp_Termine.Visible = false;
+            // 
             // Termine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Controls.Add(this.dataGrid_temp_Termine);
             this.Controls.Add(this.dataGridAppointments);
             this.KeyPreview = true;
             this.Menu = this.mainMenu1;
@@ -115,5 +126,6 @@
         private System.Windows.Forms.ContextMenu contextMenuTermine;
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.MenuItem menuItemAnzeigen;
+        private System.Windows.Forms.DataGrid dataGrid_temp_Termine;
     }
 }
