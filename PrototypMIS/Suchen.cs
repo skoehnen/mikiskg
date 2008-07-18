@@ -75,9 +75,13 @@ namespace PrototypMIS
             if (checkBoxNotizen.Checked)
             {
                 System.Data.DataSet data = db.notizSuche(textBoxSuchen.Text);
-                row = table.NewRow();
-                row["ItemID"] = data.Tables[0].Rows[0].ItemArray[1];
-                row["Titel/Nachname"] = data.Tables[0].Rows[0].ItemArray[0];
+                if (data.Tables[0].Rows.Count > 0)
+                {
+                    row = table.NewRow();
+                    row["ItemID"] = data.Tables[0].Rows[0].ItemArray[1];
+                    row["Titel/Nachname"] = data.Tables[0].Rows[0].ItemArray[0];
+                    table.Rows.Add(row);
+                }
             }
             if (checkBoxTermine.Checked)
             {
