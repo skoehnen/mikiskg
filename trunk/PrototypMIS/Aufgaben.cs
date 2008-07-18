@@ -55,11 +55,6 @@ namespace PrototypMIS
             new Aufgabe().Show();
         }
 
-        private void dataGrid1_CurrentCellChanged(object sender, EventArgs e)
-        {
-          
-        }
-
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
             int index = dataGridAufgaben.CurrentRowIndex;
