@@ -16,12 +16,14 @@ namespace PrototypMIS
         DataTable table;
         DataColumn column;
         DataRow row;
+        DB_Verarbeitung db;
 
         public Suchen()
         {
             InitializeComponent();
             table = new DataTable("Suchergebnis");
             this.createTable();
+            db = new DB_Verarbeitung();
         }
 
         public Suchen(ItemId sourceItem)
@@ -70,10 +72,13 @@ namespace PrototypMIS
                     table.Rows.Add(row);
                 }
             }
-            //if (checkBoxNotizen.Checked)
-            //{
-            //    // Suche in Notizen
-            //}
+            if (checkBoxNotizen.Checked)
+            {
+                System.Data.DataSet data = db.notizSuche(textBoxSuchen.Text);
+                row = table.NewRow();
+                row["ItemID"] = data.Tables[0].Rows[0].ItemArray[1];
+                row["Titel/Nachname"] = data.Tables[0].Rows[0].ItemArray[0];
+            }
             if (checkBoxTermine.Checked)
             {
                 collection = terminSuche(textBoxSuchen.Text);

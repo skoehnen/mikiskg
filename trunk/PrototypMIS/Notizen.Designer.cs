@@ -37,6 +37,7 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemShow = new System.Windows.Forms.MenuItem();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemSearch = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -52,6 +53,7 @@
             // menuItemMenu
             // 
             this.menuItemMenu.MenuItems.Add(this.menuItemCreateNote);
+            this.menuItemMenu.MenuItems.Add(this.menuItemSearch);
             this.menuItemMenu.Text = "Menü";
             // 
             // menuItemCreateNote
@@ -83,6 +85,11 @@
             this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
+            // menuItemSearch
+            // 
+            this.menuItemSearch.Text = "Suchen";
+            this.menuItemSearch.Click += new System.EventHandler(this.menuItemSearch_Click);
+            // 
             // Notizen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -107,5 +114,6 @@
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem menuItemShow;
         private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemSearch;
     }
 }

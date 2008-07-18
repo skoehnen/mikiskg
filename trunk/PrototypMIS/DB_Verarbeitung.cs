@@ -217,12 +217,55 @@ namespace PrototypMIS
             return new NotizInfo(titel, text);
         }
 
+        /// <summary>
+        /// Soll die ID und den Titel aus einem DB_Verarbeitung Objekt auslesen
+        /// und als Dataset zurückgeben.
+        /// 
+        /// Als Einlesemöglichkeit für das DataGrid der Notizen gedacht
+        /// </summary>
+        /// <returns></returns>
+        public System.Data.DataSet notizIdUndTitelAuslesen()
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT titel, id FROM Notizen";
+
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
+        }
+
         public System.Data.DataSet notizListe()
         {
             SqlCeConnection conn = this.DBVerbindung();
 
             SqlCeCommand selectCmd = conn.CreateCommand();
             selectCmd.CommandText = "SELECT titel FROM Notizen";
+
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
+        }
+
+        public System.Data.DataSet notizSuche(String titel)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT titel, id FROM Notizen Where titel = '" + titel + "'";
 
             SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
 
