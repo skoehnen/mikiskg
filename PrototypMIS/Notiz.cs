@@ -66,6 +66,7 @@ namespace PrototypMIS
             {
                 db.notizLoeschenTitel(notiz.getTitel());
             }
+            Dispose();
         }
     }
 }

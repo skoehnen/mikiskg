@@ -34,6 +34,7 @@ namespace PrototypMIS
         {
             myCommunication.addTask(textBoxTitle.Text, dateTimePicker1.Value, textBoxDescription.Text);
             this.Close();
+            new Aufgaben().Show();
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)

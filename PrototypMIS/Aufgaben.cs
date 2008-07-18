@@ -31,12 +31,18 @@ namespace PrototypMIS
             column.ColumnName = "Datum";
             column.DataType = System.Type.GetType("System.String");
             table.Columns.Add(column);
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "ItemId";
+            table.Columns.Add(column);
+
             foreach (PimItem item in collection)
             {
                 row = table.NewRow();
                 row["Titel"] = item.Properties[TaskProperty.Subject];
                 row["Subject"] = item.Properties[TaskProperty.Body];
                 row["Datum"] = item.Properties[TaskProperty.DueDate];
+                row["ItemId"] = item.ItemId.ToString();
                 table.Rows.Add(row);
             }
             dataGridAufgaben.DataSource = table;
@@ -53,20 +59,23 @@ namespace PrototypMIS
         private void menuItemAufgabeAnlegen_Click(object sender, EventArgs e)
         {
             new Aufgabe().Show();
+            this.Close();
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
             int index = dataGridAufgaben.CurrentRowIndex;
             OutlookCommunication outlookCom=new OutlookCommunication();
-            object Id = dataGridAufgaben[index, 21]; // weil in Spalte 21 die ID des Tasks steht
+            object Id = dataGridAufgaben[index, 3]; // weil in Spalte 3 die ID des Tasks steht
             outlookCom.deleteTask(MikiConverter.objectToItemId(Id));
+            Dispose();
+            new Aufgaben().Show();
         }
 
         private void menuItemShowEntry_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridAufgaben.CurrentRowIndex;
-            int columnIndex = 21;
+            int columnIndex = 3;
             object oid = dataGridAufgaben[rowIndex, columnIndex];
             new Aufgabe(MikiConverter.objectToItemId(oid)).Show();
         }

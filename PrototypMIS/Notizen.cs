@@ -49,7 +49,17 @@ namespace PrototypMIS
 
         private void updateGrid()
         {
-            dataGrid1.DataSource = db.notizListe().Tables[0];
+
+            dataGrid1.DataSource = db.notizIdUndTitelAuslesen().Tables[0];
+            dataGrid1.Update();
+
+           // dataGrid1.DataSource = db.notizListe().Tables[0];
         }
+
+        private void menuItemSearch_Click(object sender, EventArgs e)
+        {
+            new Suchen().Show();
+        }
+
     }
 }
