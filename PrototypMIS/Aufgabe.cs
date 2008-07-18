@@ -13,21 +13,27 @@ namespace PrototypMIS
     public partial class Aufgabe : Form
     {
         OutlookCommunication myCommunication;
-        Task task;
+        Task task = null;
+        System.Collections.ArrayList linkedItems = null;
         
         public Aufgabe()
         {
             InitializeComponent();
             myCommunication = new OutlookCommunication();
+            this.menuItemLink.Enabled = false;
         }
 
-        public Aufgabe(ItemId ID)
+        public Aufgabe(ItemId id)
         {
             InitializeComponent();
-            task = new Task(ID);
+            task = new Task(id);
             textBoxTitle.Text = task.Subject;
             dateTimePicker1.Value = task.DueDate;
             textBoxDescription.Text = task.Body;
+            this.menuItemLink.Enabled = true;
+            linkedItems = new DB_Verarbeitung().abfrage(id);
+            dataGridLinks.DataSource = linkedItems;
+            dataGridLinks.Refresh();
         }
 
         private void menuItemSave_Click(object sender, EventArgs e)
@@ -51,7 +57,7 @@ namespace PrototypMIS
 
         private void menuItemLink_Click(object sender, EventArgs e)
         {
-
+            new Suchen(task.ItemId).Show();
         }
 
                 

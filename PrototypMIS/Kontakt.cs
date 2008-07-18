@@ -12,22 +12,29 @@ namespace PrototypMIS
 {
     public partial class Kontakt : Form
     {
-        OutlookCommunication objOutlook;
+        OutlookCommunication objOutlook = null;
+        Contact kontakt = null;
+        System.Collections.ArrayList linkedItems = null;
 
         public Kontakt()
         {
             InitializeComponent();
             objOutlook = new OutlookCommunication();
+            this.menuItemLink.Enabled = false;
         }
 
         public Kontakt(ItemId id)
         {
             InitializeComponent();
-            Contact kontakt = new Contact(id);
-            textBoxFirstName.Text = kontakt.FirstName;
-            textBoxMail.Text = kontakt.Email1Address;
-            textBoxName.Text = kontakt.LastName;
-            textBoxPhone.Text = kontakt.HomeTelephoneNumber;
+            this.kontakt = new Contact(id);
+            this.textBoxFirstName.Text = kontakt.FirstName;
+            this.textBoxMail.Text = kontakt.Email1Address;
+            this.textBoxName.Text = kontakt.LastName;
+            this.textBoxPhone.Text = kontakt.HomeTelephoneNumber;
+            linkedItems = new DB_Verarbeitung().abfrage(id);
+            this.menuItemLink.Enabled = true;
+            dataGridLinks.DataSource = linkedItems;
+            dataGridLinks.Refresh();
         }
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
@@ -45,7 +52,16 @@ namespace PrototypMIS
 
         private void menuItemLink_Click(object sender, EventArgs e)
         {
-            new Suchen().Show();
+            if (kontakt == null)
+            {
+                objOutlook.addContact(textBoxName.Text, textBoxFirstName.Text, textBoxPhone.Text, textBoxMail.Text);
+            }
+            //Hier noch Funktionalität einbauen damit die Verlinkung bei einem nicht gespeicherten Objekt die Speicherung auslöst
+            //und man direkt die ItemId in this.kontakt.ItemId speichert.
+            //
+            //Bis dahin wird der Menü-Punkt ausgegraut
+
+            new Suchen(this.kontakt.ItemId).Show();
         }
     }
 }

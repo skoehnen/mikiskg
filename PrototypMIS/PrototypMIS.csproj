@@ -84,6 +84,7 @@
     <Compile Include="Kontakt.Designer.cs">
       <DependentUpon>Kontakt.cs</DependentUpon>
     </Compile>
+    <Compile Include="LinkInfo.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

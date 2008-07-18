@@ -13,24 +13,31 @@ namespace PrototypMIS
     public partial class Termin : Form
     {
         OutlookCommunication outlookCom;
+        Appointment termin;
+        System.Collections.ArrayList linkedItems = null;
 
         public Termin()
         {
             InitializeComponent();
             outlookCom = new OutlookCommunication();
+            this.menuItemLink.Enabled = false;
         }
 
         public Termin(ItemId id)
         {
-            outlookCom = new OutlookCommunication();
+            this.outlookCom = new OutlookCommunication();
             InitializeComponent();
-            Appointment termin = new Appointment(id);
-            dateTimePickerStartDate.Value = termin.Start;
-            dateTimePickerEndDate.Value = termin.End;
-            textBoxTitle.Text = termin.Subject;
-            textBoxLocation.Text = termin.Location;
-            textBoxStartTime.Text = MikiConverter.zeitAusDateTime(termin.Start);
-            textBoxEndTime.Text = MikiConverter.zeitAusDateTime(termin.End);
+            this.termin = new Appointment(id);
+            this.dateTimePickerStartDate.Value = termin.Start;
+            this.dateTimePickerEndDate.Value = termin.End;
+            this.textBoxTitle.Text = termin.Subject;
+            this.textBoxLocation.Text = termin.Location;
+            this.textBoxStartTime.Text = MikiConverter.zeitAusDateTime(termin.Start);
+            this.textBoxEndTime.Text = MikiConverter.zeitAusDateTime(termin.End);
+            this.menuItemLink.Enabled = true;
+            linkedItems = new DB_Verarbeitung().abfrage(id);
+            dataGridLinks.DataSource = linkedItems;
+            dataGridLinks.Refresh();
         }
 
         private void menuItemBack_Click(object sender, EventArgs e)
@@ -41,9 +48,14 @@ namespace PrototypMIS
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
-            outlookCom.addAppointment(textBoxTitle.Text, textBoxLocation.Text, textBoxStartTime.Text, dateTimePickerStartDate.Value, textBoxEndTime.Text, dateTimePickerEndDate.Value);
+            this.outlookCom.addAppointment(textBoxTitle.Text, textBoxLocation.Text, textBoxStartTime.Text, dateTimePickerStartDate.Value, textBoxEndTime.Text, dateTimePickerEndDate.Value);
             new Termine().Show();
             Dispose();
+        }
+
+        private void menuItemLink_Click(object sender, EventArgs e)
+        {
+            new Suchen(this.termin.ItemId).Show();
         }
 
     }

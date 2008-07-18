@@ -102,8 +102,15 @@ namespace PrototypMIS
             //{
             //    // Foto
             //}
-            
-            new SuchErgebnis(table).Show();
+
+            if (this.sourceItem == null)
+            {
+                new SuchErgebnis(table).Show();
+            }
+            else
+            {
+                new SuchErgebnis(table, this.sourceItem).Show();
+            }
             
         }
 

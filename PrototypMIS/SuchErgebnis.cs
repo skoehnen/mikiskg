@@ -41,7 +41,7 @@ namespace PrototypMIS
         {
             DB_Verarbeitung db = new DB_Verarbeitung();
             int rowIndex = dataGridSearchResults.CurrentRowIndex;
-            int columnIndex = 21;
+            int columnIndex = 0;
             Object oid = dataGridSearchResults[rowIndex,columnIndex];
             ItemId id = MikiConverter.objectToItemId(oid);
             db.verknuepfung_eintragen(source, id);
@@ -51,7 +51,6 @@ namespace PrototypMIS
         {
             ItemId selectedID = MikiConverter.objectToItemId(dataGridSearchResults[dataGridSearchResults.CurrentRowIndex, 0]);
             String type = dataGridSearchResults[dataGridSearchResults.CurrentRowIndex, 3].ToString();
-            MessageBox.Show(type);
             if (type == "Microsoft.WindowsMobile.PocketOutlook.Contact")
             {
                 new Kontakt(selectedID).Show();

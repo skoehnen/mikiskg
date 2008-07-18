@@ -18,7 +18,7 @@ namespace PrototypMIS
         public Notiz()
         {
             InitializeComponent();
-            db = new DB_Verarbeitung();
+            this.db = new DB_Verarbeitung();
             
         }
 
@@ -26,26 +26,26 @@ namespace PrototypMIS
         {
             InitializeComponent();
             this.notiz = notiz;
-            db = new DB_Verarbeitung();
+            this.db = new DB_Verarbeitung();
 
-            textBoxText.Text = this.notiz.getText();
-            textBoxTitel.Text = this.notiz.getTitel();
+            this.textBoxText.Text = this.notiz.getText();
+            this.textBoxTitel.Text = this.notiz.getTitel();
         }
 
         private void menuItem1_Click(object sender, EventArgs e)
         {
-            fensterSchliessen();
+            this.fensterSchliessen();
         }
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
             if (notiz == null)
             {
-                db.notizSpeichern(new NotizInfo(textBoxTitel.Text, textBoxText.Text));
+                this.db.notizSpeichern(new NotizInfo(textBoxTitel.Text, textBoxText.Text));
             }
             else
             {
-                db.notizUpdateTitel(this.notiz.getTitel(),new NotizInfo(textBoxTitel.Text,textBoxText.Text));
+                this.db.notizUpdateTitel(this.notiz.getTitel(),new NotizInfo(textBoxTitel.Text,textBoxText.Text));
             }
             this.fensterSchliessen();
         }
@@ -64,7 +64,7 @@ namespace PrototypMIS
             }
             else
             {
-                db.notizLoeschenTitel(notiz.getTitel());
+                this.db.notizLoeschenTitel(notiz.getTitel());
             }
             Dispose();
         }
