@@ -88,7 +88,7 @@
             // menuItemSearch
             // 
             this.menuItemSearch.Text = "Suchen";
-            this.menuItemSearch.Click += new System.EventHandler(this.menuItemSearch_Click);
+            //this.menuItemSearch.Click += new System.EventHandler(this.menuItemSearch_Click);
             // 
             // Notizen
             // 
