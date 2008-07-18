@@ -6,6 +6,7 @@ using System.Data.SqlServerCe;
 using Microsoft.WindowsMobile.PocketOutlook;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace PrototypMIS
 {
@@ -53,9 +54,9 @@ namespace PrototypMIS
             conn.Close();
         }
 
-        public LinkedList<ItemId> abfrage(ItemId Quelle)
+        public ArrayList abfrage(ItemId Quelle)
         {
-            LinkedList<ItemId> liste = new LinkedList<ItemId>();
+            ArrayList liste = new ArrayList();
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
@@ -66,7 +67,7 @@ namespace PrototypMIS
             while (ResultSet.Read())
             {
                 i = (int)  ResultSet["ItemID_Senke"];
-                liste.AddLast(new ItemId(i));
+                liste.Add(new LinkInfo(i));
             }
             conn.Close();
             return liste;

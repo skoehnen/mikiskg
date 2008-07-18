@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.dataGridLinkedItems = new System.Windows.Forms.DataGrid();
+            this.dataGridLinks = new System.Windows.Forms.DataGrid();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -104,13 +104,13 @@
             this.textBoxDescription.Size = new System.Drawing.Size(234, 67);
             this.textBoxDescription.TabIndex = 9;
             // 
-            // dataGridLinkedItems
+            // dataGridLinks
             // 
-            this.dataGridLinkedItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGridLinkedItems.Location = new System.Drawing.Point(0, 133);
-            this.dataGridLinkedItems.Name = "dataGridLinkedItems";
-            this.dataGridLinkedItems.Size = new System.Drawing.Size(240, 132);
-            this.dataGridLinkedItems.TabIndex = 11;
+            this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.Location = new System.Drawing.Point(0, 133);
+            this.dataGridLinks.Name = "dataGridLinks";
+            this.dataGridLinks.Size = new System.Drawing.Size(240, 132);
+            this.dataGridLinks.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
@@ -126,7 +126,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGridLinkedItems);
+            this.Controls.Add(this.dataGridLinks);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -148,7 +148,7 @@
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.MenuItem menuItemLink;
         private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.DataGrid dataGridLinkedItems;
+        private System.Windows.Forms.DataGrid dataGridLinks;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MenuItem menuItemSave;
     }
