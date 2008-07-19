@@ -40,6 +40,9 @@
             this.textBoxBeschreibung = new System.Windows.Forms.TextBox();
             this.tabPageLinks = new System.Windows.Forms.TabPage();
             this.dataGridLinks = new System.Windows.Forms.DataGrid();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPageFoto.SuspendLayout();
             this.tabPageBeschreibung.SuspendLayout();
@@ -99,7 +102,7 @@
             this.tabPageBeschreibung.Controls.Add(this.textBoxBeschreibung);
             this.tabPageBeschreibung.Location = new System.Drawing.Point(0, 0);
             this.tabPageBeschreibung.Name = "tabPageBeschreibung";
-            this.tabPageBeschreibung.Size = new System.Drawing.Size(240, 245);
+            this.tabPageBeschreibung.Size = new System.Drawing.Size(232, 242);
             this.tabPageBeschreibung.Text = "Beschreibung";
             // 
             // textBoxBeschreibung
@@ -115,7 +118,7 @@
             this.tabPageLinks.Controls.Add(this.dataGridLinks);
             this.tabPageLinks.Location = new System.Drawing.Point(0, 0);
             this.tabPageLinks.Name = "tabPageLinks";
-            this.tabPageLinks.Size = new System.Drawing.Size(240, 245);
+            this.tabPageLinks.Size = new System.Drawing.Size(232, 242);
             this.tabPageLinks.Text = "Verknüpfte Objekte";
             // 
             // dataGridLinks
@@ -125,6 +128,21 @@
             this.dataGridLinks.Name = "dataGridLinks";
             this.dataGridLinks.Size = new System.Drawing.Size(240, 239);
             this.dataGridLinks.TabIndex = 0;
+            // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
+            // 
+            // contextMenuItemShow
+            // 
+            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
+            // 
+            // contextMenuItemDelete
+            // 
+            this.contextMenuItemDelete.Text = "Löschen";
+            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // Foto
             // 
@@ -156,6 +174,9 @@
         private System.Windows.Forms.MenuItem menuItemSpeichern;
         private System.Windows.Forms.TabPage tabPageLinks;
         private System.Windows.Forms.DataGrid dataGridLinks;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem contextMenuItemShow;
+        private System.Windows.Forms.MenuItem contextMenuItemDelete;
 
     }
 }

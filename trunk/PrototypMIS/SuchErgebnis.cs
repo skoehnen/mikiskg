@@ -45,6 +45,8 @@ namespace PrototypMIS
             Object oid = dataGridSearchResults[rowIndex,columnIndex];
             ItemId id = MikiConverter.objectToItemId(oid);
             db.verknuepfung_eintragen(source, id, true);
+            this.Close;
+            this.Dispose();
         }
 
         private void menuItemShow_Click(object sender, EventArgs e)

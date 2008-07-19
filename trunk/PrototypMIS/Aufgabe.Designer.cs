@@ -41,6 +41,9 @@
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.dataGridLinks = new System.Windows.Forms.DataGrid();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -119,6 +122,21 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(133, 22);
             this.dateTimePicker1.TabIndex = 16;
             // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
+            // 
+            // contextMenuItemShow
+            // 
+            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
+            // 
+            // contextMenuItemDelete
+            // 
+            this.contextMenuItemDelete.Text = "Löschen";
+            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
+            // 
             // Aufgabe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -151,5 +169,8 @@
         private System.Windows.Forms.DataGrid dataGridLinks;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MenuItem menuItemSave;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem contextMenuItemShow;
+        private System.Windows.Forms.MenuItem contextMenuItemDelete;
     }
 }

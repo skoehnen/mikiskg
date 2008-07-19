@@ -33,11 +33,14 @@
             this.menuItemBack = new System.Windows.Forms.MenuItem();
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
             this.menuItemSave = new System.Windows.Forms.MenuItem();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxText = new System.Windows.Forms.TextBox();
             this.dataGridLink = new System.Windows.Forms.DataGrid();
-            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -60,6 +63,11 @@
             // 
             this.menuItemSave.Text = "speichern";
             this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // textBoxTitel
             // 
@@ -91,10 +99,20 @@
             this.dataGridLink.Size = new System.Drawing.Size(234, 95);
             this.dataGridLink.TabIndex = 4;
             // 
-            // menuItemDelete
+            // contextMenu1
             // 
-            this.menuItemDelete.Text = "löschen";
-            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
+            // 
+            // contextMenuItemShow
+            // 
+            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
+            // 
+            // contextMenuItemDelete
+            // 
+            this.contextMenuItemDelete.Text = "Löschen";
+            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // Notiz
             // 
@@ -123,5 +141,8 @@
         private System.Windows.Forms.TextBox textBoxText;
         private System.Windows.Forms.DataGrid dataGridLink;
         private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem contextMenuItemShow;
+        private System.Windows.Forms.MenuItem contextMenuItemDelete;
     }
 }
