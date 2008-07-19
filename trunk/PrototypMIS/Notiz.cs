@@ -81,9 +81,10 @@ namespace PrototypMIS
         private void contextMenuItemDelete_Click(object sender, EventArgs e)
         {
             if (secureDelete.boolDelete())
-            {
-                ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
-                new DB_Verarbeitung().einzelverknuepfung_loeschen(this.notiz.getId(), MikiConverter.itemIdToInt(ziel), true);
+            {   
+                //Muss noch angepasst werden
+                //ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
+                //new DB_Verarbeitung().einzelverknuepfung_loeschen(this.notiz.getId(), MikiConverter.itemIdToInt(ziel), true);
             }
         }
 

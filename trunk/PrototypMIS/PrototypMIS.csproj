@@ -122,6 +122,7 @@
       <DependentUpon>Kontakte.cs</DependentUpon>
     </Compile>
     <Compile Include="MikiConverter.cs" />
+    <Compile Include="MikiTreeNode.cs" />
     <Compile Include="Notiz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +196,9 @@
       <DependentUpon>SuchErgebnis.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuchergebnisTree.resx">
+      <DependentUpon>SuchergebnisTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Termin.resx">
       <DependentUpon>Termin.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -219,6 +223,12 @@
     </Compile>
     <Compile Include="SuchErgebnis.Designer.cs">
       <DependentUpon>SuchErgebnis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuchergebnisTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuchergebnisTree.Designer.cs">
+      <DependentUpon>SuchergebnisTree.cs</DependentUpon>
     </Compile>
     <Compile Include="Termin.cs">
       <SubType>Form</SubType>
