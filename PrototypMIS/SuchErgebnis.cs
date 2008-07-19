@@ -44,7 +44,7 @@ namespace PrototypMIS
             int columnIndex = 0;
             Object oid = dataGridSearchResults[rowIndex,columnIndex];
             ItemId id = MikiConverter.objectToItemId(oid);
-            db.verknuepfung_eintragen(source, id);
+            db.verknuepfung_eintragen(source, id, true);
         }
 
         private void menuItemShow_Click(object sender, EventArgs e)

@@ -38,9 +38,12 @@
             this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.tabPageBeschreibung = new System.Windows.Forms.TabPage();
             this.textBoxBeschreibung = new System.Windows.Forms.TextBox();
+            this.tabPageLinks = new System.Windows.Forms.TabPage();
+            this.dataGridLinks = new System.Windows.Forms.DataGrid();
             this.tabControl1.SuspendLayout();
             this.tabPageFoto.SuspendLayout();
             this.tabPageBeschreibung.SuspendLayout();
+            this.tabPageLinks.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -62,6 +65,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageFoto);
             this.tabControl1.Controls.Add(this.tabPageBeschreibung);
+            this.tabControl1.Controls.Add(this.tabPageLinks);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -106,6 +110,22 @@
             this.textBoxBeschreibung.Size = new System.Drawing.Size(230, 239);
             this.textBoxBeschreibung.TabIndex = 0;
             // 
+            // tabPageLinks
+            // 
+            this.tabPageLinks.Controls.Add(this.dataGridLinks);
+            this.tabPageLinks.Location = new System.Drawing.Point(0, 0);
+            this.tabPageLinks.Name = "tabPageLinks";
+            this.tabPageLinks.Size = new System.Drawing.Size(240, 245);
+            this.tabPageLinks.Text = "Verknüpfte Objekte";
+            // 
+            // dataGridLinks
+            // 
+            this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.Location = new System.Drawing.Point(0, 3);
+            this.dataGridLinks.Name = "dataGridLinks";
+            this.dataGridLinks.Size = new System.Drawing.Size(240, 239);
+            this.dataGridLinks.TabIndex = 0;
+            // 
             // Foto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -119,6 +139,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageFoto.ResumeLayout(false);
             this.tabPageBeschreibung.ResumeLayout(false);
+            this.tabPageLinks.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -133,6 +154,8 @@
         private System.Windows.Forms.TextBox textBoxBeschreibung;
         private System.Windows.Forms.MenuItem menuItemAbbrechen;
         private System.Windows.Forms.MenuItem menuItemSpeichern;
+        private System.Windows.Forms.TabPage tabPageLinks;
+        private System.Windows.Forms.DataGrid dataGridLinks;
 
     }
 }

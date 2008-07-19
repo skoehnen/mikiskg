@@ -36,9 +36,9 @@ namespace PrototypMIS
         {
             String bildPfad = fotoMachen();
             String titel = Guid.NewGuid().ToString();
-            this.bildHinzufuegen(bildPfad, titel);
+            ListViewItem item = this.bildHinzufuegen(bildPfad, titel);
             db.fotoEinfuegen(bildPfad, "", titel);
-            new Foto(db.fotoHolen(titel),true, this).Show();
+            new Foto(db.fotoHolen(titel),true, this, item).Show();
         }
 
         private String fotoMachen()
@@ -56,29 +56,31 @@ namespace PrototypMIS
             return dateiName;
         }
 
-        private void bildHinzufuegen(String pfad, String titel)
+        private ListViewItem bildHinzufuegen(String pfad, String titel)
         {
+            ListViewItem item = null;
             if (pfad != "")
             {
                 imageList1.Images.Add(Image.FromHbitmap(new Bitmap(pfad).GetHbitmap()));
                 int i = imageList1.Images.Count -1;
-                ListViewItem item = new ListViewItem();
+                item = new ListViewItem();
                 item.Text = titel;
                 item.ImageIndex = i;
                 listView1.Items.Add(item);
             }
+            return item;
         }
 
-        public void titelAendern(String titelAlt, String titelNeu)
+        public void titelAendern(String titelAlt, String titelNeu, ListViewItem item)
         {
-            int i = listView1.Items.IndexOf(new ListViewItem(titelAlt));
+            int i = listView1.Items.IndexOf(item);
             listView1.Items[i].Text = titelNeu;
         }
 
         private void menuItemShow_Click(object sender, EventArgs e)
         {
             String titel = listView1.FocusedItem.Text;
-            new Foto(db.fotoHolen(titel), false, this).Show();
+            new Foto(db.fotoHolen(titel), false, this, listView1.FocusedItem).Show();
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
