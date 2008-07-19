@@ -46,6 +46,16 @@ namespace PrototypMIS
                 table.Rows.Add(row);
             }
             dataGridAufgaben.DataSource = table;
+
+            // Create new Table Style
+            DataGridTableStyle ts = new DataGridTableStyle();
+            ts.MappingName = "Aufgaben";
+            dataGridAufgaben.TableStyles.Clear();
+            dataGridAufgaben.TableStyles.Add(ts);
+            dataGridAufgaben.TableStyles["Aufgaben"].GridColumnStyles["Titel"].Width = 80;
+            dataGridAufgaben.TableStyles["Aufgaben"].GridColumnStyles["Subject"].Width = 80;
+            dataGridAufgaben.TableStyles["Aufgaben"].GridColumnStyles["Datum"].Width = 50;
+            
             dataGridAufgaben.Update();
         }
 

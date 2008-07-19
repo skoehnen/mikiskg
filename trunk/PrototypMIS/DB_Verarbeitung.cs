@@ -279,6 +279,27 @@ namespace PrototypMIS
             return ds;
         }
 
+        public int notizAnzahl()
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT count(*) FROM Notizen";
+
+            int count = 0;
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            while (ResultSet.Read())
+            {
+                count = (int) ResultSet[0];
+            }
+
+            conn.Close();
+
+            return count;
+        }
+
         public System.Data.DataSet notizListe()
         {
             SqlCeConnection conn = this.DBVerbindung();
