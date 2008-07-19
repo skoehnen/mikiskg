@@ -20,6 +20,7 @@ namespace PrototypMIS
 
         public void verknuepfung_eintragen(ItemId QuellID, ItemId ZielID, bool typ)
         {
+            //Der typ gibt an ob es ein Objekt aus Pocket Outlook ist oder nicht
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
@@ -81,9 +82,12 @@ namespace PrototypMIS
             command.CommandText = "INSERT INTO Fotos (pfad, beschreibung, titel) VALUES ('" + pfad + "', '" + beschreibung + "', '" + titel + "')";
             command.ExecuteNonQuery();
 
-            command.CommandText = "SELECT id FROM Fotos WHERE titel = " + titel + ";";
+            conn.Close();
+            conn.Open();
+            SqlCeCommand command2 = conn.CreateCommand();
+            command2.CommandText = "SELECT id FROM Fotos WHERE titel = '" + titel + "';";
 
-            SqlCeDataReader ResultSet = command.ExecuteReader();
+            SqlCeDataReader ResultSet = command2.ExecuteReader();
 
             int id = 0;
 
@@ -93,7 +97,7 @@ namespace PrototypMIS
             }
 
             command.CommandText = "INSERT INTO uniqueIdentity (objectId, objectTyp) VALUES (" + id + ", " + Konstanten.foto + ");";
-            command.ExecuteNonQuery;
+            command.ExecuteNonQuery();
             conn.Close();
             return true;
         }

@@ -33,10 +33,10 @@
             this.menuItemZurueck = new System.Windows.Forms.MenuItem();
             this.menuItemFoto = new System.Windows.Forms.MenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemShow = new System.Windows.Forms.MenuItem();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -63,10 +63,6 @@
             this.listView1.Size = new System.Drawing.Size(234, 262);
             this.listView1.TabIndex = 0;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageSize = new System.Drawing.Size(64, 64);
-            // 
             // contextMenu1
             // 
             this.contextMenu1.MenuItems.Add(this.menuItemShow);
@@ -81,6 +77,10 @@
             // 
             this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageSize = new System.Drawing.Size(64, 64);
             // 
             // Fotos
             // 
