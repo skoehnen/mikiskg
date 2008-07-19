@@ -50,7 +50,7 @@ namespace PrototypMIS
         private void updateGrid()
         {
             dataGrid1.DataSource = db.notizIdUndTitelAuslesen().Tables[0];
-            dataGrid1.Update();
+            dataGrid1.Update();   
         }
 
         private void menuItemSearch_Click(object sender, EventArgs e)

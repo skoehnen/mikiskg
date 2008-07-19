@@ -59,6 +59,17 @@ namespace PrototypMIS
             
             
             dataGridAppointments.DataSource = table;//appointments;
+
+            // Create new Table Style
+            DataGridTableStyle ts = new DataGridTableStyle();
+            ts.MappingName = "Termine";
+            dataGridAppointments.TableStyles.Clear();
+            dataGridAppointments.TableStyles.Add(ts);
+            dataGridAppointments.TableStyles["Termine"].GridColumnStyles["Subject"].Width = 80;
+            dataGridAppointments.TableStyles["Termine"].GridColumnStyles["Ort"].Width = 60;
+            dataGridAppointments.TableStyles["Termine"].GridColumnStyles["Start"].Width = 50;
+            dataGridAppointments.TableStyles["Termine"].GridColumnStyles["Ende"].Width = 50;
+
             dataGridAppointments.Update();
         }
 
