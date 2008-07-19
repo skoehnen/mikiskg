@@ -191,6 +191,21 @@ namespace PrototypMIS
             command.CommandText = "INSERT INTO Notizen (text, titel) VALUES ('" + notiz.getText() + "', '" + notiz.getTitel() + "')";
            
             command.ExecuteNonQuery();
+
+            command.CommandText = "SELECT id FROM Notizen WHERE titel = '" + notiz.getTitel() + "'";
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            int id = 0;
+
+            while (ResultSet.Read())
+            {
+                id = Convert.ToInt32(ResultSet["id"].ToString());
+            }
+
+            command.CommandText = "INSERT INTO uniqueIdentity (objectId, objectTyp) VALUES (" + id + ", " + Konstanten.notiz + ");";
+            command.ExecuteNonQuery();
+
             
             conn.Close();
         }
@@ -326,5 +341,11 @@ namespace PrototypMIS
             conn.Close();
         }
 
+    }
+
+    class Konstanten
+    {
+        public static int foto = 0;
+        public static int notiz = 1;
     }
 }
