@@ -18,14 +18,14 @@ namespace PrototypMIS
             return conn;
         }
 
-        public void verknuepfung_eintragen(ItemId QuellID, ItemId ZielID)
+        public void verknuepfung_eintragen(ItemId QuellID, ItemId ZielID, bool typ)
         {
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
             int quelle = int.Parse(QuellID.ToString());
             int ziel = int.Parse(ZielID.ToString());
-            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke) VALUES ('" + quelle + "','" + ziel+ "')";
+            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + quelle + "','" + ziel+ "'," + typ +")";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
         }
@@ -80,6 +80,20 @@ namespace PrototypMIS
             SqlCeCommand command = conn.CreateCommand();
             command.CommandText = "INSERT INTO Fotos (pfad, beschreibung, titel) VALUES ('" + pfad + "', '" + beschreibung + "', '" + titel + "')";
             command.ExecuteNonQuery();
+
+            command.CommandText = "SELECT id FROM Fotos WHERE titel = " + titel + ";";
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            int id = 0;
+
+            while (ResultSet.Read())
+            {
+                id = (int)ResultSet["id"];
+            }
+
+            command.CommandText = "INSERT INTO uniqueIdentity (objectId, objectTyp) VALUES (" + id + ", " + Konstanten.foto + ");";
+            command.ExecuteNonQuery;
             conn.Close();
             return true;
         }
@@ -148,20 +162,23 @@ namespace PrototypMIS
             SqlCeConnection conn = this.DBVerbindung();
             conn.Open();
             SqlCeCommand command1 = conn.CreateCommand();
-            command1.CommandText = "SELECT pfad FROM Fotos WHERE titel = '" + titel + "'";
+            command1.CommandText = "SELECT pfad, id FROM Fotos WHERE titel = '" + titel + "'";
 
             SqlCeDataReader rs = command1.ExecuteReader();
             
             String pfad = "";
+            int id = 0;
 
             while (rs.Read())
             {
                 pfad = rs["pfad"].ToString();
+                id = (int)rs["id"];
             }
             SqlCeCommand command = new SqlCeCommand();
-            command.CommandText = "DELETE FROM Fotos WHERE titel = '" + titel + "'";
+            command.CommandText = "DELETE FROM Fotos WHERE id = " + id + ";";
             command.ExecuteNonQuery();
-
+            command.CommandText = "DELETE FROM uniqueIdentity WHERE id = " + id + " AND objectTyp = " + Konstanten.foto + ";";
+            command.ExecuteNonQuery();
             File.Delete(pfad);
             conn.Close();
         }
@@ -200,7 +217,7 @@ namespace PrototypMIS
 
             while (ResultSet.Read())
             {
-                id = Convert.ToInt32(ResultSet["id"].ToString());
+                id = (int)ResultSet["id"];
             }
 
             command.CommandText = "INSERT INTO uniqueIdentity (objectId, objectTyp) VALUES (" + id + ", " + Konstanten.notiz + ");";
@@ -321,11 +338,24 @@ namespace PrototypMIS
         {
             SqlCeConnection conn = this.DBVerbindung();
             conn.Open();
+
             SqlCeCommand command = conn.CreateCommand();
-            command.CommandText = "DELETE FROM Notizen WHERE titel = '" + titel + "'";
+            command.CommandText = "SELECT id FROM Notizen WHERE titel = '" + titel + "'";
 
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            int id = 0;
+
+            while (ResultSet.Read())
+            {
+                id = (int)ResultSet["id"];
+            }
+
+            
+            command.CommandText = "DELETE FROM Notizen WHERE id = " + id + "";
             command.ExecuteNonQuery();
-
+            command.CommandText = "DELETE FROM uniqueIdentity WHERE objectId = " + id + " AND objectTyp = " + Konstanten.notiz + ";";
+            command.ExecuteNonQuery();
             conn.Close();
         }
 
