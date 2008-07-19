@@ -95,9 +95,12 @@ namespace PrototypMIS
         /// <param name="e"></param>
         private void contextMenuItemDelete_Click(object sender, EventArgs e)
         {
-            int row = this.dataGridLinks.CurrentCell.RowNumber;
-            ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
-            new DB_Verarbeitung().einzelverknuepfung_loeschen(this.foto.getId(), MikiConverter.itemIdToInt(ziel), true);
+            if (secureDelete.boolDelete())
+            {
+                int row = this.dataGridLinks.CurrentCell.RowNumber;
+                ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
+                new DB_Verarbeitung().einzelverknuepfung_loeschen(this.foto.getId(), MikiConverter.itemIdToInt(ziel), true);
+            }
         }
     }
 }
