@@ -35,14 +35,25 @@ namespace PrototypMIS
                 table.Rows.Add(row);
             }
 
+            // Create new Table Style
+            DataGridTableStyle ts = new DataGridTableStyle();
+            ts.MappingName = "Kontakte";
+            dataGridKontakte.TableStyles.Clear();
+            dataGridKontakte.TableStyles.Add(ts);
+
             dataGridKontakte.DataSource = table;
             
-
             // Spaltenbreite anpassen
+            
             //for (int i = 0; i < table.Columns.Count; i++)
             //{
             //    fitColumnWidth(table.TableName, table.Columns[i].ColumnName);
             //}
+
+            dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Vorname"].Width = 70;
+            dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Nachname"].Width = 70;
+            dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Telefon"].Width = 50;
+            dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Nachname"].Width = 70;
 
             dataGridKontakte.Update();
         }
@@ -95,6 +106,7 @@ namespace PrototypMIS
             column = new DataColumn();
             column.DataType = System.Type.GetType("System.String");
             column.ColumnName = "Vorname";
+            
             table.Columns.Add(column);
 
             // 2. Spalte
@@ -135,7 +147,7 @@ namespace PrototypMIS
 
             // Create new Table Style
             DataGridTableStyle ts = new DataGridTableStyle();
-            ts.MappingName = tabName;
+            ts.MappingName = "Kontakte";
             dataGridKontakte.TableStyles.Clear();
             dataGridKontakte.TableStyles.Add(ts);
 

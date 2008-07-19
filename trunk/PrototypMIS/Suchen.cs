@@ -32,6 +32,7 @@ namespace PrototypMIS
             this.sourceItem = sourceItem;
             table = new DataTable("Suchergebnis");
             this.createTable();
+            db = new DB_Verarbeitung();
         }
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
