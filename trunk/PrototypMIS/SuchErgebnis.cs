@@ -44,8 +44,8 @@ namespace PrototypMIS
             int columnIndex = 0;
             Object oid = dataGridSearchResults[rowIndex,columnIndex];
             ItemId id = MikiConverter.objectToItemId(oid);
-            db.verknuepfung_eintragen(source, id, true);
-            this.Close;
+            db.verknuepfung_eintragen(MikiConverter.itemIdToInt(source), MikiConverter.itemIdToInt(id), true);
+            this.Close();
             this.Dispose();
         }
 

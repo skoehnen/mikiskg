@@ -37,7 +37,7 @@ namespace PrototypMIS
             this.textBoxStartTime.Text = MikiConverter.zeitAusDateTime(termin.Start);
             this.textBoxEndTime.Text = MikiConverter.zeitAusDateTime(termin.End);
             this.menuItemLink.Enabled = true;
-            linkedItems = new DB_Verarbeitung().abfrage(id);
+            linkedItems = new DB_Verarbeitung().abfrage(MikiConverter.itemIdToInt(id));
             dataGridLinks.DataSource = linkedItems;
             dataGridLinks.Refresh();
         }
@@ -122,7 +122,7 @@ namespace PrototypMIS
         {
             int row = this.dataGridLinks.CurrentCell.RowNumber;
             ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
-            new DB_Verarbeitung().einzelverknuepfung_loeschen(this.kontakt.ItemId, ziel);
+            new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.termin.ItemId), MikiConverter.itemIdToInt(ziel), true);
         }
     }
 }

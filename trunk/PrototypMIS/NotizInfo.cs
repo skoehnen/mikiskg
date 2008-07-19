@@ -7,6 +7,7 @@ namespace PrototypMIS
 {
     public class NotizInfo
     {
+        int id;
         String titel;
         String text;
 
@@ -14,6 +15,18 @@ namespace PrototypMIS
         {
             this.titel = titel;
             this.text = text;
+        }
+
+        public NotizInfo(String titel, String text, int id)
+        {
+            this.id = id;
+            this.titel = titel;
+            this.text = text;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
         }
 
         public String getText()
@@ -24,6 +37,11 @@ namespace PrototypMIS
         public String getTitel()
         {
             return this.titel;
+        }
+
+        public int getId()
+        {
+            return this.id;
         }
     }
 }

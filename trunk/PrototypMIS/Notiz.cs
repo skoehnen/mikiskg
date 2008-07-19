@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.WindowsMobile.Forms;
+using Microsoft.WindowsMobile.PocketOutlook;
 
 namespace PrototypMIS
 {
@@ -81,7 +82,7 @@ namespace PrototypMIS
         {
             int row = this.dataGridLinks.CurrentCell.RowNumber;
             ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
-            new DB_Verarbeitung().einzelverknuepfung_loeschen(this.kontakt.ItemId, ziel);
+            new DB_Verarbeitung().einzelverknuepfung_loeschen(this.notiz.getId(), MikiConverter.itemIdToInt(ziel), true);
         }
 
         /// <summary>

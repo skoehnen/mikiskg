@@ -18,54 +18,49 @@ namespace PrototypMIS
             return conn;
         }
 
-        public void verknuepfung_eintragen(ItemId QuellID, ItemId ZielID, bool typ)
+        public void verknuepfung_eintragen(int quellID, int zielID, bool typ)
         {
             //Der typ gibt an ob es ein Objekt aus Pocket Outlook ist oder nicht
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            int quelle = int.Parse(QuellID.ToString());
-            int ziel = int.Parse(ZielID.ToString());
-            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + quelle + "','" + ziel+ "'," + "0" +")";
+            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + quellID + "','" + zielID + "'," + "0" +")";
             sqlcommand.ExecuteNonQuery();
-            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + ziel + "','" + quelle + "'," + "0" + ")";
+            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + zielID + "','" + quellID + "'," + "0" + ")";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
         }
 
-        public void einzelverknuepfung_loeschen(ItemId Quelle, ItemId Ziel)
+        public void einzelverknuepfung_loeschen(int quelle, int ziel, bool typ)
         {
-            int quelle = int.Parse(Quelle.ToString());
-            int ziel = int.Parse(Ziel.ToString());
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + quelle + "' AND ItemId_Senke = '" + ziel + "'" ;
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "' AND ItemId_Senke = '" + ziel + "' AND MikiObject = " + "0";
             sqlcommand.ExecuteNonQuery();
-            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + ziel + "' AND ItemId_Senke = '" + quelle + "'";
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + ziel + "' AND ItemId_Senke = '" + quelle + "' AND MikiObject = " + "0";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
 
         }
 
-        public void gesamtverknuepfung_loeschen(ItemId Quelle)
+        public void gesamtverknuepfung_loeschen(int quelle, bool typ)
         {
             SqlCeConnection conn = DBVerbindung();
-            int quelle = int.Parse(Quelle.ToString());
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + quelle + "'";
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "' AND MikiObject = " + "0";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
         }
 
-        public ArrayList abfrage(ItemId Quelle)
+        public ArrayList abfrage(int quelle)
         {
             ArrayList liste = new ArrayList();
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "SELECT * from Verknüpfung where ItemID_Quelle = '" + Quelle + "'";
+            sqlcommand.CommandText = "SELECT * FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "'";
             SqlCeDataReader ResultSet;
             ResultSet = sqlcommand.ExecuteReader();
             int i ;
@@ -255,7 +250,7 @@ namespace PrototypMIS
 
             conn.Close();
 
-            return new NotizInfo(titel, text);
+            return new NotizInfo(titel, text, id);
         }
 
         /// <summary>
