@@ -44,6 +44,9 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -80,6 +83,7 @@
             // dataGridLinks
             // 
             this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.ContextMenu = this.contextMenu1;
             this.dataGridLinks.Location = new System.Drawing.Point(0, 135);
             this.dataGridLinks.Name = "dataGridLinks";
             this.dataGridLinks.Size = new System.Drawing.Size(240, 107);
@@ -141,6 +145,21 @@
             this.textBoxName.Size = new System.Drawing.Size(100, 21);
             this.textBoxName.TabIndex = 16;
             // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
+            // 
+            // contextMenuItemShow
+            // 
+            this.contextMenuItemShow.Text = "anzeigen";
+            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
+            // 
+            // contextMenuItemDelete
+            // 
+            this.contextMenuItemDelete.Text = "löschen";
+            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
+            // 
             // Kontakt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -179,5 +198,8 @@
         private System.Windows.Forms.MenuItem menuItemSave;
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.MenuItem menuItemLink;
+        private System.Windows.Forms.ContextMenu contextMenu1;
+        private System.Windows.Forms.MenuItem contextMenuItemShow;
+        private System.Windows.Forms.MenuItem contextMenuItemDelete;
     }
 }

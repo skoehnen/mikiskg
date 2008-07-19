@@ -42,6 +42,8 @@ namespace PrototypMIS
             SqlCeCommand sqlcommand = conn.CreateCommand();
             sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + quelle + "' AND ItemId_Senke = '" + ziel + "'" ;
             sqlcommand.ExecuteNonQuery();
+            sqlcommand.CommandText = "Delete from Verknüpfung where ItemID_Quelle = '" + ziel + "' AND ItemId_Senke = '" + quelle + "'";
+            sqlcommand.ExecuteNonQuery();
             conn.Close();
 
         }
