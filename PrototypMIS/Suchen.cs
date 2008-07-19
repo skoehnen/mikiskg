@@ -15,7 +15,7 @@ namespace PrototypMIS
         ItemId sourceItem;
         DataTable table;
         DataColumn column;
-        DataRow row;
+        //DataRow row;
         DB_Verarbeitung db;
 
         public Suchen()
@@ -43,59 +43,84 @@ namespace PrototypMIS
         private void buttonSuchen_Click(object sender, EventArgs e)
         {
             PimItemCollection collection;
-            table.Clear();            
+            table.Clear();
+
+            SuchergebnisTree ergebnis;
+
+            if (this.sourceItem == null)
+            {
+                ergebnis = new SuchergebnisTree();
+            }
+            else
+            {
+                ergebnis = new SuchergebnisTree(MikiConverter.itemIdToInt(this.sourceItem));
+            }
 
             if (checkBoxKontakte.Checked)
             {
                 collection = kontaktSuche(textBoxSuchen.Text);
+                ergebnis.setFound(0,collection.Count);
                 
                 foreach(PimItem item in collection)
                 {
-                    row = table.NewRow();
-                    row["ItemID"] = item.ItemId.ToString();
-                    row["Titel/Nachname"] = item.Properties[ContactProperty.LastName];
-                    row["Name/Datum"] = item.Properties[ContactProperty.FirstName];
-                    row["Type"] = item.GetType();
-                    table.Rows.Add(row);
+                    ergebnis.addNewChield(0, new MikiTreeNode(MikiConverter.itemIdToInt(item.ItemId),item.Properties[ContactProperty.LastName] + ", " + item.Properties[ContactProperty.FirstName],"Kontakt"));
+
+                    //row = table.NewRow();
+                    //row["ItemID"] = item.ItemId.ToString();
+                    //row["Titel/Nachname"] = item.Properties[ContactProperty.LastName];
+                    //row["Name/Datum"] = item.Properties[ContactProperty.FirstName];
+                    //row["Type"] = item.GetType();
+                    //table.Rows.Add(row);
                 }
             }
             if (checkBoxAufgaben.Checked)
             {
                 collection = aufgabenSuche(textBoxSuchen.Text);
-               
+                ergebnis.setFound(1, collection.Count);
+  
                 foreach (PimItem item in collection)
                 {
-                    row = table.NewRow();
-                    row["ItemID"] = item.ItemId.ToString();
-                    row["Titel/Nachname"] = item.Properties[TaskProperty.Subject];
-                    row["Name/Datum"] = item.Properties[TaskProperty.DueDate.ToString()];
-                    row["Type"] = item.GetType();
-                    table.Rows.Add(row);
+                    ergebnis.addNewChield(1, new MikiTreeNode(MikiConverter.itemIdToInt(item.ItemId),item.Properties[TaskProperty.Subject].ToString(),"Aufgabe"));
+
+                    //row = table.NewRow();
+                    //row["ItemID"] = item.ItemId.ToString();
+                    //row["Titel/Nachname"] = item.Properties[TaskProperty.Subject];
+                    //row["Name/Datum"] = item.Properties[TaskProperty.DueDate.ToString()];
+                    //row["Type"] = item.GetType();
+                    //table.Rows.Add(row);
                 }
             }
             if (checkBoxNotizen.Checked)
             {
                 System.Data.DataSet data = db.notizSuche(textBoxSuchen.Text);
+
+                ergebnis.setFound(2, data.Tables[0].Rows.Count);
+
                 if (data.Tables[0].Rows.Count > 0)
                 {
-                    row = table.NewRow();
-                    row["ItemID"] = data.Tables[0].Rows[0].ItemArray[1];
-                    row["Titel/Nachname"] = data.Tables[0].Rows[0].ItemArray[0];
-                    table.Rows.Add(row);
+                    ergebnis.addNewChield(2, new MikiTreeNode((int)data.Tables[0].Rows[0].ItemArray[1],data.Tables[0].Rows[0].ItemArray[0].ToString(),"Notiz"));
+
+                    //row = table.NewRow();
+                    //row["ItemID"] = data.Tables[0].Rows[0].ItemArray[1];
+                    //row["Titel/Nachname"] = data.Tables[0].Rows[0].ItemArray[0];
+                    //table.Rows.Add(row);
                 }
             }
             if (checkBoxTermine.Checked)
             {
                 collection = terminSuche(textBoxSuchen.Text);
+                ergebnis.setFound(3, collection.Count);
                
                 foreach (PimItem item in collection)
                 {
-                    row = table.NewRow();
-                    row["ItemID"] = Convert.ToString(item.ItemId);
-                    row["Titel/Nachname"] = item.Properties[AppointmentProperty.Subject];
-                    row["Name/Datum"] = item.Properties[AppointmentProperty.Start.ToString()];
-                    row["Type"] = item.GetType();
-                    table.Rows.Add(row);
+                    ergebnis.addNewChield(3, new MikiTreeNode(MikiConverter.itemIdToInt(item.ItemId),item.Properties[AppointmentProperty.Subject].ToString(),"Termin"));
+
+                    //row = table.NewRow();
+                    //row["ItemID"] = Convert.ToString(item.ItemId);
+                    //row["Titel/Nachname"] = item.Properties[AppointmentProperty.Subject];
+                    //row["Name/Datum"] = item.Properties[AppointmentProperty.Start.ToString()];
+                    //row["Type"] = item.GetType();
+                    //table.Rows.Add(row);
                 }
             }
             //if (checkBoxKunden.Checked)
@@ -108,14 +133,16 @@ namespace PrototypMIS
             //    // Foto
             //}
 
-            if (this.sourceItem == null)
-            {
-                new SuchErgebnis(table).Show();
-            }
-            else
-            {
-                new SuchErgebnis(table, this.sourceItem).Show();
-            }
+            //if (this.sourceItem == null)
+            //{
+            //    //new SuchErgebnis(table).Show();
+            //}
+            //else
+            //{
+            //    //new SuchErgebnis(table, this.sourceItem).Show();
+            //}
+
+            ergebnis.Show();
             
         }
 

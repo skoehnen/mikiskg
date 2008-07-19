@@ -44,7 +44,7 @@ namespace PrototypMIS
 
         private void menuItemBack_Click(object sender, EventArgs e)
         {
-            new Termine().Show();
+            this.Close();
             Dispose();
         }
 
