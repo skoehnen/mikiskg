@@ -29,7 +29,7 @@ namespace PrototypMIS
                 row = table.NewRow();
                 row["Vorname"] = item.Properties[ContactProperty.FirstName];
                 row["Nachname"] = item.Properties[ContactProperty.LastName];
-                row["Telefon"] = item.Properties[ContactProperty.FirstName];
+                row["Telefon"] = item.Properties[ContactProperty.HomeTelephoneNumber];
                 row["eMail"] = item.Properties[ContactProperty.Email1Address];
                 row["ItemId"] = item.ItemId.ToString();
                 table.Rows.Add(row);

@@ -67,7 +67,6 @@ namespace PrototypMIS
 /// Ende Methoden für Kontakte
 /// </summary>
 
-
 /// <summary>
 /// Methoden für Termine
 /// </summary>
@@ -101,7 +100,7 @@ namespace PrototypMIS
             return mySession;
         }
 
-        private DateTime datumZusammenbasteln(string Time, DateTime startDate)
+        public DateTime datumZusammenbasteln(string Time, DateTime startDate)
         {
             // Zeiten in int Werte umwandeln:
             int hour = Convert.ToInt32(Time[0].ToString() + Time[1].ToString());

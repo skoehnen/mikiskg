@@ -13,7 +13,7 @@ namespace PrototypMIS
     public partial class Termin : Form
     {
         OutlookCommunication outlookCom;
-        Appointment termin;
+        Appointment termin = null;
         System.Collections.ArrayList linkedItems = null;
 
         public Termin()
@@ -50,7 +50,19 @@ namespace PrototypMIS
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
-            this.outlookCom.addAppointment(textBoxTitle.Text, textBoxLocation.Text, textBoxStartTime.Text, dateTimePickerStartDate.Value, textBoxEndTime.Text, dateTimePickerEndDate.Value);
+            if (this.termin == null)
+            {
+                this.outlookCom.addAppointment(textBoxTitle.Text, textBoxLocation.Text, textBoxStartTime.Text, dateTimePickerStartDate.Value, textBoxEndTime.Text, dateTimePickerEndDate.Value);
+            }
+            else
+            {
+                this.termin.Subject = this.textBoxTitle.Text;
+                this.termin.Start = this.outlookCom.datumZusammenbasteln(this.textBoxStartTime.Text, this.dateTimePickerStartDate.Value);
+                this.termin.End = this.outlookCom.datumZusammenbasteln(this.textBoxEndTime.Text, this.dateTimePickerEndDate.Value);
+                this.termin.Location = this.textBoxLocation.Text;
+                this.termin.Update();
+
+            }
             new Termine().Show();
             Dispose();
         }
