@@ -37,7 +37,7 @@
             this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxText = new System.Windows.Forms.TextBox();
-            this.dataGridLink = new System.Windows.Forms.DataGrid();
+            this.dataGridLinks = new System.Windows.Forms.DataGrid();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
             this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
@@ -91,13 +91,13 @@
             this.textBoxText.Size = new System.Drawing.Size(234, 129);
             this.textBoxText.TabIndex = 2;
             // 
-            // dataGridLink
+            // dataGridLinks
             // 
-            this.dataGridLink.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGridLink.Location = new System.Drawing.Point(3, 170);
-            this.dataGridLink.Name = "dataGridLink";
-            this.dataGridLink.Size = new System.Drawing.Size(234, 95);
-            this.dataGridLink.TabIndex = 4;
+            this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.Location = new System.Drawing.Point(3, 170);
+            this.dataGridLinks.Name = "dataGridLinks";
+            this.dataGridLinks.Size = new System.Drawing.Size(234, 95);
+            this.dataGridLinks.TabIndex = 4;
             // 
             // contextMenu1
             // 
@@ -120,7 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
-            this.Controls.Add(this.dataGridLink);
+            this.Controls.Add(this.dataGridLinks);
             this.Controls.Add(this.textBoxText);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxTitel);
@@ -139,7 +139,7 @@
         private System.Windows.Forms.TextBox textBoxTitel;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxText;
-        private System.Windows.Forms.DataGrid dataGridLink;
+        private System.Windows.Forms.DataGrid dataGridLinks;
         private System.Windows.Forms.MenuItem menuItemDelete;
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem contextMenuItemShow;
