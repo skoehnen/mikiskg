@@ -25,6 +25,7 @@ namespace PrototypMIS
 
         public Kontakt(ItemId id)
         {
+            objOutlook = new OutlookCommunication();
             InitializeComponent();
             this.kontakt = new Contact(id);
             this.textBoxFirstName.Text = kontakt.FirstName;

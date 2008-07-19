@@ -73,6 +73,7 @@ namespace PrototypMIS
 
         public void titelAendern(String titelAlt, String titelNeu, ListViewItem item)
         {
+            db.fotoAendern(new FotoInfo(titelNeu,"","",db.fotoIDholen(titelAlt)));
             int i = listView1.Items.IndexOf(item);
             listView1.Items[i].Text = titelNeu;
         }
