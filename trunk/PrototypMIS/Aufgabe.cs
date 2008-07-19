@@ -25,6 +25,7 @@ namespace PrototypMIS
 
         public Aufgabe(ItemId id)
         {
+            myCommunication = new OutlookCommunication();
             InitializeComponent();
             task = new Task(id);
             textBoxTitle.Text = task.Subject;
