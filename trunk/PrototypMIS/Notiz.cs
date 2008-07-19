@@ -64,7 +64,10 @@ namespace PrototypMIS
             }
             else
             {
-                this.db.notizLoeschenTitel(notiz.getTitel());
+                if (secureDelete.boolDelete())
+                {
+                    this.db.notizLoeschenTitel(notiz.getTitel());
+                }
             }
             Dispose();
         }

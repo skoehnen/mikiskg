@@ -83,6 +83,11 @@ namespace PrototypMIS
         private void dataGrid_kundenauftraege_CurrentCellChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+
         }       
     }
 }

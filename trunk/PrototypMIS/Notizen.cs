@@ -43,8 +43,11 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            db.notizLoeschenTitel(dataGrid1[dataGrid1.CurrentCell.RowNumber, dataGrid1.CurrentCell.ColumnNumber].ToString());
-            updateGrid();
+            if (secureDelete.boolDelete())
+            {
+                db.notizLoeschenTitel(dataGrid1[dataGrid1.CurrentCell.RowNumber, dataGrid1.CurrentCell.ColumnNumber].ToString());
+                updateGrid();
+            }
         }
 
         private void updateGrid()

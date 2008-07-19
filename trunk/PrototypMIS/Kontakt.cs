@@ -77,6 +77,16 @@ namespace PrototypMIS
             new Suchen(this.kontakt.ItemId).Show();
         }
 
+        private void menuItemDelete_Click(object sender, EventArgs e)
+        {
+            if (secureDelete.boolDelete())
+            {
+                this.kontakt.Delete();
+                Dispose();
+                new Kontakte().Show();
+            }
+        }
+
         /// <summary>
         /// Detail-Ansicht der verlinkten Items öffnen
         /// </summary>

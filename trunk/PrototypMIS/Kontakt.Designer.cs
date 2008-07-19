@@ -69,6 +69,7 @@
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemLink
             // 
@@ -100,7 +101,7 @@
             // 
             this.textBoxMail.Location = new System.Drawing.Point(123, 108);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(100, 21);
+            this.textBoxMail.Size = new System.Drawing.Size(100, 25);
             this.textBoxMail.TabIndex = 19;
             // 
             // label3
@@ -128,21 +129,21 @@
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(123, 81);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(100, 21);
+            this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
             this.textBoxPhone.TabIndex = 18;
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.Location = new System.Drawing.Point(123, 54);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(100, 21);
+            this.textBoxFirstName.Size = new System.Drawing.Size(100, 25);
             this.textBoxFirstName.TabIndex = 17;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(123, 27);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 21);
+            this.textBoxName.Size = new System.Drawing.Size(100, 25);
             this.textBoxName.TabIndex = 16;
             // 
             // contextMenu1

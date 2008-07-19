@@ -72,6 +72,15 @@ namespace PrototypMIS
             new Suchen(this.termin.ItemId).Show();
         }
 
+        private void menuItemDelete_Click(object sender, EventArgs e)
+        {
+            if (secureDelete.boolDelete())
+            {
+                this.termin.Delete();
+                Dispose();
+            }
+        }
+
         /// <summary>
         /// Detail-Ansicht der verlinkten Items öffnen
         /// </summary>

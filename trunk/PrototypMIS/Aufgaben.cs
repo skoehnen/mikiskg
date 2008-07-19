@@ -74,12 +74,17 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            int index = dataGridAufgaben.CurrentRowIndex;
-            OutlookCommunication outlookCom=new OutlookCommunication();
-            object Id = dataGridAufgaben[index, 3]; // weil in Spalte 3 die ID des Tasks steht
-            outlookCom.deleteTask(MikiConverter.objectToItemId(Id));
-            Dispose();
-            new Aufgaben().Show();
+            // Sicherheitsabfrage:
+            if (secureDelete.boolDelete())
+            {
+                // Löschen:
+                int index = dataGridAufgaben.CurrentRowIndex;
+                OutlookCommunication outlookCom = new OutlookCommunication();
+                object Id = dataGridAufgaben[index, 3]; // weil in Spalte 3 die ID des Tasks steht
+                outlookCom.deleteTask(MikiConverter.objectToItemId(Id));
+                Dispose();
+                new Aufgaben().Show();
+            }
         }
 
         private void menuItemShowEntry_Click(object sender, EventArgs e)
@@ -87,6 +92,7 @@ namespace PrototypMIS
             int rowIndex = dataGridAufgaben.CurrentRowIndex;
             int columnIndex = 3;
             object oid = dataGridAufgaben[rowIndex, columnIndex];
+            this.Dispose();
             new Aufgabe(MikiConverter.objectToItemId(oid)).Show();
         }
     }

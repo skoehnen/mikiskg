@@ -86,8 +86,11 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            String titel = listView1.FocusedItem.Text;
-            db.fotoLoeschen(titel);
+            if (secureDelete.boolDelete())
+            {
+                String titel = listView1.FocusedItem.Text;
+                db.fotoLoeschen(titel);
+            }
         }
     }
 }
