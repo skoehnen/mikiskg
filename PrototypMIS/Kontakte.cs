@@ -83,21 +83,24 @@ namespace PrototypMIS
             int rowIndex = dataGridKontakte.CurrentRowIndex;
             int columnIndex = 4;
             object oid = dataGridKontakte[rowIndex, columnIndex];
-            new Kontakt(MikiConverter.objectToItemId(oid)).Show();
             Dispose();
+            new Kontakt(MikiConverter.objectToItemId(oid)).Show();
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            int index = dataGridKontakte.CurrentRowIndex;
-            OutlookCommunication outlookCom = new OutlookCommunication();
-            object Id = dataGridKontakte[index, 4]; // weil in Spalte 4 die ID des Kontakts steht
-            outlookCom.deleteContact(MikiConverter.objectToItemId(Id));
-            Dispose();
-            new Kontakte().Show();
+            if (secureDelete.boolDelete())
+            {
+                int index = dataGridKontakte.CurrentRowIndex;
+                OutlookCommunication outlookCom = new OutlookCommunication();
+                object Id = dataGridKontakte[index, 4]; // weil in Spalte 4 die ID des Kontakts steht
+                outlookCom.deleteContact(MikiConverter.objectToItemId(Id));
+                Dispose();
+                new Kontakte().Show();
+            }
         }
 
-        /// <summary>
+       /// <summary>
         /// CreateTable() formatiert die Ergebnistabelle
         /// </summary>
         private void createTable()

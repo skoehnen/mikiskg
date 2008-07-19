@@ -86,13 +86,16 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            int index = dataGridAppointments.CurrentRowIndex;
-            OutlookCommunication outlookCom = new OutlookCommunication();
-//            object Id = dataGridAppointments[index, 23]; // weil in Spalte 23 die ID des Termins steht
-            object Id = dataGrid_temp_Termine[index, 23]; // weil in Spalte 23 die ID des Termins steht
-            outlookCom.deleteAppointment(MikiConverter.objectToItemId(Id));
-            Dispose();
-            new Termine().Show();
+            if (secureDelete.boolDelete())
+            {
+                int index = dataGridAppointments.CurrentRowIndex;
+                OutlookCommunication outlookCom = new OutlookCommunication();
+                //            object Id = dataGridAppointments[index, 23]; // weil in Spalte 23 die ID des Termins steht
+                object Id = dataGrid_temp_Termine[index, 23]; // weil in Spalte 23 die ID des Termins steht
+                outlookCom.deleteAppointment(MikiConverter.objectToItemId(Id));
+                Dispose();
+                new Termine().Show();
+            }
         }
 
         private void menuItemAnzeigen_Click(object sender, EventArgs e)

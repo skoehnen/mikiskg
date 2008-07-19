@@ -90,6 +90,7 @@
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemSave
             // 
@@ -122,7 +123,7 @@
             this.tabPage1.Controls.Add(this.dateTimePickerStartDate);
             this.tabPage1.Location = new System.Drawing.Point(0, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(240, 245);
+            this.tabPage1.Size = new System.Drawing.Size(240, 241);
             this.tabPage1.Text = "Termin";
             // 
             // label6
@@ -136,7 +137,7 @@
             // 
             this.dateTimePickerEndDate.Location = new System.Drawing.Point(15, 206);
             this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
-            this.dateTimePickerEndDate.Size = new System.Drawing.Size(212, 22);
+            this.dateTimePickerEndDate.Size = new System.Drawing.Size(212, 26);
             this.dateTimePickerEndDate.TabIndex = 29;
             // 
             // label5
@@ -150,7 +151,7 @@
             // 
             this.textBoxEndTime.Location = new System.Drawing.Point(127, 156);
             this.textBoxEndTime.Name = "textBoxEndTime";
-            this.textBoxEndTime.Size = new System.Drawing.Size(100, 21);
+            this.textBoxEndTime.Size = new System.Drawing.Size(100, 25);
             this.textBoxEndTime.TabIndex = 28;
             // 
             // label4
@@ -164,7 +165,7 @@
             // 
             this.textBoxStartTime.Location = new System.Drawing.Point(127, 68);
             this.textBoxStartTime.Name = "textBoxStartTime";
-            this.textBoxStartTime.Size = new System.Drawing.Size(100, 21);
+            this.textBoxStartTime.Size = new System.Drawing.Size(100, 25);
             this.textBoxStartTime.TabIndex = 27;
             // 
             // label3
@@ -192,21 +193,21 @@
             // 
             this.textBoxTitle.Location = new System.Drawing.Point(71, 14);
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(156, 21);
+            this.textBoxTitle.Size = new System.Drawing.Size(156, 25);
             this.textBoxTitle.TabIndex = 26;
             // 
             // textBoxLocation
             // 
             this.textBoxLocation.Location = new System.Drawing.Point(71, 41);
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(156, 21);
+            this.textBoxLocation.Size = new System.Drawing.Size(156, 25);
             this.textBoxLocation.TabIndex = 25;
             // 
             // dateTimePickerStartDate
             // 
             this.dateTimePickerStartDate.Location = new System.Drawing.Point(15, 111);
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
-            this.dateTimePickerStartDate.Size = new System.Drawing.Size(212, 22);
+            this.dateTimePickerStartDate.Size = new System.Drawing.Size(212, 26);
             this.dateTimePickerStartDate.TabIndex = 23;
             // 
             // tabPage2
@@ -214,7 +215,7 @@
             this.tabPage2.Controls.Add(this.dataGridLinks);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(240, 245);
+            this.tabPage2.Size = new System.Drawing.Size(232, 239);
             this.tabPage2.Text = "Verknüpfte Objekt";
             // 
             // dataGridLinks

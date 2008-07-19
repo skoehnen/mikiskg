@@ -51,6 +51,8 @@
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.verknuepfte = new System.Windows.Forms.ContextMenu();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dataGrid_kundenauftraege = new System.Windows.Forms.DataGrid();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,14 +70,12 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGrid2 = new System.Windows.Forms.DataGrid();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.dataGrid_kundenauftraege = new System.Windows.Forms.DataGrid();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -116,7 +116,7 @@
             this.tabPage1.Controls.Add(this.textBox_anrede);
             this.tabPage1.Location = new System.Drawing.Point(0, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(240, 242);
+            this.tabPage1.Size = new System.Drawing.Size(240, 238);
             this.tabPage1.Text = "Kundendaten";
             // 
             // label7
@@ -173,7 +173,7 @@
             this.textBox_hausnr.Enabled = false;
             this.textBox_hausnr.Location = new System.Drawing.Point(93, 166);
             this.textBox_hausnr.Name = "textBox_hausnr";
-            this.textBox_hausnr.Size = new System.Drawing.Size(140, 21);
+            this.textBox_hausnr.Size = new System.Drawing.Size(140, 25);
             this.textBox_hausnr.TabIndex = 6;
             // 
             // textBox_knr
@@ -181,7 +181,7 @@
             this.textBox_knr.Enabled = false;
             this.textBox_knr.Location = new System.Drawing.Point(93, 193);
             this.textBox_knr.Name = "textBox_knr";
-            this.textBox_knr.Size = new System.Drawing.Size(140, 21);
+            this.textBox_knr.Size = new System.Drawing.Size(140, 25);
             this.textBox_knr.TabIndex = 5;
             // 
             // textBox_straße
@@ -189,7 +189,7 @@
             this.textBox_straße.Enabled = false;
             this.textBox_straße.Location = new System.Drawing.Point(93, 139);
             this.textBox_straße.Name = "textBox_straße";
-            this.textBox_straße.Size = new System.Drawing.Size(140, 21);
+            this.textBox_straße.Size = new System.Drawing.Size(140, 25);
             this.textBox_straße.TabIndex = 4;
             // 
             // textBox_plz
@@ -197,7 +197,7 @@
             this.textBox_plz.Enabled = false;
             this.textBox_plz.Location = new System.Drawing.Point(93, 112);
             this.textBox_plz.Name = "textBox_plz";
-            this.textBox_plz.Size = new System.Drawing.Size(140, 21);
+            this.textBox_plz.Size = new System.Drawing.Size(140, 25);
             this.textBox_plz.TabIndex = 3;
             // 
             // textBox_nachname
@@ -205,7 +205,7 @@
             this.textBox_nachname.Enabled = false;
             this.textBox_nachname.Location = new System.Drawing.Point(93, 85);
             this.textBox_nachname.Name = "textBox_nachname";
-            this.textBox_nachname.Size = new System.Drawing.Size(140, 21);
+            this.textBox_nachname.Size = new System.Drawing.Size(140, 25);
             this.textBox_nachname.TabIndex = 2;
             // 
             // textBox_vorname
@@ -213,7 +213,7 @@
             this.textBox_vorname.Enabled = false;
             this.textBox_vorname.Location = new System.Drawing.Point(93, 58);
             this.textBox_vorname.Name = "textBox_vorname";
-            this.textBox_vorname.Size = new System.Drawing.Size(140, 21);
+            this.textBox_vorname.Size = new System.Drawing.Size(140, 25);
             this.textBox_vorname.TabIndex = 1;
             // 
             // textBox_anrede
@@ -221,7 +221,7 @@
             this.textBox_anrede.Enabled = false;
             this.textBox_anrede.Location = new System.Drawing.Point(93, 31);
             this.textBox_anrede.Name = "textBox_anrede";
-            this.textBox_anrede.Size = new System.Drawing.Size(140, 21);
+            this.textBox_anrede.Size = new System.Drawing.Size(140, 25);
             this.textBox_anrede.TabIndex = 0;
             this.textBox_anrede.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -230,7 +230,7 @@
             this.tabPage2.Controls.Add(this.dataGrid1);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(240, 242);
+            this.tabPage2.Size = new System.Drawing.Size(240, 238);
             this.tabPage2.Text = "Verbindungen";
             // 
             // dataGrid1
@@ -249,6 +249,24 @@
             // menuItem2
             // 
             this.menuItem2.Text = "Anzeigen";
+            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dataGrid_kundenauftraege);
+            this.tabPage5.Location = new System.Drawing.Point(0, 0);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(240, 238);
+            this.tabPage5.Text = "Aufträge";
+            // 
+            // dataGrid_kundenauftraege
+            // 
+            this.dataGrid_kundenauftraege.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGrid_kundenauftraege.Location = new System.Drawing.Point(4, 4);
+            this.dataGrid_kundenauftraege.Name = "dataGrid_kundenauftraege";
+            this.dataGrid_kundenauftraege.Size = new System.Drawing.Size(229, 226);
+            this.dataGrid_kundenauftraege.TabIndex = 0;
+            this.dataGrid_kundenauftraege.CurrentCellChanged += new System.EventHandler(this.dataGrid_kundenauftraege_CurrentCellChanged);
             // 
             // tabPage3
             // 
@@ -325,7 +343,7 @@
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(93, 166);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 21);
+            this.textBox1.Size = new System.Drawing.Size(140, 25);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
@@ -333,7 +351,7 @@
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(93, 193);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 21);
+            this.textBox2.Size = new System.Drawing.Size(140, 25);
             this.textBox2.TabIndex = 5;
             // 
             // textBox3
@@ -341,7 +359,7 @@
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(93, 139);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 21);
+            this.textBox3.Size = new System.Drawing.Size(140, 25);
             this.textBox3.TabIndex = 4;
             // 
             // textBox4
@@ -349,7 +367,7 @@
             this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(93, 112);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 21);
+            this.textBox4.Size = new System.Drawing.Size(140, 25);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
@@ -357,7 +375,7 @@
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(93, 85);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(140, 21);
+            this.textBox5.Size = new System.Drawing.Size(140, 25);
             this.textBox5.TabIndex = 2;
             // 
             // textBox6
@@ -365,7 +383,7 @@
             this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(93, 58);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 21);
+            this.textBox6.Size = new System.Drawing.Size(140, 25);
             this.textBox6.TabIndex = 1;
             // 
             // textBox7
@@ -373,7 +391,7 @@
             this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(93, 31);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 21);
+            this.textBox7.Size = new System.Drawing.Size(140, 25);
             this.textBox7.TabIndex = 0;
             // 
             // tabPage4
@@ -393,23 +411,6 @@
             this.dataGrid2.Size = new System.Drawing.Size(240, 239);
             this.dataGrid2.TabIndex = 0;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.dataGrid_kundenauftraege);
-            this.tabPage5.Location = new System.Drawing.Point(0, 0);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(240, 242);
-            this.tabPage5.Text = "Aufträge";
-            // 
-            // dataGrid_kundenauftraege
-            // 
-            this.dataGrid_kundenauftraege.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid_kundenauftraege.Location = new System.Drawing.Point(4, 4);
-            this.dataGrid_kundenauftraege.Name = "dataGrid_kundenauftraege";
-            this.dataGrid_kundenauftraege.Size = new System.Drawing.Size(229, 226);
-            this.dataGrid_kundenauftraege.TabIndex = 0;
-            this.dataGrid_kundenauftraege.CurrentCellChanged += new System.EventHandler(this.dataGrid_kundenauftraege_CurrentCellChanged);
-            // 
             // Kunde
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -423,9 +424,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

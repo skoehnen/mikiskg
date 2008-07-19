@@ -56,9 +56,13 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            OutlookCommunication outlookCom = new OutlookCommunication();
-            outlookCom.deleteTask(task.ItemId);
-            Dispose();
+            if (secureDelete.boolDelete())
+            {
+                OutlookCommunication outlookCom = new OutlookCommunication();
+                outlookCom.deleteTask(task.ItemId);
+                Dispose();
+                new Aufgaben().Show();
+            }
         }
 
         private void menuItem1_Click(object sender, EventArgs e)

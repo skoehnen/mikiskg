@@ -207,6 +207,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="secureDelete.cs" />
     <Compile Include="Suchen.cs">
       <SubType>Form</SubType>
     </Compile>
