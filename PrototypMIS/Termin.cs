@@ -21,6 +21,8 @@ namespace PrototypMIS
             InitializeComponent();
             outlookCom = new OutlookCommunication();
             this.menuItemLink.Enabled = false;
+            this.textBoxEndTime.Text = "00:00";
+            this.textBoxStartTime.Text = "00:00";
         }
 
         public Termin(ItemId id)

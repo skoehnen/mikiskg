@@ -25,6 +25,14 @@ namespace PrototypMIS
             pictureBox1.Image = new Bitmap(foto.getPfad());
             this.guiFotos = guiFotos;
             this.item = item;
+            if (neuesFoto)
+            {
+                this.textBoxTitel.Text = "";
+            }
+            else
+            {
+               this.textBoxTitel.Text = foto.getTitel();
+            }
         }
 
         private void menuItemAbbrechen_Click(object sender, EventArgs e)
@@ -33,10 +41,8 @@ namespace PrototypMIS
             {
                 db.fotoLoeschen(foto);
             }
-            
             this.Dispose();
-            this.Close(); 
-
+            this.Close();
         }
 
         private void menuItemSpeichern_Click(object sender, EventArgs e)
@@ -48,6 +54,5 @@ namespace PrototypMIS
             this.Dispose();
             this.Close();
         }
-
     }
 }
