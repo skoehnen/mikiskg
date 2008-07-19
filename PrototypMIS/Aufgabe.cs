@@ -71,6 +71,48 @@ namespace PrototypMIS
             new Suchen(task.ItemId).Show();
         }
 
-                
+        /// <summary>
+        /// Detail-Ansicht der verlinkten Items öffnen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void contextMenuItemShow_Click(object sender, EventArgs e)
+        {
+            int column = this.dataGridLinks.CurrentCell.ColumnNumber;
+            int row = this.dataGridLinks.CurrentCell.RowNumber;
+            String typ = this.dataGridLinks[row, 1].ToString();
+            if (typ == "Foto" && typ == "Notiz")
+            {
+                //hier kommt der Kram für die nicht POOM-Objekte rein
+            }
+            else
+            {
+                ItemId id = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
+                switch (typ)
+                {
+                    case "Task":
+                        new Aufgabe(id).Show();
+                        break;
+                    case "Kontakt":
+                        new Kontakt(id).Show();
+                        break;
+                    case "Termin":
+                        new Termin(id).Show();
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Verlinkung zu Objekt löschen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void contextMenuItemDelete_Click(object sender, EventArgs e)
+        {
+            int row = this.dataGridLinks.CurrentCell.RowNumber;
+            ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
+            new DB_Verarbeitung().einzelverknuepfung_loeschen(this.kontakt.ItemId, ziel);
+        }    
     }
 }
