@@ -31,9 +31,9 @@ namespace PrototypMIS
 
         private void menuItemShow_Click(object sender, EventArgs e)
         {
-            int rowIndex = this.dataGrid1.CurrentCell.ColumnNumber;
-            int columnIndex = this.dataGrid1.CurrentCell.ColumnNumber;
-            new Notiz(this.db.notizHolenTitel(this.dataGrid1[rowIndex,columnIndex].ToString())).Show();
+            int rowIndex = dataGrid1.CurrentCell.ColumnNumber;
+            int columnIndex = dataGrid1.CurrentCell.ColumnNumber;
+            new Notiz(db.notizHolenTitel(dataGrid1[rowIndex,columnIndex].ToString())).Show();
         }
 
         private void gotFocus(object sender, EventArgs e)
@@ -43,13 +43,20 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
-            this.db.notizLoeschenTitel(this.dataGrid1[dataGrid1.CurrentCell.RowNumber, this.dataGrid1.CurrentCell.ColumnNumber].ToString());
-            this.updateGrid();
+            db.notizLoeschenTitel(dataGrid1[dataGrid1.CurrentCell.RowNumber, dataGrid1.CurrentCell.ColumnNumber].ToString());
+            updateGrid();
         }
 
         private void updateGrid()
         {
-            this.dataGrid1.DataSource = this.db.notizListe().Tables[0];
+            dataGrid1.DataSource = db.notizIdUndTitelAuslesen().Tables[0];
+            dataGrid1.Update();
         }
+
+        private void menuItemSearch_Click(object sender, EventArgs e)
+        {
+            new Suchen().Show();
+        }
+
     }
 }
