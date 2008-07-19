@@ -39,7 +39,17 @@ namespace PrototypMIS
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
-            myCommunication.addTask(textBoxTitle.Text, dateTimePicker1.Value, textBoxDescription.Text);
+            if (this.task == null)
+            {
+                myCommunication.addTask(textBoxTitle.Text, dateTimePicker1.Value, textBoxDescription.Text);
+            }
+            else
+            {
+                this.task.Subject = this.textBoxTitle.Text;
+                this.task.DueDate = this.dateTimePicker1.Value;
+                this.task.Body = this.textBoxDescription.Text;
+                this.task.Update();
+            }
             this.Close();
             new Aufgaben().Show();
         }

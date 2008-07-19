@@ -27,6 +27,7 @@ namespace PrototypMIS
         {
             objOutlook = new OutlookCommunication();
             InitializeComponent();
+            objOutlook = new OutlookCommunication();
             this.kontakt = new Contact(id);
             this.textBoxFirstName.Text = kontakt.FirstName;
             this.textBoxMail.Text = kontakt.Email1Address;
@@ -46,7 +47,18 @@ namespace PrototypMIS
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
-            objOutlook.addContact(textBoxName.Text, textBoxFirstName.Text, textBoxPhone.Text, textBoxMail.Text);
+            if (this.kontakt == null)
+            {
+                objOutlook.addContact(textBoxName.Text, textBoxFirstName.Text, textBoxPhone.Text, textBoxMail.Text);
+            }
+            else
+            {
+                this.kontakt.FirstName = this.textBoxFirstName.Text;
+                this.kontakt.LastName = this.textBoxName.Text;
+                this.kontakt.HomeTelephoneNumber = this.textBoxPhone.Text;
+                this.kontakt.Email1Address = this.textBoxMail.Text;
+                this.kontakt.Update();
+            }
             Dispose();
             new Kontakte().Show();
         }
