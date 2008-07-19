@@ -9,44 +9,50 @@ namespace PrototypMIS
     class LinkInfo
     {
         ItemId id = null;
-
         private String name;
         private String typ;
 
         public LinkInfo(int id)
         {
+            //Das ist so ziemlich die unsauberste Lösung die es gibt, aber die beste die wir haben
             this.id = new ItemId(id);
-            String typ = id.GetType().ToString();
             
-            switch(typ){
-                case "Microsoft.WindowsMobile.PocketOutlook.Contact":
-                    Contact kontakt = new Contact(this.id);
-                    this.name = kontakt.LastName;
-                    this.typ = "Kontakt";
-                    break;
-                case "Microsoft.WindowsMobile.PocketOutlook.Appointment":
-                    Appointment termin = new Appointment(this.id);
-                    this.name = termin.Subject;
-                    this.typ = "Termin";
-                    break;
-                case "Microsoft.WindowsMobile.PocketOutlook.Task":
-                    Task aufgabe = new Task(this.id);
-                    this.name = aufgabe.Subject;
-                    this.typ = "Task";
-                    break;
+            Contact kontakt = null;
+            try
+            {
+                kontakt = new Contact(this.id);
+                this.name = kontakt.LastName;
+                this.typ = "Kontakt";
             }
-                            
+            catch (Exception) { }
+            
+            Appointment termin = null;
+            try
+            {
+                termin = new Appointment(this.id);
+                this.name = termin.Subject;
+                this.typ = "Termin";
+            }
+            catch (Exception) { }
+
+            Task aufgabe = null;
+            try
+            {
+                aufgabe = new Task(this.id);
+                this.name = aufgabe.Subject;
+                this.typ = "Task";
+            }
+            catch (Exception) { }
+
         }
-        
-        public string Name // this will be displayed in the column Header in the DataGrid 
+
+        public string Name
         {
             get
             {
                 return this.name;
             }
-            set
-            {
-            }
+            set { }
         }
 
         public string Typ
@@ -58,8 +64,13 @@ namespace PrototypMIS
             set { }
         }
 
-
-        //... Rest of properties
+        public String ItemId
+        {
+            get
+            {
+                return this.id.ToString();
+            }
+            set { }
         } 
-
-    }
+    }    
+}
