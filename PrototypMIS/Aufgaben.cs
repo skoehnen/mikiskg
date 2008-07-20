@@ -45,7 +45,8 @@ namespace PrototypMIS
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
         {
-            Dispose();
+            this.Close();
+            this.Dispose();
         }
 
         private void menuItemAufgabeAnlegen_Click(object sender, EventArgs e)

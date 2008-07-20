@@ -18,7 +18,8 @@ namespace PrototypMIS
 
         private void buttonAufgaben_Click(object sender, EventArgs e)
         {
-            new Aufgaben().Show();
+            //new Aufgaben().Show();
+            new AufgabenList().Show();
         }
 
         private void buttonNotizen_Click(object sender, EventArgs e)
