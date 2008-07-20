@@ -63,7 +63,7 @@ namespace PrototypMIS
                 this.termin.Update();
 
             }
-            new Termine().Show();
+            
             Dispose();
         }
 
@@ -76,8 +76,15 @@ namespace PrototypMIS
         {
             if (secureDelete.boolDelete())
             {
-                this.termin.Delete();
-                Dispose();
+                if (this.termin == null)
+                {
+                    MessageBox.Show("Dieser Eintrag existiert nicht!");
+                }
+                else
+                {
+                    this.termin.Delete();
+                    Dispose();
+                }
             }
         }
 
@@ -133,6 +140,11 @@ namespace PrototypMIS
                 dataGridLinks.DataSource = linkedItems;
                 dataGridLinks.Refresh();
             }
+        }
+
+        private void menuItemSearch_Click(object sender, EventArgs e)
+        {
+            new Suchen( MikiConverter.itemIdToInt(this.termin.ItemId), Konstanten.termin);
         }    
     }
 }

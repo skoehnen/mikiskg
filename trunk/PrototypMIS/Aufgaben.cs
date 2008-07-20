@@ -12,40 +12,22 @@ namespace PrototypMIS
 {
     public partial class Aufgaben : Form
     {
+        TaskCollection collection;
+        DataTable table;
+        DataColumn column;
+        DataRow row;
+
         public Aufgaben()
         {
             InitializeComponent();
-            TaskCollection collection;
+            
             collection = new OutlookCommunication().getOutlookSession().Tasks.Items;
-            DataTable table = new DataTable("Aufgaben");
-            DataColumn column = new DataColumn();
-            DataRow row;
-            column.ColumnName = "Titel";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);
+            table = new DataTable("Aufgaben");
             column = new DataColumn();
-            column.ColumnName = "Subject";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);
-            column = new DataColumn();
-            column.ColumnName = "Datum";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "ItemId";
-            table.Columns.Add(column);
 
-            foreach (PimItem item in collection)
-            {
-                row = table.NewRow();
-                row["Titel"] = item.Properties[TaskProperty.Subject];
-                row["Subject"] = item.Properties[TaskProperty.Body];
-                row["Datum"] = item.Properties[TaskProperty.DueDate];
-                row["ItemId"] = item.ItemId.ToString();
-                table.Rows.Add(row);
-            }
-            dataGridAufgaben.DataSource = table;
+            this.createColumns();
+
+            this.fillDataGrid();
 
             // Create new Table Style
             DataGridTableStyle ts = new DataGridTableStyle();
@@ -69,7 +51,7 @@ namespace PrototypMIS
         private void menuItemAufgabeAnlegen_Click(object sender, EventArgs e)
         {
             new Aufgabe().Show();
-            this.Close();
+            
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
@@ -92,8 +74,44 @@ namespace PrototypMIS
             int rowIndex = dataGridAufgaben.CurrentRowIndex;
             int columnIndex = 3;
             object oid = dataGridAufgaben[rowIndex, columnIndex];
-            this.Dispose();
+            
             new Aufgabe(MikiConverter.objectToItemId(oid)).Show();
+        }
+
+        private void createColumns()
+        {
+            column = new DataColumn();
+
+            column.ColumnName = "Titel";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.ColumnName = "Subject";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.ColumnName = "Datum";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "ItemId";
+            table.Columns.Add(column);
+
+        }
+
+        private void fillDataGrid()
+        {
+            foreach (PimItem item in collection)
+            {
+                row = table.NewRow();
+                row["Titel"] = item.Properties[TaskProperty.Subject];
+                row["Subject"] = item.Properties[TaskProperty.Body];
+                row["Datum"] = item.Properties[TaskProperty.DueDate];
+                row["ItemId"] = item.ItemId.ToString();
+                table.Rows.Add(row);
+            }
+            dataGridAufgaben.DataSource = table;
         }
     }
 }

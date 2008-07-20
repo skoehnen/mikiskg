@@ -106,7 +106,6 @@ D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Micros
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.xml
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Forms.xml
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\bin\Debug\Microsoft.WindowsMobile.Status.xml
-D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS\PrototypMIS\obj\Debug\PrototypMIS.SuchErgebnis.resources
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.Aufgaben.resources
@@ -173,3 +172,4 @@ C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Pa
 C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Part_II\PrototypMIS\obj\Debug\PrototypMIS.pdb
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Foto.resources
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.SuchergebnisTree.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.SuchergebnisTree.resources
