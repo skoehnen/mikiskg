@@ -14,7 +14,6 @@ namespace PrototypMIS
 
         public LinkInfo(int id, int typ)
         {
-            //Das ist so ziemlich die unsauberste Lösung die es gibt, aber die beste die wir haben
             this.id = id;
             this.typ = typ;
 

@@ -269,11 +269,6 @@ namespace PrototypMIS
             {
                 id = (int)ResultSet["id"];
             }
-
-            command.CommandText = "INSERT INTO uniqueIdentity (objectId, objectTyp) VALUES (" + id + ", " + Konstanten.notiz + ");";
-            command.ExecuteNonQuery();
-
-            
             conn.Close();
         }
 
@@ -387,10 +382,11 @@ namespace PrototypMIS
             SqlCeConnection conn = this.DBVerbindung();
             conn.Open();
             SqlCeCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT titel, text FROM notizen WHERE titel = '" + titel + "'";
+            command.CommandText = "SELECT id, titel, text FROM notizen WHERE titel = '" + titel + "'";
 
             String text = null;
             titel = null;
+            int id = -1;
 
             SqlCeDataReader ResultSet = command.ExecuteReader();
 
@@ -398,11 +394,12 @@ namespace PrototypMIS
             {
                 text = ResultSet["text"].ToString();
                 titel = ResultSet["titel"].ToString();
+                id = (int)ResultSet["id"];
             }
 
             conn.Close();
 
-            return new NotizInfo(titel, text);
+            return new NotizInfo(titel, text,id);
         }
 
         public void notizLoeschenTitel(String titel)
@@ -440,6 +437,42 @@ namespace PrototypMIS
             command.ExecuteNonQuery();
 
             conn.Close();
+        }
+
+        public DataSet notizSuchen(String suchBegriff)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT * FROM Notizen WHERE titel LIKE '%" + suchBegriff + "%' OR text LIKE '%" + suchBegriff + "%'";
+            
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
+        }
+
+        public DataSet fotoSuchen(String suchBegriff)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT * FROM Fotos WHERE titel LIKE '%" + suchBegriff + "%' OR beschreibung LIKE '%" + suchBegriff + "%'";
+
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
         }
 
     }

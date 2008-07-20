@@ -73,13 +73,13 @@ namespace PrototypMIS
             }
             if (checkBoxNotizen.Checked)
             {
-                System.Data.DataSet data = db.notizSuche(textBoxSuchen.Text);
+                System.Data.DataSet data = db.notizSuchen(textBoxSuchen.Text);
 
                 ergebnis.setFound(2, data.Tables[0].Rows.Count);
 
-                if (data.Tables[0].Rows.Count > 0)
+                foreach (DataRow row in data.Tables[0].Rows)
                 {
-                    ergebnis.addNewChield(2, new MikiTreeNode((int)data.Tables[0].Rows[0].ItemArray[1],data.Tables[0].Rows[0].ItemArray[0].ToString(),Konstanten.notiz));
+                    ergebnis.addNewChield(2, new MikiTreeNode((int)row["id"], row["titel"].ToString(), Konstanten.notiz));
                 }
             }
             if (checkBoxTermine.Checked)
@@ -90,6 +90,17 @@ namespace PrototypMIS
                 foreach (PimItem item in collection)
                 {
                     ergebnis.addNewChield(3, new MikiTreeNode(MikiConverter.itemIdToInt(item.ItemId),item.Properties[AppointmentProperty.Subject].ToString(),Konstanten.termin));
+                }
+            }
+            if (this.checkBoxFotos.Checked)
+            {
+                System.Data.DataSet data = db.fotoSuchen(textBoxSuchen.Text);
+
+                ergebnis.setFound(5, data.Tables[0].Rows.Count);
+
+                foreach (DataRow row in data.Tables[0].Rows)
+                {
+                    ergebnis.addNewChield(5, new MikiTreeNode((int)row["id"], row["titel"].ToString(), Konstanten.foto));
                 }
             }
 

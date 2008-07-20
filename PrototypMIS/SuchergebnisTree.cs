@@ -129,13 +129,11 @@ namespace PrototypMIS
                     break;
 
                 case Konstanten.notiz:
-                    //Noch zu implementieren
-                    new Notiz().Show();
+                    new Notiz(new DB_Verarbeitung().notizHolen(this.auswahl.id)).Show();
                     break;
 
                 case Konstanten.foto:
-                    //Noch zu implementieren
-                    //new Foto().Show();
+                    new Foto(new DB_Verarbeitung().fotoHolen(auswahl.id), false, null, null).Show();
                     break;
             }
         }
