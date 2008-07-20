@@ -31,7 +31,10 @@
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemAbbrechen = new System.Windows.Forms.MenuItem();
-            this.menuItemSpeichern = new System.Windows.Forms.MenuItem();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemSave = new System.Windows.Forms.MenuItem();
+            this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageFoto = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,17 +55,33 @@
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.Add(this.menuItemAbbrechen);
-            this.mainMenu1.MenuItems.Add(this.menuItemSpeichern);
+            this.mainMenu1.MenuItems.Add(this.menuItemMenu);
             // 
             // menuItemAbbrechen
             // 
             this.menuItemAbbrechen.Text = "abbrechen";
             this.menuItemAbbrechen.Click += new System.EventHandler(this.menuItemAbbrechen_Click);
             // 
-            // menuItemSpeichern
+            // menuItemMenu
             // 
-            this.menuItemSpeichern.Text = "speichern";
-            this.menuItemSpeichern.Click += new System.EventHandler(this.menuItemSpeichern_Click);
+            this.menuItemMenu.MenuItems.Add(this.menuItemSave);
+            this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
+            this.menuItemMenu.MenuItems.Add(this.menuItemLink);
+            this.menuItemMenu.Text = "Menü";
+            // 
+            // menuItemSave
+            // 
+            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Click += new System.EventHandler(this.menuItemSpeichern_Click);
+            // 
+            // menuItemDelete
+            // 
+            this.menuItemDelete.Text = "Löschen";
+            // 
+            // menuItemLink
+            // 
+            this.menuItemLink.Text = "Verlinken";
+            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // tabControl1
             // 
@@ -124,6 +143,7 @@
             // dataGridLinks
             // 
             this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.ContextMenu = this.contextMenu1;
             this.dataGridLinks.Location = new System.Drawing.Point(0, 3);
             this.dataGridLinks.Name = "dataGridLinks";
             this.dataGridLinks.Size = new System.Drawing.Size(240, 239);
@@ -171,12 +191,15 @@
         private System.Windows.Forms.TabPage tabPageBeschreibung;
         private System.Windows.Forms.TextBox textBoxBeschreibung;
         private System.Windows.Forms.MenuItem menuItemAbbrechen;
-        private System.Windows.Forms.MenuItem menuItemSpeichern;
+        private System.Windows.Forms.MenuItem menuItemMenu;
         private System.Windows.Forms.TabPage tabPageLinks;
         private System.Windows.Forms.DataGrid dataGridLinks;
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem contextMenuItemShow;
         private System.Windows.Forms.MenuItem contextMenuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemSave;
+        private System.Windows.Forms.MenuItem menuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemLink;
 
     }
 }

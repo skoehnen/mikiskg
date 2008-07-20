@@ -8,42 +8,46 @@ namespace PrototypMIS
 {
     class LinkInfo
     {
-        ItemId id = null;
+        int id = -1;
         private String name;
-        private String typ;
+        private int typ;
 
-        public LinkInfo(int id)
+        public LinkInfo(int id, int typ)
         {
             //Das ist so ziemlich die unsauberste Lösung die es gibt, aber die beste die wir haben
-            this.id = new ItemId(id);
-            
-            Contact kontakt = null;
-            try
-            {
-                kontakt = new Contact(this.id);
-                this.name = kontakt.LastName;
-                this.typ = "Kontakt";
-            }
-            catch (Exception) { }
-            
-            Appointment termin = null;
-            try
-            {
-                termin = new Appointment(this.id);
-                this.name = termin.Subject;
-                this.typ = "Termin";
-            }
-            catch (Exception) { }
+            this.id = id;
+            this.typ = typ;
 
-            Task aufgabe = null;
-            try
+            switch (typ)
             {
-                aufgabe = new Task(this.id);
-                this.name = aufgabe.Subject;
-                this.typ = "Task";
-            }
-            catch (Exception) { }
+                case Konstanten.aufgabe:
+                    Task aufgabe = new Task(new ItemId(id));
+                    this.name = aufgabe.Subject;
+                    break;
 
+                case Konstanten.foto:
+                    FotoInfo foto = new DB_Verarbeitung().fotoHolen(id);
+                    this.name = foto.getTitel();
+                    break;
+
+                case Konstanten.kontakt:
+                    Contact kontakt = new Contact(new ItemId(id));
+                    this.name = kontakt.LastName + ", " + kontakt.FirstName;
+                    break;
+
+                case Konstanten.kunde:
+                    throw new NotImplementedException();
+                    
+                case Konstanten.notiz:
+                    NotizInfo notiz = new DB_Verarbeitung().notizHolen(id);
+                    this.name = notiz.getTitel();
+                    break;
+
+                case Konstanten.termin:
+                    Appointment termin = new Appointment(new ItemId(id));
+                    this.name = termin.Subject;
+                    break;
+            }
         }
 
         public string Name
@@ -55,11 +59,11 @@ namespace PrototypMIS
             set { }
         }
 
-        public string Typ
+        public String Typ
         {
             get
             {
-                return this.typ;
+                return MikiConverter.mikiObjectToString(typ);
             }
             set { }
         }
