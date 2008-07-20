@@ -90,6 +90,12 @@
     <Compile Include="Kontakt.Designer.cs">
       <DependentUpon>Kontakt.cs</DependentUpon>
     </Compile>
+    <Compile Include="KontakteListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KontakteListe.Designer.cs">
+      <DependentUpon>KontakteListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="LinkInfo.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -163,6 +169,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kontakt.resx">
       <DependentUpon>Kontakt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KontakteListe.resx">
+      <DependentUpon>KontakteListe.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">

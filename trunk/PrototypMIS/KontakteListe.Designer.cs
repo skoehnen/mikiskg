@@ -1,6 +1,6 @@
 ﻿namespace PrototypMIS
 {
-    partial class KontakteList
+    partial class KontakteListe
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -32,12 +32,12 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemBack = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
-            this.menuItemCreateTask = new System.Windows.Forms.MenuItem();
+            this.menuItemContactCreate = new System.Windows.Forms.MenuItem();
             this.menuItemSearch = new System.Windows.Forms.MenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
-            this.menuItemDelete = new System.Windows.Forms.MenuItem();
-            this.menuItemShowEntry = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -52,14 +52,14 @@
             // 
             // menuItem2
             // 
-            this.menuItem2.MenuItems.Add(this.menuItemCreateTask);
+            this.menuItem2.MenuItems.Add(this.menuItemContactCreate);
             this.menuItem2.MenuItems.Add(this.menuItemSearch);
             this.menuItem2.Text = "Menü";
             // 
-            // menuItemCreateTask
+            // menuItemContactCreate
             // 
-            this.menuItemCreateTask.Text = "Aufgabe anlegen";
-            this.menuItemCreateTask.Click += new System.EventHandler(this.menuItemCreateTask_Click);
+            this.menuItemContactCreate.Text = "Kontakt Anlegen";
+            this.menuItemContactCreate.Click += new System.EventHandler(this.menuItemContactCreate_Click);
             // 
             // menuItemSearch
             // 
@@ -75,20 +75,20 @@
             // 
             // contextMenu1
             // 
-            this.contextMenu1.MenuItems.Add(this.menuItemDelete);
-            this.contextMenu1.MenuItems.Add(this.menuItemShowEntry);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
             // 
-            // menuItemDelete
+            // contextMenuItemShow
             // 
-            this.menuItemDelete.Text = "Löschen";
-            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
+            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
             // 
-            // menuItemShowEntry
+            // contextMenuItemDelete
             // 
-            this.menuItemShowEntry.Text = "Anzeigen";
-            this.menuItemShowEntry.Click += new System.EventHandler(this.menuItemShowEntry_Click);
+            this.contextMenuItemDelete.Text = "Löchen";
+            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
-            // AufgabenList
+            // KontakteListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -96,8 +96,8 @@
             this.ClientSize = new System.Drawing.Size(240, 268);
             this.Controls.Add(this.listView1);
             this.Menu = this.mainMenu1;
-            this.Name = "AufgabenList";
-            this.Text = "Aufgaben";
+            this.Name = "KontakteListe";
+            this.Text = "Kontakte";
             this.ResumeLayout(false);
 
         }
@@ -106,11 +106,11 @@
 
         private System.Windows.Forms.MenuItem menuItemBack;
         private System.Windows.Forms.MenuItem menuItem2;
-        private System.Windows.Forms.MenuItem menuItemCreateTask;
+        private System.Windows.Forms.MenuItem menuItemContactCreate;
         private System.Windows.Forms.MenuItem menuItemSearch;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ContextMenu contextMenu1;
-        private System.Windows.Forms.MenuItem menuItemDelete;
-        private System.Windows.Forms.MenuItem menuItemShowEntry;
+        private System.Windows.Forms.MenuItem contextMenuItemShow;
+        private System.Windows.Forms.MenuItem contextMenuItemDelete;
     }
 }

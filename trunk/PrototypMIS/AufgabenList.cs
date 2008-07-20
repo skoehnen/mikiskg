@@ -10,12 +10,12 @@ using Microsoft.WindowsMobile.PocketOutlook;
 
 namespace PrototypMIS
 {
-    public partial class AufgabenList : Form
+    public partial class KontakteList : Form
     {
         OutlookCommunication oc = null;
         TaskCollection collection = null;
 
-        public AufgabenList()
+        public KontakteList()
         {
             InitializeComponent();
             this.oc = new OutlookCommunication();

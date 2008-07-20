@@ -19,7 +19,7 @@ namespace PrototypMIS
         private void buttonAufgaben_Click(object sender, EventArgs e)
         {
             //new Aufgaben().Show();
-            new AufgabenList().Show();
+            new KontakteList().Show();
         }
 
         private void buttonNotizen_Click(object sender, EventArgs e)
@@ -34,7 +34,8 @@ namespace PrototypMIS
 
         private void buttonKontakte_Click(object sender, EventArgs e)
         {
-            new Kontakte().Show();
+            //new Kontakte().Show();
+            new KontakteListe().Show();
         }
 
         private void buttonKunden_Click(object sender, EventArgs e)
