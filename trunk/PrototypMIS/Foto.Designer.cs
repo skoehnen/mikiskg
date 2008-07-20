@@ -174,6 +174,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Foto";
             this.Text = "Foto";
+            this.GotFocus += new System.EventHandler(this.Foto_GotFocus);
             this.tabControl1.ResumeLayout(false);
             this.tabPageFoto.ResumeLayout(false);
             this.tabPageBeschreibung.ResumeLayout(false);

@@ -122,6 +122,17 @@ namespace PrototypMIS
                 int zielTyp = MikiConverter.stringToMikiObjectTyp(this.dataGridLinks[row, 1].ToString());
                 new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.termin.ItemId), ziel, Konstanten.aufgabe, zielTyp);
             }
+        }
+
+        private void Termin_GotFocus(object sender, EventArgs e)
+        {
+            if (this.termin != null)
+            {
+                this.menuItemLink.Enabled = true;
+                linkedItems = new DB_Verarbeitung().abfrage(MikiConverter.itemIdToInt(this.termin.ItemId));
+                dataGridLinks.DataSource = linkedItems;
+                dataGridLinks.Refresh();
+            }
         }    
     }
 }
