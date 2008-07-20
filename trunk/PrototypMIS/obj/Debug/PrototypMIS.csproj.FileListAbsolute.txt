@@ -173,3 +173,4 @@ C:\Dokumente und Einstellungen\morpheus\Eigene Dateien\FH-Aachen\CheckOut_MIS_Pa
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.Foto.resources
 C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.SuchergebnisTree.resources
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.SuchergebnisTree.resources
+C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.AufgabenList.resources

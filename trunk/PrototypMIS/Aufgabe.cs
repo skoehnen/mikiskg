@@ -74,6 +74,8 @@ namespace PrototypMIS
 
         private void menuItem1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            new AufgabenList().Show();
             Dispose();
         }
 
