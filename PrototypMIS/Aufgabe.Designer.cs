@@ -40,10 +40,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.dataGridLinks = new System.Windows.Forms.DataGrid();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
             this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -116,13 +116,6 @@
             this.dataGridLinks.Size = new System.Drawing.Size(240, 132);
             this.dataGridLinks.TabIndex = 11;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(90, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 22);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
             // contextMenu1
             // 
             this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
@@ -137,6 +130,13 @@
             // 
             this.contextMenuItemDelete.Text = "Löschen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(90, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(133, 22);
+            this.dateTimePicker1.TabIndex = 16;
             // 
             // Aufgabe
             // 
@@ -153,6 +153,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Aufgabe";
             this.Text = "Aufgabe";
+            this.GotFocus += new System.EventHandler(this.Aufgabe_GotFocus);
             this.ResumeLayout(false);
 
         }

@@ -36,6 +36,9 @@
             this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.menuItemSave = new System.Windows.Forms.MenuItem();
             this.dataGridLinks = new System.Windows.Forms.DataGrid();
+            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
+            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxMail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
-            this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
-            this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -90,6 +90,21 @@
             this.dataGridLinks.Size = new System.Drawing.Size(240, 107);
             this.dataGridLinks.TabIndex = 20;
             // 
+            // contextMenu1
+            // 
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
+            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
+            // 
+            // contextMenuItemShow
+            // 
+            this.contextMenuItemShow.Text = "anzeigen";
+            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
+            // 
+            // contextMenuItemDelete
+            // 
+            this.contextMenuItemDelete.Text = "löschen";
+            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
+            // 
             // label4
             // 
             this.label4.Location = new System.Drawing.Point(17, 108);
@@ -101,7 +116,7 @@
             // 
             this.textBoxMail.Location = new System.Drawing.Point(123, 108);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(100, 25);
+            this.textBoxMail.Size = new System.Drawing.Size(100, 21);
             this.textBoxMail.TabIndex = 19;
             // 
             // label3
@@ -129,37 +144,22 @@
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(123, 81);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
+            this.textBoxPhone.Size = new System.Drawing.Size(100, 21);
             this.textBoxPhone.TabIndex = 18;
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.Location = new System.Drawing.Point(123, 54);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxFirstName.Size = new System.Drawing.Size(100, 21);
             this.textBoxFirstName.TabIndex = 17;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(123, 27);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxName.Size = new System.Drawing.Size(100, 21);
             this.textBoxName.TabIndex = 16;
-            // 
-            // contextMenu1
-            // 
-            this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
-            this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
-            // 
-            // contextMenuItemShow
-            // 
-            this.contextMenuItemShow.Text = "anzeigen";
-            this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
-            // 
-            // contextMenuItemDelete
-            // 
-            this.contextMenuItemDelete.Text = "löschen";
-            this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // Kontakt
             // 
@@ -179,6 +179,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Kontakt";
             this.Text = "Kontakt";
+            this.GotFocus += new System.EventHandler(this.Kontakt_GotFocus);
             this.ResumeLayout(false);
 
         }

@@ -106,5 +106,16 @@ namespace PrototypMIS
         {
             new Suchen(foto.getId(), Konstanten.foto).Show();
         }
+
+        private void Foto_GotFocus(object sender, EventArgs e)
+        {
+            if (!neuesFoto)
+            {
+                this.menuItemLink.Enabled = true;
+                linkedItems = new DB_Verarbeitung().abfrage(this.foto.getId());
+                dataGridLinks.DataSource = linkedItems;
+                dataGridLinks.Refresh();
+            }
+        }
     }
 }
