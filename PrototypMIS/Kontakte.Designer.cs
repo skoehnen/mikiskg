@@ -34,11 +34,11 @@
             this.Menue = new System.Windows.Forms.MenuItem();
             this.menuItemSearch = new System.Windows.Forms.MenuItem();
             this.menuItemCreateContact = new System.Windows.Forms.MenuItem();
+            this.menuItemFitColumnWidth = new System.Windows.Forms.MenuItem();
             this.dataGridKontakte = new System.Windows.Forms.DataGrid();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
             this.menuItemShow = new System.Windows.Forms.MenuItem();
-            this.menuItemFitColumnWidth = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -68,6 +68,11 @@
             this.menuItemCreateContact.Text = "Kontakt anlegen";
             this.menuItemCreateContact.Click += new System.EventHandler(this.menuItem2_Click);
             // 
+            // menuItemFitColumnWidth
+            // 
+            this.menuItemFitColumnWidth.Text = "Spaltenbreite anpassen";
+            this.menuItemFitColumnWidth.Click += new System.EventHandler(this.menuItemFitColumnWidth_Click);
+            // 
             // dataGridKontakte
             // 
             this.dataGridKontakte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -94,11 +99,6 @@
             this.menuItemShow.Text = "anzeigen";
             this.menuItemShow.Click += new System.EventHandler(this.menuItemShow_Click);
             // 
-            // menuItemFitColumnWidth
-            // 
-            this.menuItemFitColumnWidth.Text = "Spaltenbreite anpassen";
-            this.menuItemFitColumnWidth.Click += new System.EventHandler(this.menuItemFitColumnWidth_Click);
-            // 
             // Kontakte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -109,6 +109,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Kontakte";
             this.Text = "Kontakte";
+            this.GotFocus += new System.EventHandler(this.gotFocus);
             this.ResumeLayout(false);
 
         }

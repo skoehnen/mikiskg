@@ -90,6 +90,7 @@
             this.textBoxText.Name = "textBoxText";
             this.textBoxText.Size = new System.Drawing.Size(234, 129);
             this.textBoxText.TabIndex = 2;
+            this.textBoxText.TextChanged += new System.EventHandler(this.textBoxText_TextChanged);
             // 
             // dataGridLinks
             // 

@@ -19,10 +19,11 @@ namespace PrototypMIS
         public Kontakte()
         {
             InitializeComponent();
-            ContactCollection collection;
-            collection = new OutlookCommunication().getOutlookSession().Contacts.Items;
+            //ContactCollection collection;
+            //collection = new OutlookCommunication().getOutlookSession().Contacts.Items;
 
-            table = new DataTable("Kontakte");
+            table = tablefuellen();
+                /*new DataTable("Kontakte");
             this.createTable();
             foreach (PimItem item in collection)
             {
@@ -33,7 +34,7 @@ namespace PrototypMIS
                 row["eMail"] = item.Properties[ContactProperty.Email1Address];
                 row["ItemId"] = item.ItemId.ToString();
                 table.Rows.Add(row);
-            }
+            }*/
 
             // Create new Table Style
             DataGridTableStyle ts = new DataGridTableStyle();
@@ -54,8 +55,37 @@ namespace PrototypMIS
             dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Nachname"].Width = 70;
             dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Telefon"].Width = 50;
             dataGridKontakte.TableStyles["Kontakte"].GridColumnStyles["Nachname"].Width = 70;
-
             dataGridKontakte.Update();
+        }
+
+        private DataTable tablefuellen()
+        {
+            ContactCollection collection;
+            collection = new OutlookCommunication().getOutlookSession().Contacts.Items;
+            table = new DataTable("Kontakte");
+            this.createTable();
+            foreach (PimItem item in collection)
+            {
+                row = table.NewRow();
+                row["Vorname"] = item.Properties[ContactProperty.FirstName];
+                row["Nachname"] = item.Properties[ContactProperty.LastName];
+                row["Telefon"] = item.Properties[ContactProperty.HomeTelephoneNumber];
+                row["eMail"] = item.Properties[ContactProperty.Email1Address];
+                row["ItemId"] = item.ItemId.ToString();
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+
+        private void gotFocus(object sender, EventArgs e)
+        {
+            this.updateGrid();
+        }
+
+        private void updateGrid()
+        {
+            dataGridKontakte.DataSource = tablefuellen(); ;
+            dataGridKontakte.Refresh();
         }
 
         private void menuItemZurueck_Click(object sender, EventArgs e)
@@ -66,6 +96,7 @@ namespace PrototypMIS
         private void menuItem2_Click(object sender, EventArgs e)
         {
             new Kontakt().Show();
+            //Dispose();
         }
 
         private void dataGridKontakte_CurrentCellChanged(object sender, EventArgs e)
@@ -83,15 +114,15 @@ namespace PrototypMIS
             int rowIndex = dataGridKontakte.CurrentRowIndex;
             int columnIndex = 4;
             object oid = dataGridKontakte[rowIndex, columnIndex];
-            Dispose();
+            //Dispose();
             new Kontakt(MikiConverter.objectToItemId(oid)).Show();
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
+            int index = dataGridKontakte.CurrentRowIndex;
             if (secureDelete.boolDelete())
             {
-                int index = dataGridKontakte.CurrentRowIndex;
                 OutlookCommunication outlookCom = new OutlookCommunication();
                 object Id = dataGridKontakte[index, 4]; // weil in Spalte 4 die ID des Kontakts steht
                 outlookCom.deleteContact(MikiConverter.objectToItemId(Id));
