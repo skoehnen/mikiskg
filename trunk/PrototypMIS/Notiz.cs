@@ -119,5 +119,10 @@ namespace PrototypMIS
                 }
             }
         }
+
+        private void textBoxText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,6 +73,7 @@
             this.dataGridAufgaben.Name = "dataGridAufgaben";
             this.dataGridAufgaben.Size = new System.Drawing.Size(240, 265);
             this.dataGridAufgaben.TabIndex = 0;
+            this.dataGridAufgaben.CurrentCellChanged += new System.EventHandler(this.dataGridAufgaben_CurrentCellChanged);
             // 
             // contextMenu1
             // 

@@ -31,9 +31,8 @@ namespace PrototypMIS
 
         private void menuItemShow_Click(object sender, EventArgs e)
         {
-            int rowIndex = dataGrid1.CurrentCell.ColumnNumber;
-            int columnIndex = dataGrid1.CurrentCell.ColumnNumber;
-            new Notiz(db.notizHolenTitel(dataGrid1[rowIndex,columnIndex].ToString())).Show();
+            int index = dataGrid1.CurrentRowIndex;
+            new Notiz(db.notizHolenTitel(dataGrid1[dataGrid1.CurrentRowIndex,0].ToString())).Show();
         }
 
         private void gotFocus(object sender, EventArgs e)
@@ -43,9 +42,10 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
+            int index = dataGrid1.CurrentRowIndex;
             if (secureDelete.boolDelete())
             {
-                db.notizLoeschenTitel(dataGrid1[dataGrid1.CurrentCell.RowNumber, dataGrid1.CurrentCell.ColumnNumber].ToString());
+                db.notizLoeschenTitel(dataGrid1[index,0].ToString());
                 updateGrid();
             }
         }
@@ -61,5 +61,10 @@ namespace PrototypMIS
         {
             new Suchen().Show();
         }
+        private void dataGrid1_CurrentCellChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
