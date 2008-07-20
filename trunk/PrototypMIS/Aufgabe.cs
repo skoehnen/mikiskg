@@ -72,7 +72,7 @@ namespace PrototypMIS
 
         private void menuItemLink_Click(object sender, EventArgs e)
         {
-            new Suchen(task.ItemId).Show();
+            new Suchen(MikiConverter.itemIdToInt(task.ItemId),Konstanten.aufgabe).Show();
         }
 
         /// <summary>
@@ -85,26 +85,21 @@ namespace PrototypMIS
             int column = this.dataGridLinks.CurrentCell.ColumnNumber;
             int row = this.dataGridLinks.CurrentCell.RowNumber;
             String typ = this.dataGridLinks[row, 1].ToString();
-            if (typ == "Foto" && typ == "Notiz")
-            {
-                //hier kommt der Kram für die nicht POOM-Objekte rein
-            }
-            else
-            {
-                ItemId id = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
                 switch (typ)
                 {
-                    case "Task":
-                        new Aufgabe(id).Show();
+                    case "Aufgabe":
+                        new Aufgabe(MikiConverter.objectToItemId(this.dataGridLinks[row, 2])).Show();
                         break;
                     case "Kontakt":
-                        new Kontakt(id).Show();
+                        new Kontakt(MikiConverter.objectToItemId(this.dataGridLinks[row, 2])).Show();
                         break;
                     case "Termin":
-                        new Termin(id).Show();
+                        new Termin(MikiConverter.objectToItemId(this.dataGridLinks[row, 2])).Show();
+                        break;
+                    case "Foto":
+                        new Foto(new DB_Verarbeitung().fotoHolen(Convert.ToInt32(this.dataGridLinks[row, 2].ToString())), false, null, null).Show();
                         break;
                 }
-            }
         }
 
         /// <summary>
@@ -117,8 +112,9 @@ namespace PrototypMIS
             if (secureDelete.boolDelete())
             {
                 int row = this.dataGridLinks.CurrentCell.RowNumber;
-                ItemId ziel = MikiConverter.objectToItemId(this.dataGridLinks[row, 2]);
-                new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.task.ItemId), MikiConverter.itemIdToInt(ziel), true);
+                int ziel = Convert.ToInt32(this.dataGridLinks[row, 2].ToString());
+                int zielTyp = MikiConverter.stringToMikiObjectTyp(this.dataGridLinks[row,1].ToString());
+                new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.task.ItemId), ziel, Konstanten.aufgabe, zielTyp);
             }
         }    
     }

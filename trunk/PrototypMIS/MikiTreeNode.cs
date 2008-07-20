@@ -13,7 +13,7 @@ namespace PrototypMIS
         /// </summary>
         /// <param name="id"></param>
         /// <param name="text"></param>
-        public MikiTreeNode(int id, String text, String typ)
+        public MikiTreeNode(int id, String text, int typ)
         {
             this.Text = text;
             this.Tag = new MikiDuo(id, typ);
@@ -23,9 +23,9 @@ namespace PrototypMIS
     public class MikiDuo
     {
         public int id;
-        public String typ;
+        public int typ;
 
-        public MikiDuo(int id, String typ)
+        public MikiDuo(int id, int typ)
         {
             this.id = id;
             this.typ = typ;

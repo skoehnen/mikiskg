@@ -13,6 +13,8 @@ namespace PrototypMIS
     public partial class SuchergebnisTree : Form
     {
         int id = 0;
+        int sourceTyp = -1;
+        MikiDuo auswahl = null;
 
         public SuchergebnisTree()
         {
@@ -20,11 +22,12 @@ namespace PrototypMIS
             this.addNewParents();
         }
 
-        public SuchergebnisTree(int id)
+        public SuchergebnisTree(int id, int typ)
         {
             InitializeComponent();
             this.id = id;
             this.addNewParents();
+            this.sourceTyp = typ;
         }
 
 
@@ -110,32 +113,40 @@ namespace PrototypMIS
 
         private void contextMenuItemShow_Click(object sender, EventArgs e)
         {
-            MikiDuo auswahl = (MikiDuo)this.treeView1.SelectedNode.Tag;
-
+            this.auswahl = (MikiDuo)this.treeView1.SelectedNode.Tag;
             switch (auswahl.typ)
             {
-                case "Kontakt":
+                case Konstanten.kontakt:
                     new Kontakt(new ItemId(auswahl.id)).Show();
                     break;
 
-                case "Aufgabe":
+                case Konstanten.aufgabe:
                     new Aufgabe(new ItemId(auswahl.id)).Show();
                     break;
 
-                case "Termin":
+                case Konstanten.termin:
                     new Termin(new ItemId(auswahl.id)).Show();
                     break;
 
-                case "Notiz":
+                case Konstanten.notiz:
                     //Noch zu implementieren
                     new Notiz().Show();
                     break;
 
-                case "Foto":
+                case Konstanten.foto:
                     //Noch zu implementieren
                     //new Foto().Show();
                     break;
             }
+        }
+
+        private void contextMenuItemLink_Click(object sender, EventArgs e)
+        {
+            DB_Verarbeitung db = new DB_Verarbeitung();
+            this.auswahl = (MikiDuo)this.treeView1.SelectedNode.Tag;
+            db.verknuepfung_eintragen(id, auswahl.id, sourceTyp, auswahl.typ);
+            this.Close();
+            this.Dispose();
         }
     }
 }

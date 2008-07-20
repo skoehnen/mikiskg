@@ -24,6 +24,12 @@ namespace PrototypMIS
             ColumnHeader test = new ColumnHeader();
             test.Text = "Test";
             listView1.Columns.Add("test", 10, HorizontalAlignment.Center);
+            DataSet ds = new DB_Verarbeitung().fotosHolen();
+            
+            foreach(DataRow row in ds.Tables[0].Rows)
+            {
+                this.bildHinzufuegen(row["pfad"].ToString(), row["titel"].ToString());
+            }
         }
 
         private void menuItemZueruck_Click(object sender, EventArgs e)

@@ -65,5 +65,55 @@ namespace PrototypMIS
         {
             return Convert.ToInt32(id.ToString());
         }
+
+        public static int stringToMikiObjectTyp(String typ)
+        {
+            switch (typ)
+            {
+                case "Aufgabe":
+                    return Konstanten.aufgabe;
+
+                case "Foto":
+                    return Konstanten.foto;
+
+                case "Kontakt":
+                    return Konstanten.kontakt;
+
+                case "Kunde":
+                    return Konstanten.kunde;
+
+                case "Notiz":
+                    return Konstanten.notiz;
+
+                case "Termin":
+                    return Konstanten.termin;
+            }
+            return -1;
+        }
+
+        public static String mikiObjectToString(int typ)
+        {
+            switch (typ)
+            {
+                case Konstanten.aufgabe:
+                    return "Aufgabe";
+
+                case Konstanten.foto:
+                    return "Foto";
+
+                case Konstanten.kontakt:
+                    return "Kontakt";
+
+                case Konstanten.kunde:
+                    return "Kunde";
+
+                case Konstanten.notiz:
+                    return "Notiz";
+
+                case Konstanten.termin:
+                    return "Termin";
+            }
+            return "FEHLER";
+        }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.WindowsMobile.PocketOutlook;
 using System.IO;
 using System.Windows.Forms;
 using System.Collections;
+using System.Data;
 
 namespace PrototypMIS
 {
@@ -18,38 +19,40 @@ namespace PrototypMIS
             return conn;
         }
 
-        public void verknuepfung_eintragen(int quellID, int zielID, bool typ)
+        public void verknuepfung_eintragen(int quellID, int zielID, int quellTyp, int zielTyp)
         {
             //Der typ gibt an ob es ein Objekt aus Pocket Outlook ist oder nicht
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + quellID + "','" + zielID + "'," + "0" +")";
+            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke, MikiObjectQuelle, MikiObjectZiel) VALUES ('" + quellID + "','" + zielID + "'," + quellTyp +", " + zielTyp + ")";
             sqlcommand.ExecuteNonQuery();
-            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObject) VALUES ('" + zielID + "','" + quellID + "'," + "0" + ")";
+            sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObjectQuelle, MikiObjectZiel) VALUES ('" + zielID + "','" + quellID + "'," + zielTyp + ", " + quellTyp + ")";
             sqlcommand.ExecuteNonQuery();
             conn.Close();
         }
 
-        public void einzelverknuepfung_loeschen(int quelle, int ziel, bool typ)
+        public void einzelverknuepfung_loeschen(int quelle, int ziel, int quellTyp, int zielTyp)
         {
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "' AND ItemId_Senke = '" + ziel + "' AND MikiObject = " + "0";
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "' AND ItemId_Senke = '" + ziel + "' AND MikiObjectQuelle = " + quellTyp + " AND MikiObjectZiel = " + zielTyp;
             sqlcommand.ExecuteNonQuery();
-            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + ziel + "' AND ItemId_Senke = '" + quelle + "' AND MikiObject = " + "0";
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + ziel + "' AND ItemId_Senke = '" + quelle + "' AND MikiObjectQuelle = '" + zielTyp + "' AND MikiObjectZiel = " + quellTyp;
             sqlcommand.ExecuteNonQuery();
             conn.Close();
 
         }
 
-        public void gesamtverknuepfung_loeschen(int quelle, bool typ)
+        public void gesamtverknuepfung_loeschen(int quelle, int typ)
         {
             SqlCeConnection conn = DBVerbindung();
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
-            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "' AND MikiObject = " + "0";
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "' AND MikiObjectQuelle = " + typ;
+            sqlcommand.ExecuteNonQuery();
+            sqlcommand.CommandText = "DELETE FROM Verknüpfung WHERE ItemID_Senke = '" + quelle + "' AND MikiObjectZiel = " + typ;
             sqlcommand.ExecuteNonQuery();
             conn.Close();
         }
@@ -63,14 +66,34 @@ namespace PrototypMIS
             sqlcommand.CommandText = "SELECT * FROM Verknüpfung WHERE ItemID_Quelle = '" + quelle + "'";
             SqlCeDataReader ResultSet;
             ResultSet = sqlcommand.ExecuteReader();
-            int i ;
+            int i;
+            int zielTyp;
             while (ResultSet.Read())
             {
                 i = (int)  ResultSet["ItemID_Senke"];
-                liste.Add(new LinkInfo(i));
+                zielTyp = (int) ResultSet["MikiObjectZiel"];
+                liste.Add(new LinkInfo(i, zielTyp));
             }
             conn.Close();
             return liste;
+        }
+
+        public DataSet fotosHolen()
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT titel, pfad FROM Fotos";
+
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
         }
 
         public bool fotoEinfuegen(String pfad, String beschreibung, String titel)
@@ -95,8 +118,6 @@ namespace PrototypMIS
                 id = (int)ResultSet["id"];
             }
 
-            command.CommandText = "INSERT INTO uniqueIdentity (objectId, objectTyp) VALUES (" + id + ", " + Konstanten.foto + ");";
-            command.ExecuteNonQuery();
             conn.Close();
             return true;
         }
@@ -142,6 +163,32 @@ namespace PrototypMIS
                 id = (int)ResultSet["id"];
                 beschreibung = ResultSet["beschreibung"].ToString();
                 pfad = ResultSet["pfad"].ToString();
+            }
+
+            conn.Close();
+
+            return new FotoInfo(titel, pfad, beschreibung, id);
+        }
+
+        public FotoInfo fotoHolen(int id)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+            conn.Open();
+            SqlCeCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT beschreibung, pfad, titel FROM Fotos WHERE id = '" + id + "'";
+            command.ExecuteNonQuery();
+
+            SqlCeDataReader ResultSet = command.ExecuteReader();
+
+            String beschreibung = "";
+            String pfad = "";
+            String titel = "";
+
+            while (ResultSet.Read())
+            {
+                beschreibung = ResultSet["beschreibung"].ToString();
+                pfad = ResultSet["pfad"].ToString();
+                titel = ResultSet["titel"].ToString();
             }
 
             conn.Close();
@@ -397,9 +444,13 @@ namespace PrototypMIS
 
     }
 
-    class Konstanten
+    public class Konstanten
     {
-        public static int foto = 0;
-        public static int notiz = 1;
+        public const int foto = 0;
+        public const int notiz = 1;
+        public const int aufgabe = 2;
+        public const int termin = 3;
+        public const int kontakt = 4;
+        public const int kunde = 5;
     }
 }

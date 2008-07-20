@@ -30,8 +30,8 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuItemBack = new System.Windows.Forms.MenuItem();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
             this.contextMenuItemLink = new System.Windows.Forms.MenuItem();
@@ -41,6 +41,11 @@
             // 
             this.mainMenu1.MenuItems.Add(this.menuItemBack);
             // 
+            // menuItemBack
+            // 
+            this.menuItemBack.Text = "zurück";
+            this.menuItemBack.Click += new System.EventHandler(this.menuItemBack_Click);
+            // 
             // treeView1
             // 
             this.treeView1.ContextMenu = this.contextMenu1;
@@ -48,11 +53,6 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(234, 265);
             this.treeView1.TabIndex = 0;
-            // 
-            // menuItemBack
-            // 
-            this.menuItemBack.Text = "zurück";
-            this.menuItemBack.Click += new System.EventHandler(this.menuItemBack_Click);
             // 
             // contextMenu1
             // 
@@ -67,6 +67,7 @@
             // contextMenuItemLink
             // 
             this.contextMenuItemLink.Text = "Verlinken";
+            this.contextMenuItemLink.Click += new System.EventHandler(this.contextMenuItemLink_Click);
             // 
             // SuchergebnisTree
             // 

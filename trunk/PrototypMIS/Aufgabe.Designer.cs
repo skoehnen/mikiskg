@@ -110,6 +110,7 @@
             // dataGridLinks
             // 
             this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.ContextMenu = this.contextMenu1;
             this.dataGridLinks.Location = new System.Drawing.Point(0, 133);
             this.dataGridLinks.Name = "dataGridLinks";
             this.dataGridLinks.Size = new System.Drawing.Size(240, 132);
