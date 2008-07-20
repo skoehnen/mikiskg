@@ -65,6 +65,7 @@
             // menuItemSuchen
             // 
             this.menuItemSuchen.Text = "Suchen";
+            this.menuItemSuchen.Click += new System.EventHandler(this.menuItemSuchen_Click);
             // 
             // dataGridAppointments
             // 
@@ -112,6 +113,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Termine";
             this.Text = "Termine";
+            this.GotFocus += new System.EventHandler(this.gotFocus);
             this.ResumeLayout(false);
 
         }

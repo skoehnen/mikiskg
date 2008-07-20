@@ -12,53 +12,25 @@ namespace PrototypMIS
 {
     public partial class Termine : Form
     {
-        
+        AppointmentCollection appointments;
+        DataTable table;
+        DataColumn column;
+        DataRow row;
+
         public Termine()
         {
             InitializeComponent();
-            DataTable table = new DataTable("Termine");
-            DataColumn column = new DataColumn();
-            DataRow row ;
-            // Subject,Location,Start,End
-            AppointmentCollection appointments = new OutlookCommunication().getOutlookSession().Appointments.Items;
-            dataGrid_temp_Termine.DataSource = appointments;
-            // Spalte 1
-            column.ColumnName = "Subject";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);
-            // Spalte 2
+            table = new DataTable("Termine");
             column = new DataColumn();
-            column.ColumnName = "Ort";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);
-            // Spalte 3
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.String");
-            column.ColumnName = "Start";
-            table.Columns.Add(column);
-            // Spalte 4
-            column = new DataColumn();
-            column.ColumnName = "Ende";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);
-            // Spalte 5
-            /*column = new DataColumn();
-            column.ColumnName = "ItemID";
-            column.DataType = System.Type.GetType("System.String");
-            table.Columns.Add(column);*/
-            foreach (PimItem item in appointments)
-            {
-                row = table.NewRow();
-                row["Subject"] = item.Properties[AppointmentProperty.Subject];
-                row["Ort"] = item.Properties[AppointmentProperty.Location];
-                row["Start"] = item.Properties[AppointmentProperty.Start];
-                row["Ende"] = item.Properties[AppointmentProperty.End];
-                //row["ItemID"] = item.ItemId.ToString();
-                table.Rows.Add(row);
-            }
             
-            
-            dataGridAppointments.DataSource = table;//appointments;
+            // appointments muss vor createColumns bekannt sein
+            appointments = new OutlookCommunication().getOutlookSession().Appointments.Items;
+                        
+            // ausgelagerte Column erstellung
+            this.createColumns();
+
+           // hier wurden die Inhalte von fillDataGrid() exportiert
+            this.fillDataGrid();
 
             // Create new Table Style
             DataGridTableStyle ts = new DataGridTableStyle();
@@ -86,9 +58,10 @@ namespace PrototypMIS
 
         private void menuItemDelete_Click(object sender, EventArgs e)
         {
+            int index = dataGridAppointments.CurrentRowIndex;
+
             if (secureDelete.boolDelete())
             {
-                int index = dataGridAppointments.CurrentRowIndex;
                 OutlookCommunication outlookCom = new OutlookCommunication();
                 //            object Id = dataGridAppointments[index, 23]; // weil in Spalte 23 die ID des Termins steht
                 object Id = dataGrid_temp_Termine[index, 23]; // weil in Spalte 23 die ID des Termins steht
@@ -104,7 +77,6 @@ namespace PrototypMIS
             int columnIndex = 23;
             //object oid = dataGridAppointments[rowIndex, columnIndex];
             object oid = dataGrid_temp_Termine[rowIndex, columnIndex];
-            Dispose();
             new Termin(MikiConverter.objectToItemId(oid)).Show();
             
         }
@@ -114,6 +86,71 @@ namespace PrototypMIS
 
         }
 
-        
+        private void fillDataGrid()
+        {
+            foreach (PimItem item in appointments)
+            {
+                row = table.NewRow();
+                row["Subject"] = item.Properties[AppointmentProperty.Subject];
+                row["Ort"] = item.Properties[AppointmentProperty.Location];
+                row["Start"] = item.Properties[AppointmentProperty.Start];
+                row["Ende"] = item.Properties[AppointmentProperty.End];
+                //row["ItemID"] = item.ItemId.ToString();
+                table.Rows.Add(row);
+            }
+
+            dataGridAppointments.DataSource = table;//appointments;
+        }
+
+        private void createColumns()
+        {
+            column = new DataColumn();
+            // Subject,Location,Start,End
+            dataGrid_temp_Termine.DataSource = appointments;
+            // Spalte 1
+            column.ColumnName = "Subject";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            // Spalte 2
+            column = new DataColumn();
+            column.ColumnName = "Ort";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            // Spalte 3
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "Start";
+            table.Columns.Add(column);
+            // Spalte 4
+            column = new DataColumn();
+            column.ColumnName = "Ende";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            // Spalte 5
+            /*column = new DataColumn();
+            column.ColumnName = "ItemID";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);*/
+        }
+
+        private void gotFocus(object sender, EventArgs e)
+        {
+            this.updateDataGrid();
+        }
+
+        private void updateDataGrid()
+        {
+            table = new DataTable("Termine");
+            appointments = new OutlookCommunication().getOutlookSession().Appointments.Items;
+            this.createColumns();
+            this.fillDataGrid();
+            dataGridAppointments.Update();
+        }
+
+        private void menuItemSuchen_Click(object sender, EventArgs e)
+        {
+            new Suchen();
+        }
+
     }
 }

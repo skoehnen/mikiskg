@@ -61,6 +61,5 @@ namespace PrototypMIS
         {
             new Suchen().Show();
         }
-
     }
 }

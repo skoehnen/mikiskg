@@ -58,10 +58,17 @@ namespace PrototypMIS
         {
             if (secureDelete.boolDelete())
             {
-                OutlookCommunication outlookCom = new OutlookCommunication();
-                outlookCom.deleteTask(task.ItemId);
-                Dispose();
-                new Aufgaben().Show();
+                if (this.task == null)
+                {
+                    MessageBox.Show("Dieser Eintrag existiert nicht!");
+                }
+                else
+                {
+                    OutlookCommunication outlookCom = new OutlookCommunication();
+                    outlookCom.deleteTask(task.ItemId);
+                    Dispose();
+                    new Aufgaben().Show();
+                }
             }
         }
 
