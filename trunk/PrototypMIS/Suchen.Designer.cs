@@ -56,7 +56,7 @@
             // 
             this.textBoxSuchen.Location = new System.Drawing.Point(65, 3);
             this.textBoxSuchen.Name = "textBoxSuchen";
-            this.textBoxSuchen.Size = new System.Drawing.Size(175, 25);
+            this.textBoxSuchen.Size = new System.Drawing.Size(175, 21);
             this.textBoxSuchen.TabIndex = 0;
             // 
             // labelSuchen

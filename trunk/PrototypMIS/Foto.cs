@@ -34,6 +34,7 @@ namespace PrototypMIS
             else
             {
                 this.textBoxTitel.Text = foto.getTitel();
+                this.textBoxBeschreibung.Text = foto.getBeschreibung();
                 linkedItems = new DB_Verarbeitung().abfrage(foto.getId());
                 dataGridLinks.DataSource = linkedItems;
             }
@@ -74,14 +75,21 @@ namespace PrototypMIS
                 case "Aufgabe":
                     new Aufgabe(MikiConverter.objectToItemId(this.dataGridLinks[row, 2])).Show();
                     break;
+
                 case "Kontakt":
                     new Kontakt(MikiConverter.objectToItemId(this.dataGridLinks[row, 2])).Show();
                     break;
+
                 case "Termin":
                     new Termin(MikiConverter.objectToItemId(this.dataGridLinks[row, 2])).Show();
                     break;
+
                 case "Foto":
                     new Foto(new DB_Verarbeitung().fotoHolen(Convert.ToInt32(this.dataGridLinks[row, 2].ToString())), false, null, null).Show();
+                    break;
+
+                case "Notiz":
+                    new Notiz(new DB_Verarbeitung().notizHolen(Convert.ToInt32(this.dataGridLinks[row, 2].ToString()))).Show();
                     break;
             }
         }
@@ -104,12 +112,12 @@ namespace PrototypMIS
 
         private void menuItemLink_Click(object sender, EventArgs e)
         {
-            new Suchen(foto.getId(), Konstanten.foto).Show();
+            new Suchen(this.foto.getId(), Konstanten.foto).Show();
         }
 
         private void Foto_GotFocus(object sender, EventArgs e)
         {
-            if (!neuesFoto)
+            if (!this.neuesFoto)
             {
                 this.menuItemLink.Enabled = true;
                 linkedItems = new DB_Verarbeitung().abfrage(this.foto.getId());

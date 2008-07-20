@@ -41,6 +41,7 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
             this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -57,6 +58,7 @@
             // 
             this.menuItemMenu.MenuItems.Add(this.menuItemSave);
             this.menuItemMenu.MenuItems.Add(this.menuItemDelete);
+            this.menuItemMenu.MenuItems.Add(this.menuItemLink);
             this.menuItemMenu.Text = "Menü";
             // 
             // menuItemSave
@@ -95,6 +97,7 @@
             // dataGridLinks
             // 
             this.dataGridLinks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dataGridLinks.ContextMenu = this.contextMenu1;
             this.dataGridLinks.Location = new System.Drawing.Point(3, 170);
             this.dataGridLinks.Name = "dataGridLinks";
             this.dataGridLinks.Size = new System.Drawing.Size(234, 95);
@@ -115,6 +118,11 @@
             this.contextMenuItemDelete.Text = "Löschen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
+            // menuItemLink
+            // 
+            this.menuItemLink.Text = "Verlinken";
+            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
+            // 
             // Notiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -128,6 +136,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Notiz";
             this.Text = "Notiz";
+            this.GotFocus += new System.EventHandler(this.Notiz_GotFocus);
             this.ResumeLayout(false);
 
         }
@@ -145,5 +154,6 @@
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem contextMenuItemShow;
         private System.Windows.Forms.MenuItem contextMenuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemLink;
     }
 }
