@@ -42,7 +42,7 @@ namespace PrototypMIS
         private void menuItemZurueck_Click(object sender, EventArgs e)
         {
             Dispose();
-            new Kontakte().Show();
+            new KontakteListe().Show();
         }
 
         private void menuItemSave_Click(object sender, EventArgs e)
