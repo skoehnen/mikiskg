@@ -26,9 +26,23 @@ namespace PrototypMIS
             conn.Open();
             SqlCeCommand sqlcommand = conn.CreateCommand();
             sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke, MikiObjectQuelle, MikiObjectZiel) VALUES ('" + quellID + "','" + zielID + "'," + quellTyp +", " + zielTyp + ")";
-            sqlcommand.ExecuteNonQuery();
+            try
+            {
+                sqlcommand.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Verknüpfung vorhanden");
+            }
             sqlcommand.CommandText = "Insert into Verknüpfung (ItemID_Quelle,ItemID_Senke,MikiObjectQuelle, MikiObjectZiel) VALUES ('" + zielID + "','" + quellID + "'," + zielTyp + ", " + quellTyp + ")";
-            sqlcommand.ExecuteNonQuery();
+            try
+            {
+                sqlcommand.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Verknüpfung vorhanden");
+            }
             conn.Close();
         }
 

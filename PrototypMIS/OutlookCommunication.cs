@@ -61,6 +61,7 @@ namespace PrototypMIS
         public void deleteContact(ItemId id)
         {
             Contact contact = new Contact(id);
+            new DB_Verarbeitung().gesamtverknuepfung_loeschen(MikiConverter.itemIdToInt(id), Konstanten.kontakt);
             contact.Delete();
         }
 /// <summary>
@@ -88,6 +89,7 @@ namespace PrototypMIS
         public void deleteAppointment(ItemId id)
         {
             Appointment appointment = new Appointment(id);
+            new DB_Verarbeitung().gesamtverknuepfung_loeschen(MikiConverter.itemIdToInt(id), Konstanten.termin);
             appointment.Delete();
         }
 /// <summary>

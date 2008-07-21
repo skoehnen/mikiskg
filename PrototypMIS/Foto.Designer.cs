@@ -77,6 +77,7 @@
             // menuItemDelete
             // 
             this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemLink
             // 

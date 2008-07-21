@@ -82,7 +82,9 @@ namespace PrototypMIS
                 }
                 else
                 {
-                    this.termin.Delete();
+                    OutlookCommunication oc = new OutlookCommunication();
+                    oc.deleteAppointment(this.termin.ItemId);
+                    //this.termin.Delete();
                     Dispose();
                 }
             }

@@ -20,6 +20,7 @@ namespace PrototypMIS
         {
             //new Aufgaben().Show();
             new KontakteList().Show();
+            
         }
 
         private void buttonNotizen_Click(object sender, EventArgs e)

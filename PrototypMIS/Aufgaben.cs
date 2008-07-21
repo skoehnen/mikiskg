@@ -64,9 +64,12 @@ namespace PrototypMIS
                 int index = dataGridAufgaben.CurrentRowIndex;
                 OutlookCommunication outlookCom = new OutlookCommunication();
                 object Id = dataGridAufgaben[index, 3]; // weil in Spalte 3 die ID des Tasks steht
+                int quelle = MikiConverter.itemIdToInt(MikiConverter.objectToItemId(Id));
+                new DB_Verarbeitung().gesamtverknuepfung_loeschen(quelle, Konstanten.aufgabe);
                 outlookCom.deleteTask(MikiConverter.objectToItemId(Id));
                 Dispose();
-                new Aufgaben().Show();
+                new KontakteList().Show();
+                //new Aufgaben().Show();
             }
         }
 
@@ -113,6 +116,16 @@ namespace PrototypMIS
                 table.Rows.Add(row);
             }
             dataGridAufgaben.DataSource = table;
+        }
+
+        private void dataGridAufgaben_CurrentCellChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenu1_Popup(object sender, EventArgs e)
+        {
+
         }
     }
 }
