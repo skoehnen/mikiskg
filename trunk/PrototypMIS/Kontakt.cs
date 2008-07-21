@@ -60,7 +60,8 @@ namespace PrototypMIS
                 this.kontakt.Update();
             }
             Dispose();
-            new Kontakte().Show();
+            new KontakteListe().Show();
+            //new Kontakte().Show();
         }
 
         private void menuItemLink_Click(object sender, EventArgs e)
@@ -81,7 +82,9 @@ namespace PrototypMIS
         {
             if (secureDelete.boolDelete())
             {
-                this.kontakt.Delete();
+                OutlookCommunication oc = new OutlookCommunication();
+                oc.deleteContact(this.kontakt.ItemId);
+                
                 Dispose();
             }
         }
@@ -147,6 +150,11 @@ namespace PrototypMIS
                 dataGridLinks.DataSource = linkedItems;
                 dataGridLinks.Refresh();
             }
+        }
+
+        private void textBoxFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }    
 
     }

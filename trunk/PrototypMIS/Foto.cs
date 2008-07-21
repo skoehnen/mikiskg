@@ -125,5 +125,10 @@ namespace PrototypMIS
                 dataGridLinks.Refresh();
             }
         }
+
+        private void menuItemDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

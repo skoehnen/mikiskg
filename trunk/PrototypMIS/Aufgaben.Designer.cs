@@ -78,6 +78,7 @@
             // 
             this.contextMenu1.MenuItems.Add(this.menuItemDelete);
             this.contextMenu1.MenuItems.Add(this.menuItemShowEntry);
+            this.contextMenu1.Popup += new System.EventHandler(this.contextMenu1_Popup);
             // 
             // menuItemDelete
             // 

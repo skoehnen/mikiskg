@@ -51,7 +51,8 @@ namespace PrototypMIS
                 this.task.Update();
             }
             this.Close();
-            new Aufgaben().Show();
+            new KontakteList().Show();
+            //new Aufgaben().Show();
         }
 
         private void menuItemDelete_Click(object sender, EventArgs e)
@@ -65,9 +66,13 @@ namespace PrototypMIS
                 else
                 {
                     OutlookCommunication outlookCom = new OutlookCommunication();
+                    int quelle = MikiConverter.itemIdToInt(task.ItemId);
                     outlookCom.deleteTask(task.ItemId);
+                    DB_Verarbeitung db = new DB_Verarbeitung();
+                    db.gesamtverknuepfung_loeschen(quelle, Konstanten.aufgabe);
                     Dispose();
-                    new Aufgaben().Show();
+                    new KontakteList().Show();
+                    //new Aufgaben().Show();
                 }
             }
         }

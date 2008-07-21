@@ -71,6 +71,7 @@ namespace PrototypMIS
             {
                 if (secureDelete.boolDelete())
                 {
+                    new DB_Verarbeitung().gesamtverknuepfung_loeschen(notiz.getId(), Konstanten.notiz);
                     this.db.notizLoeschenTitel(notiz.getTitel());
                 }
             }

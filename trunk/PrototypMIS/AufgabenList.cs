@@ -31,6 +31,7 @@ namespace PrototypMIS
                 int itemIndex = this.listView1.SelectedIndices[0];
                 ListViewItem item = this.listView1.Items[itemIndex];
                 MikiDuo auswahl = (MikiDuo) item.Tag;
+                new DB_Verarbeitung().gesamtverknuepfung_loeschen(auswahl.id, Konstanten.aufgabe);
                 oc.deleteTask(MikiConverter.objectToItemId(auswahl.id));
                 this.update();
             }
