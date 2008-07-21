@@ -80,5 +80,14 @@ namespace PrototypMIS
                 this.update();
             }
         }
+
+        private void menuItemLinkToItem_Click(object sender, EventArgs e)
+        {
+            int itemIndex = this.listView1.SelectedIndices[0];
+            ListViewItem item = this.listView1.Items[itemIndex];
+            MikiDuo auswahl = (MikiDuo)item.Tag;
+            new Suchen(auswahl.id, Konstanten.kontakt).Show();
+            this.Dispose();
+        }
     }
 }
