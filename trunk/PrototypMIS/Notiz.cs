@@ -40,6 +40,7 @@ namespace PrototypMIS
         private void menuItem1_Click(object sender, EventArgs e)
         {
             this.fensterSchliessen();
+            new NotizenListe().Show();
         }
 
         private void menuItemSave_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace PrototypMIS
                 this.db.notizUpdateTitel(this.notiz.getTitel(),new NotizInfo(textBoxTitel.Text,textBoxText.Text));
             }
             this.fensterSchliessen();
+            new NotizenListe().Show();
         }
 
         private void fensterSchliessen()
@@ -76,6 +78,7 @@ namespace PrototypMIS
                 }
             }
             Dispose();
+            new NotizenListe().Show();
         }
 
         /// <summary>
@@ -146,6 +149,6 @@ namespace PrototypMIS
                 dataGridLinks.DataSource = linkedItems;
                 dataGridLinks.Refresh();
             }
-        }        
+        }       
     }    
-    }
+}

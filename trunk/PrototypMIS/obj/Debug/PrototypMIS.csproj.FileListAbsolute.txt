@@ -177,3 +177,4 @@ C:\Users\sk\Documents\MIS\projekt\PrototypMIS\obj\Debug\PrototypMIS.pdb
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.KontakteList.resources
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.KontakteListe.resources
 D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.TermineList.resources
+D:\FH-AACHEN\SemVI\MIST\Prak\Projekt_MIKI\Quellcode\PrototypMIS\obj\Debug\PrototypMIS.NotizenListe.resources

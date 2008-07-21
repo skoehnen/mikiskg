@@ -34,6 +34,7 @@
             this.menuItemMenu = new System.Windows.Forms.MenuItem();
             this.menuItemSave = new System.Windows.Forms.MenuItem();
             this.menuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxText = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
             this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
-            this.menuItemLink = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -71,11 +71,16 @@
             this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
+            // menuItemLink
+            // 
+            this.menuItemLink.Text = "Verlinken";
+            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
+            // 
             // textBoxTitel
             // 
             this.textBoxTitel.Location = new System.Drawing.Point(39, 8);
             this.textBoxTitel.Name = "textBoxTitel";
-            this.textBoxTitel.Size = new System.Drawing.Size(198, 21);
+            this.textBoxTitel.Size = new System.Drawing.Size(198, 25);
             this.textBoxTitel.TabIndex = 0;
             // 
             // labelTitle
@@ -101,6 +106,7 @@
             this.dataGridLinks.Name = "dataGridLinks";
             this.dataGridLinks.Size = new System.Drawing.Size(234, 95);
             this.dataGridLinks.TabIndex = 4;
+            this.dataGridLinks.GotFocus += new System.EventHandler(this.Notiz_GotFocus);
             // 
             // contextMenu1
             // 
@@ -116,11 +122,6 @@
             // 
             this.contextMenuItemDelete.Text = "Löschen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
-            // 
-            // menuItemLink
-            // 
-            this.menuItemLink.Text = "Verlinken";
-            this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // Notiz
             // 
