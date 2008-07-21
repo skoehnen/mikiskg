@@ -19,6 +19,109 @@ namespace PrototypMIS
             return conn;
         }
 
+
+        public void kunde_eintragen(string anrede, string Kref,string vorname,string nachname,string plz, string strasse, string hausnr)
+        {
+            SqlCeConnection conn = DBVerbindung();
+            conn.Open();
+            SqlCeCommand sqlcommand = conn.CreateCommand();
+            sqlcommand.CommandText = "Insert into Kundendaten (Kref,Anrede,Vorname,Nachname,PLZ,Straße,HausNr) VALUES ('"+Kref+"','"+anrede+"','"+vorname+"','"+nachname+"','"+plz+"','"+strasse+"','"+hausnr+"')";
+            try
+            {
+                sqlcommand.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+               
+            }
+        }
+
+
+        public DataTable kunde_suchen(string kref,bool name)
+    {
+        DataTable kunde = new DataTable("Abfrage");
+        DataRow row;
+        kunde = null;
+        SqlCeConnection conn = DBVerbindung();
+        conn.Open();
+        SqlCeCommand sqlcommand = conn.CreateCommand();
+        if (name == false)
+        {
+           sqlcommand.CommandText = "Select * from Kundendaten where Kref = '"+kref+ "'";
+        }
+        else
+        {
+           sqlcommand.CommandText = "Select * from Kundendaten where Nachname = '" +kref+ "'";
+        }
+        SqlCeDataReader ResultSet;
+        try
+        {
+            kunde = createColumns();
+            ResultSet = sqlcommand.ExecuteReader();
+
+            if (ResultSet.Read())
+            {
+                do
+                {
+                    row = kunde.NewRow();
+                    row["Kref"] = ResultSet.GetString(0);
+                    row["Anrede"] = ResultSet.GetString(1);
+                    row["Vorname"] = ResultSet.GetString(2);
+                    row["Nachname"] = ResultSet.GetString(3);
+                    row["PLZ"] = ResultSet.GetString(4);
+                    row["Straße"] = ResultSet.GetString(5);
+                    row["HausNr"] = ResultSet.GetString(6);
+                    kunde.Rows.Add(row);
+                } while (ResultSet.Read());
+            }
+            else
+            {
+                kunde = null;
+            }
+        }
+         catch (Exception e)
+         {
+             
+         }
+         return kunde;
+    }
+
+        private DataTable createColumns()
+        {
+            DataColumn column;
+            DataTable table = new DataTable();
+            column = new DataColumn();
+            column.ColumnName = "Kref";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.ColumnName = "Anrede";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.ColumnName = "Vorname";
+            column.DataType = System.Type.GetType("System.String");
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "Nachname";
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "PLZ";
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "Straße";
+            table.Columns.Add(column);
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "HausNr";
+            table.Columns.Add(column);
+
+            return table;
+        }
+
         public void verknuepfung_eintragen(int quellID, int zielID, int quellTyp, int zielTyp)
         {
             //Der typ gibt an ob es ein Objekt aus Pocket Outlook ist oder nicht

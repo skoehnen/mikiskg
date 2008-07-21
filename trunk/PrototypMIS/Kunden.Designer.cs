@@ -41,6 +41,7 @@
             this.button_suche = new System.Windows.Forms.Button();
             this.listBox_kunden = new System.Windows.Forms.ListBox();
             this.button_uebernahme = new System.Windows.Forms.Button();
+            this.button_netzsuche = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -119,7 +120,7 @@
             // 
             // button_uebernahme
             // 
-            this.button_uebernahme.Location = new System.Drawing.Point(75, 225);
+            this.button_uebernahme.Location = new System.Drawing.Point(29, 224);
             this.button_uebernahme.Name = "button_uebernahme";
             this.button_uebernahme.Size = new System.Drawing.Size(84, 20);
             this.button_uebernahme.TabIndex = 12;
@@ -127,12 +128,23 @@
             this.button_uebernahme.Visible = false;
             this.button_uebernahme.Click += new System.EventHandler(this.button_uebernahme_Click);
             // 
+            // button_netzsuche
+            // 
+            this.button_netzsuche.Location = new System.Drawing.Point(120, 225);
+            this.button_netzsuche.Name = "button_netzsuche";
+            this.button_netzsuche.Size = new System.Drawing.Size(72, 20);
+            this.button_netzsuche.TabIndex = 15;
+            this.button_netzsuche.Text = "Netzsuche";
+            this.button_netzsuche.Visible = false;
+            this.button_netzsuche.Click += new System.EventHandler(this.button_netzsuche_Click);
+            // 
             // Kunden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 268);
+            this.Controls.Add(this.button_netzsuche);
             this.Controls.Add(this.button_uebernahme);
             this.Controls.Add(this.listBox_kunden);
             this.Controls.Add(this.button_suche);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Button button_suche;
         private System.Windows.Forms.ListBox listBox_kunden;
         private System.Windows.Forms.Button button_uebernahme;
+        private System.Windows.Forms.Button button_netzsuche;
     }
 }

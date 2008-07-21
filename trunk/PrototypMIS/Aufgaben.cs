@@ -85,7 +85,6 @@ namespace PrototypMIS
         private void createColumns()
         {
             column = new DataColumn();
-
             column.ColumnName = "Titel";
             column.DataType = System.Type.GetType("System.String");
             table.Columns.Add(column);
