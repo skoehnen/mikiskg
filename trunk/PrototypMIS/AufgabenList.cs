@@ -82,5 +82,15 @@ namespace PrototypMIS
             new Aufgabe().Show();
             this.Dispose();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItemSearch_Click(object sender, EventArgs e)
+        {
+            new Suchen().Show();
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace PrototypMIS
         private void menuItemBack_Click(object sender, EventArgs e)
         {
             this.Close();
+            new TermineList().Show();
             Dispose();
         }
 
@@ -61,9 +62,8 @@ namespace PrototypMIS
                 this.termin.End = this.outlookCom.datumZusammenbasteln(this.textBoxEndTime.Text, this.dateTimePickerEndDate.Value);
                 this.termin.Location = this.textBoxLocation.Text;
                 this.termin.Update();
-
             }
-            
+            new TermineList().Show();
             Dispose();
         }
 

@@ -30,7 +30,7 @@ namespace PrototypMIS
 
         private void buttonTermine_Click(object sender, EventArgs e)
         {
-            new Termine().Show();
+            new TermineList().Show();
         }
 
         private void buttonKontakte_Click(object sender, EventArgs e)
