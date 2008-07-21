@@ -38,6 +38,7 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.contextMenuItemShow = new System.Windows.Forms.MenuItem();
             this.contextMenuItemDelete = new System.Windows.Forms.MenuItem();
+            this.menuItemLinkToItem = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -77,6 +78,7 @@
             // 
             this.contextMenu1.MenuItems.Add(this.contextMenuItemShow);
             this.contextMenu1.MenuItems.Add(this.contextMenuItemDelete);
+            this.contextMenu1.MenuItems.Add(this.menuItemLinkToItem);
             // 
             // contextMenuItemShow
             // 
@@ -87,6 +89,11 @@
             // 
             this.contextMenuItemDelete.Text = "Löchen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
+            // 
+            // menuItemLinkToItem
+            // 
+            this.menuItemLinkToItem.Text = "Verlinken";
+            this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
             // 
             // KontakteListe
             // 
@@ -112,5 +119,6 @@
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem contextMenuItemShow;
         private System.Windows.Forms.MenuItem contextMenuItemDelete;
+        private System.Windows.Forms.MenuItem menuItemLinkToItem;
     }
 }

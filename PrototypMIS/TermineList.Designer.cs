@@ -38,6 +38,7 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenu();
             this.menuItemDeleteListItem = new System.Windows.Forms.MenuItem();
             this.menuItemShowListItem = new System.Windows.Forms.MenuItem();
+            this.menuItemLinkToItem = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -78,6 +79,7 @@
             // 
             this.contextMenu1.MenuItems.Add(this.menuItemDeleteListItem);
             this.contextMenu1.MenuItems.Add(this.menuItemShowListItem);
+            this.contextMenu1.MenuItems.Add(this.menuItemLinkToItem);
             // 
             // menuItemDeleteListItem
             // 
@@ -88,6 +90,11 @@
             // 
             this.menuItemShowListItem.Text = "Anzeigen";
             this.menuItemShowListItem.Click += new System.EventHandler(this.menuItemShowListItem_Click);
+            // 
+            // menuItemLinkToItem
+            // 
+            this.menuItemLinkToItem.Text = "Verlinken";
+            this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
             // 
             // TermineList
             // 
@@ -113,5 +120,6 @@
         private System.Windows.Forms.MenuItem menuItemShowListItem;
         private System.Windows.Forms.MenuItem menuItemSearch;
         private System.Windows.Forms.MenuItem menuItemNewAppointment;
+        private System.Windows.Forms.MenuItem menuItemLinkToItem;
     }
 }
