@@ -25,7 +25,8 @@ namespace PrototypMIS
 
         private void buttonNotizen_Click(object sender, EventArgs e)
         {
-            new Notizen().Show();
+            //new Notizen().Show();
+            new NotizenListe().Show();
         }
 
         private void buttonTermine_Click(object sender, EventArgs e)

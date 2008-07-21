@@ -99,7 +99,6 @@ namespace PrototypMIS
             ListViewItem item = this.listView1.Items[itemIndex];
             MikiDuo auswahl = (MikiDuo) item.Tag;
             new Suchen(auswahl.id, Konstanten.aufgabe).Show();
-            this.Dispose();
         }
     }
 }

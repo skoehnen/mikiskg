@@ -539,8 +539,6 @@ namespace PrototypMIS
             
             command.CommandText = "DELETE FROM Notizen WHERE id = " + id + "";
             command.ExecuteNonQuery();
-            command.CommandText = "DELETE FROM uniqueIdentity WHERE objectId = " + id + " AND objectTyp = " + Konstanten.notiz + ";";
-            command.ExecuteNonQuery();
             conn.Close();
         }
 
