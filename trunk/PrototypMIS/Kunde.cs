@@ -136,5 +136,52 @@ namespace PrototypMIS
                 dataGrid1.Refresh();
             }
         }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+            int column = this.dataGrid1.CurrentCell.ColumnNumber;
+            int row = this.dataGrid1.CurrentCell.RowNumber;
+            String typ = this.dataGrid1[row, 1].ToString();
+            switch (typ)
+            {
+                case "Aufgabe":
+                    new Aufgabe(MikiConverter.objectToItemId(this.dataGrid1[row, 2])).Show();
+                    break;
+
+                case "Kontakt":
+                    new Kontakt(MikiConverter.objectToItemId(this.dataGrid1[row, 2])).Show();
+                    break;
+
+                case "Termin":
+                    new Termin(MikiConverter.objectToItemId(this.dataGrid1[row, 2])).Show();
+                    break;
+
+                case "Foto":
+                    new Foto(new DB_Verarbeitung().fotoHolen(Convert.ToInt32(this.dataGrid1[row, 2].ToString())), false, null, null).Show();
+                    break;
+
+                case "Notiz":
+                    new Notiz(new DB_Verarbeitung().notizHolen(Convert.ToInt32(this.dataGrid1[row, 2].ToString()))).Show();
+                    break;
+
+                case "Kunde":
+                    new Kunde(new DB_Verarbeitung().kunde_suchen(this.dataGrid1[row, 2].ToString(), false)).Show();
+                    break;
+            }
+        }
+
+        private void menuItemlöschen_Click(object sender, EventArgs e)
+        {
+            if (secureDelete.boolDelete())
+            {
+                int row = this.dataGrid1.CurrentCell.RowNumber;
+                int ziel = Convert.ToInt32(this.dataGrid1[row, 2].ToString());
+                int zielTyp = MikiConverter.stringToMikiObjectTyp(this.dataGrid1[row, 1].ToString());
+                new DB_Verarbeitung().einzelverknuepfung_loeschen(Convert.ToInt32(this.kdnr), ziel, Konstanten.aufgabe, zielTyp);
+                this.Dispose();
+                DataTable test = new DB_Verarbeitung().kunde_suchen(this.kdnr, false);
+                new Kunde(test).Show();
+            }
+        }
     }
 }

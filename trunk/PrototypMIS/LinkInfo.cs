@@ -35,8 +35,9 @@ namespace PrototypMIS
                     break;
 
                 case Konstanten.kunde:
-                    System.Data.DataTable table = new DB_Verarbeitung().kunde_suchen(id.ToString(), false);
+                    //System.Data.DataTable table = new DB_Verarbeitung().kunde_suchen(id.ToString(), false);
                     //this.name = table.Rows[3].ToString();
+                    this.name = "Kunde";
                     break;
 
                 case Konstanten.notiz:

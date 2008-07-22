@@ -67,20 +67,28 @@ namespace PrototypMIS
                 kunde = db.kunde_suchen(textBox_kundendaten.Text, true);
                 if (kunde == null)
                 {
-                    ergebnis = webkunde.getCustomerByName(textBox_kundendaten.Text);
-                    listBox_kunden.Visible = true;
-                    listBox_kunden.Items.Clear();
-                    button_uebernahme.Visible = true;
-                    button_netzsuche.Visible = true;
-                    DataTable dataTable = ergebnis.Tables[0];
-                    int menge = dataTable.Rows.Count, counter = 0;
-                    kundennr = new string[menge];
-                    foreach (DataRow dataRow in dataTable.Rows)
+                    try
                     {
-                        listBox_kunden.Items.Add(dataRow["NANAM1"] + ", " + dataRow["NANAM2"] + ", " + dataRow["ANSTRA"]);
-                        kundennr[counter++] = dataRow["ERREFN"].ToString();
-                        listBox_kunden.ValueMember = dataRow["ERREFN"].ToString();
+                        ergebnis = webkunde.getCustomerByName(textBox_kundendaten.Text);
+                        listBox_kunden.Visible = true;
+                        listBox_kunden.Items.Clear();
+                        button_uebernahme.Visible = true;
+                        button_netzsuche.Visible = true;
+                        DataTable dataTable = ergebnis.Tables[0];
+                        int menge = dataTable.Rows.Count, counter = 0;
+                        kundennr = new string[menge];
+                        foreach (DataRow dataRow in dataTable.Rows)
+                        {
+                            listBox_kunden.Items.Add(dataRow["NANAM1"] + ", " + dataRow["NANAM2"] + ", " + dataRow["ANSTRA"]);
+                            kundennr[counter++] = dataRow["ERREFN"].ToString();
+                            listBox_kunden.ValueMember = dataRow["ERREFN"].ToString();
+                        }
                     }
+                    catch
+                    {
+                        MessageBox.Show("Keine Netzverbindung");
+                    }
+                    
                 }
                 else
                 {
@@ -159,8 +167,5 @@ namespace PrototypMIS
                 listBox_kunden.ValueMember = dataRow["ERREFN"].ToString();
             }
         }
-
-        
-
     }
 }
