@@ -64,7 +64,7 @@ namespace PrototypMIS
             foreach (Task task in this.collection)
             {
                 ListViewItem item = new ListViewItem(task.Subject);
-                item.SubItems.Add(task.DueDate.ToString());
+                item.SubItems.Add(task.DueDate.Day + "." + task.DueDate.Month + "." + task.DueDate.Year);
                 item.Tag = new MikiDuo(MikiConverter.itemIdToInt(task.ItemId), Konstanten.aufgabe);
                 this.listView1.Items.Add(item);
             }

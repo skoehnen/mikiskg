@@ -14,6 +14,9 @@ namespace PrototypMIS
     {
         string anrede,vorname,nachname,strasse,hausnr,plz,kdnr;
         DataTable customertable;
+        System.Collections.ArrayList linkedItems = null;
+        DataTable kundentabelle = null;
+
         public Kunde()
         {
             InitializeComponent();
@@ -22,6 +25,7 @@ namespace PrototypMIS
 
         public Kunde(DataTable kundentabelle)
         {
+            this.kundentabelle = kundentabelle;
             customertable = kundentabelle;
             foreach (DataRow dataRow in customertable.Rows)
             {
@@ -117,24 +121,20 @@ namespace PrototypMIS
             Dispose();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void menuItemLinkToItem_Click(object sender, EventArgs e)
         {
-
+            new Suchen(Convert.ToInt32(this.kdnr), Konstanten.kunde).Show();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void gotFocus(object sender, EventArgs e)
         {
-
+            if (this.kundentabelle != null)
+            {
+                this.menuItemLinkToItem.Enabled = true;
+                linkedItems = new DB_Verarbeitung().abfrage(Convert.ToInt32(this.kdnr));
+                dataGrid1.DataSource = linkedItems;
+                dataGrid1.Refresh();
+            }
         }
-
-        private void dataGrid_kundenauftraege_CurrentCellChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuItem2_Click(object sender, EventArgs e)
-        {
-
-        }       
     }
 }
