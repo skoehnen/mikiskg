@@ -80,22 +80,22 @@
             // 
             // menuItemLink
             // 
-            this.menuItemLink.Text = "Verlinken";
+            this.menuItemLink.Text = "verlinken";
             this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // menuItemSearch
             // 
-            this.menuItemSearch.Text = "Suchen";
+            this.menuItemSearch.Text = "suchen";
             this.menuItemSearch.Click += new System.EventHandler(this.menuItemSearch_Click);
             // 
             // menuItemDelete
             // 
-            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemSave
             // 
-            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Text = "speichern";
             this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
             // 
             // tabControl1
@@ -235,12 +235,12 @@
             // 
             // contextMenuItemShow
             // 
-            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Text = "anzeigen";
             this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
             // 
             // contextMenuDelete
             // 
-            this.contextMenuDelete.Text = "Löschen";
+            this.contextMenuDelete.Text = "löschen";
             this.contextMenuDelete.Click += new System.EventHandler(this.contextMenuDelete_Click);
             // 
             // Termin

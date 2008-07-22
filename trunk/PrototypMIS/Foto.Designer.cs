@@ -71,17 +71,17 @@
             // 
             // menuItemSave
             // 
-            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Text = "speichern";
             this.menuItemSave.Click += new System.EventHandler(this.menuItemSpeichern_Click);
             // 
             // menuItemDelete
             // 
-            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemLink
             // 
-            this.menuItemLink.Text = "Verlinken";
+            this.menuItemLink.Text = "verlinken";
             this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // tabControl1
@@ -101,7 +101,7 @@
             this.tabPageFoto.Controls.Add(this.textBoxTitel);
             this.tabPageFoto.Location = new System.Drawing.Point(0, 0);
             this.tabPageFoto.Name = "tabPageFoto";
-            this.tabPageFoto.Size = new System.Drawing.Size(240, 245);
+            this.tabPageFoto.Size = new System.Drawing.Size(240, 241);
             this.tabPageFoto.Text = "Foto";
             // 
             // pictureBox1
@@ -114,7 +114,7 @@
             // 
             this.textBoxTitel.Location = new System.Drawing.Point(3, 3);
             this.textBoxTitel.Name = "textBoxTitel";
-            this.textBoxTitel.Size = new System.Drawing.Size(234, 21);
+            this.textBoxTitel.Size = new System.Drawing.Size(234, 25);
             this.textBoxTitel.TabIndex = 0;
             // 
             // tabPageBeschreibung
@@ -122,7 +122,7 @@
             this.tabPageBeschreibung.Controls.Add(this.textBoxBeschreibung);
             this.tabPageBeschreibung.Location = new System.Drawing.Point(0, 0);
             this.tabPageBeschreibung.Name = "tabPageBeschreibung";
-            this.tabPageBeschreibung.Size = new System.Drawing.Size(232, 242);
+            this.tabPageBeschreibung.Size = new System.Drawing.Size(232, 239);
             this.tabPageBeschreibung.Text = "Beschreibung";
             // 
             // textBoxBeschreibung
@@ -138,7 +138,7 @@
             this.tabPageLinks.Controls.Add(this.dataGridLinks);
             this.tabPageLinks.Location = new System.Drawing.Point(0, 0);
             this.tabPageLinks.Name = "tabPageLinks";
-            this.tabPageLinks.Size = new System.Drawing.Size(232, 242);
+            this.tabPageLinks.Size = new System.Drawing.Size(232, 239);
             this.tabPageLinks.Text = "Verknüpfte Objekte";
             // 
             // dataGridLinks
@@ -157,12 +157,12 @@
             // 
             // contextMenuItemShow
             // 
-            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Text = "anzeigen";
             this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
             // 
             // contextMenuItemDelete
             // 
-            this.contextMenuItemDelete.Text = "Löschen";
+            this.contextMenuItemDelete.Text = "löschen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // Foto

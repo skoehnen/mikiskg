@@ -59,12 +59,12 @@
             // 
             // menuItemContactCreate
             // 
-            this.menuItemContactCreate.Text = "Kontakt Anlegen";
+            this.menuItemContactCreate.Text = "Kontakt anlegen";
             this.menuItemContactCreate.Click += new System.EventHandler(this.menuItemContactCreate_Click);
             // 
             // menuItemSearch
             // 
-            this.menuItemSearch.Text = "Suchen";
+            this.menuItemSearch.Text = "suchen";
             // 
             // listView1
             // 
@@ -82,17 +82,17 @@
             // 
             // contextMenuItemShow
             // 
-            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Text = "anzeigen";
             this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
             // 
             // contextMenuItemDelete
             // 
-            this.contextMenuItemDelete.Text = "Löchen";
+            this.contextMenuItemDelete.Text = "löchen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // menuItemLinkToItem
             // 
-            this.menuItemLinkToItem.Text = "Verlinken";
+            this.menuItemLinkToItem.Text = "verlinken";
             this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
             // 
             // KontakteListe

@@ -100,5 +100,10 @@ namespace PrototypMIS
             MikiDuo auswahl = (MikiDuo) item.Tag;
             new Suchen(auswahl.id, Konstanten.aufgabe).Show();
         }
+
+        private void contextMenu1_Popup(object sender, EventArgs e)
+        {
+
+        }
     }
 }

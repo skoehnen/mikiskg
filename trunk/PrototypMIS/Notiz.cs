@@ -21,6 +21,7 @@ namespace PrototypMIS
         {
             InitializeComponent();
             this.db = new DB_Verarbeitung();
+            this.menuItemLink.Enabled = false;
             
         }
 
@@ -29,6 +30,7 @@ namespace PrototypMIS
             InitializeComponent();
             this.notiz = notiz;
             this.db = new DB_Verarbeitung();
+            this.menuItemLink.Enabled = true;
 
             this.textBoxText.Text = this.notiz.getText();
             this.textBoxTitel.Text = this.notiz.getTitel();
@@ -75,10 +77,10 @@ namespace PrototypMIS
                 {
                     new DB_Verarbeitung().gesamtverknuepfung_loeschen(notiz.getId(), Konstanten.notiz);
                     this.db.notizLoeschenTitel(notiz.getTitel());
+                    Dispose();
+                    new NotizenListe().Show();
                 }
             }
-            Dispose();
-            new NotizenListe().Show();
         }
 
         /// <summary>
