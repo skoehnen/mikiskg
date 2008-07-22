@@ -73,7 +73,7 @@
             // 
             // menuItemLink
             // 
-            this.menuItemLink.Text = "Verlinken";
+            this.menuItemLink.Text = "verlinken";
             this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // textBoxTitel
@@ -115,12 +115,12 @@
             // 
             // contextMenuItemShow
             // 
-            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Text = "anzeigen";
             this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
             // 
             // contextMenuItemDelete
             // 
-            this.contextMenuItemDelete.Text = "Löschen";
+            this.contextMenuItemDelete.Text = "löschen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // Notiz

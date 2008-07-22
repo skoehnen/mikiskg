@@ -59,7 +59,7 @@
             // 
             // menuItemSearch
             // 
-            this.menuItemSearch.Text = "Suchen";
+            this.menuItemSearch.Text = "suchen";
             this.menuItemSearch.Click += new System.EventHandler(this.menuItemSearch_Click);
             // 
             // menuItemNewNote

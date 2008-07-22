@@ -230,7 +230,7 @@
             this.tabPage2.Controls.Add(this.dataGrid1);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(240, 238);
+            this.tabPage2.Size = new System.Drawing.Size(232, 236);
             this.tabPage2.Text = "Verbindungen";
             // 
             // dataGrid1
@@ -248,7 +248,7 @@
             // 
             // menuItem2
             // 
-            this.menuItem2.Text = "Anzeigen";
+            this.menuItem2.Text = "anzeigen";
             this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // tabPage5

@@ -62,7 +62,7 @@
             // 
             // menuItem3
             // 
-            this.menuItem3.Text = "Suchen";
+            this.menuItem3.Text = "suchen";
             // 
             // menuItem4
             // 
@@ -88,7 +88,7 @@
             this.comboBox_Kundeneingabe.Items.Add("Kundenname");
             this.comboBox_Kundeneingabe.Location = new System.Drawing.Point(6, 58);
             this.comboBox_Kundeneingabe.Name = "comboBox_Kundeneingabe";
-            this.comboBox_Kundeneingabe.Size = new System.Drawing.Size(107, 22);
+            this.comboBox_Kundeneingabe.Size = new System.Drawing.Size(107, 26);
             this.comboBox_Kundeneingabe.TabIndex = 4;
             this.comboBox_Kundeneingabe.SelectedIndexChanged += new System.EventHandler(this.comboBox_Kundeneingabe_SelectedIndexChanged);
             // 
@@ -96,7 +96,7 @@
             // 
             this.textBox_kundendaten.Location = new System.Drawing.Point(120, 58);
             this.textBox_kundendaten.Name = "textBox_kundendaten";
-            this.textBox_kundendaten.Size = new System.Drawing.Size(100, 21);
+            this.textBox_kundendaten.Size = new System.Drawing.Size(100, 25);
             this.textBox_kundendaten.TabIndex = 5;
             this.textBox_kundendaten.TextChanged += new System.EventHandler(this.textBox_kundendaten_TextChanged);
             // 
@@ -113,7 +113,7 @@
             // 
             this.listBox_kunden.Location = new System.Drawing.Point(6, 118);
             this.listBox_kunden.Name = "listBox_kunden";
-            this.listBox_kunden.Size = new System.Drawing.Size(231, 100);
+            this.listBox_kunden.Size = new System.Drawing.Size(231, 92);
             this.listBox_kunden.TabIndex = 9;
             this.listBox_kunden.Visible = false;
             this.listBox_kunden.SelectedIndexChanged += new System.EventHandler(this.listBox_kunden_SelectedIndexChanged);

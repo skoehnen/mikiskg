@@ -63,7 +63,7 @@
             // 
             // menuItemSuchen
             // 
-            this.menuItemSuchen.Text = "Suchen";
+            this.menuItemSuchen.Text = "suchen";
             // 
             // dataGridAufgaben
             // 
@@ -82,12 +82,12 @@
             // 
             // menuItemDelete
             // 
-            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemShowEntry
             // 
-            this.menuItemShowEntry.Text = "Anzeigen";
+            this.menuItemShowEntry.Text = "anzeigen";
             this.menuItemShowEntry.Click += new System.EventHandler(this.menuItemShowEntry_Click);
             // 
             // Aufgaben

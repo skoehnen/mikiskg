@@ -74,7 +74,6 @@ namespace PrototypMIS
                 ListViewItem item = this.listViewNotes.Items[itemIndex];
                 MikiDuo auswahl = (MikiDuo)item.Tag;
                 new DB_Verarbeitung().gesamtverknuepfung_loeschen(auswahl.id, Konstanten.notiz);
-                MessageBox.Show(item.Text);
                 db.notizLoeschenTitel(item.Text);
                 this.update();
             }

@@ -59,7 +59,7 @@
             // 
             // menuItemSearch
             // 
-            this.menuItemSearch.Text = "Suchen";
+            this.menuItemSearch.Text = "suchen";
             this.menuItemSearch.Click += new System.EventHandler(this.menuItemSearch_Click);
             // 
             // menuItemNewAppointment
@@ -83,17 +83,17 @@
             // 
             // menuItemDeleteListItem
             // 
-            this.menuItemDeleteListItem.Text = "Löschen";
+            this.menuItemDeleteListItem.Text = "löschen";
             this.menuItemDeleteListItem.Click += new System.EventHandler(this.menuItemDeleteListItem_Click);
             // 
             // menuItemShowListItem
             // 
-            this.menuItemShowListItem.Text = "Anzeigen";
+            this.menuItemShowListItem.Text = "anzeigen";
             this.menuItemShowListItem.Click += new System.EventHandler(this.menuItemShowListItem_Click);
             // 
             // menuItemLinkToItem
             // 
-            this.menuItemLinkToItem.Text = "Verlinken";
+            this.menuItemLinkToItem.Text = "verlinken";
             this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
             // 
             // TermineList

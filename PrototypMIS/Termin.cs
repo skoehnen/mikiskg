@@ -136,7 +136,7 @@ namespace PrototypMIS
                 int row = this.dataGridLinks.CurrentCell.RowNumber;
                 int ziel = Convert.ToInt32(this.dataGridLinks[row, 2].ToString());
                 int zielTyp = MikiConverter.stringToMikiObjectTyp(this.dataGridLinks[row, 1].ToString());
-                new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.termin.ItemId), ziel, Konstanten.aufgabe, zielTyp);
+                new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.termin.ItemId), ziel, Konstanten.termin, zielTyp);
             }
         }
 

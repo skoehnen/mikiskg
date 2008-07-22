@@ -65,24 +65,24 @@
             // 
             // menuItemDelete
             // 
-            this.menuItemDelete.Text = "Löschen";
+            this.menuItemDelete.Text = "löschen";
             this.menuItemDelete.Click += new System.EventHandler(this.menuItemDelete_Click);
             // 
             // menuItemLink
             // 
-            this.menuItemLink.Text = "Anhängen";
+            this.menuItemLink.Text = "verlinken";
             this.menuItemLink.Click += new System.EventHandler(this.menuItemLink_Click);
             // 
             // menuItemSave
             // 
-            this.menuItemSave.Text = "Speichern";
+            this.menuItemSave.Text = "speichern";
             this.menuItemSave.Click += new System.EventHandler(this.menuItemSave_Click);
             // 
             // textBoxTitle
             // 
             this.textBoxTitle.Location = new System.Drawing.Point(90, 3);
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(133, 21);
+            this.textBoxTitle.Size = new System.Drawing.Size(133, 25);
             this.textBoxTitle.TabIndex = 0;
             // 
             // label1
@@ -123,19 +123,19 @@
             // 
             // contextMenuItemShow
             // 
-            this.contextMenuItemShow.Text = "Anzeigen";
+            this.contextMenuItemShow.Text = "anzeigen";
             this.contextMenuItemShow.Click += new System.EventHandler(this.contextMenuItemShow_Click);
             // 
             // contextMenuItemDelete
             // 
-            this.contextMenuItemDelete.Text = "Löschen";
+            this.contextMenuItemDelete.Text = "löschen";
             this.contextMenuItemDelete.Click += new System.EventHandler(this.contextMenuItemDelete_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(90, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(133, 26);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // Aufgabe
