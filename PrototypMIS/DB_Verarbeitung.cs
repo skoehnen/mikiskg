@@ -83,8 +83,27 @@ namespace PrototypMIS
          {
              
          }
+        conn.Close();
          return kunde;
     }
+
+        public DataSet kunde_suchen(int id)
+        {
+            SqlCeConnection conn = this.DBVerbindung();
+
+            SqlCeCommand selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "Select * from Kundendaten where Kref = '" + id.ToString() + "'";
+
+            SqlCeDataAdapter adp = new SqlCeDataAdapter(selectCmd);
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+
+            adp.Fill(ds);
+
+            conn.Close();
+
+            return ds;
+        }
 
         private DataTable createColumns()
         {

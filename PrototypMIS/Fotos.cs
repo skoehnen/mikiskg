@@ -28,7 +28,11 @@ namespace PrototypMIS
             
             foreach(DataRow row in ds.Tables[0].Rows)
             {
-                this.bildHinzufuegen(row["pfad"].ToString(), row["titel"].ToString());
+                try
+                {
+                    this.bildHinzufuegen(row["pfad"].ToString(), row["titel"].ToString());
+                }
+                catch { }
             }
         }
 
@@ -42,9 +46,13 @@ namespace PrototypMIS
         {
             String bildPfad = fotoMachen();
             String titel = Guid.NewGuid().ToString();
-            ListViewItem item = this.bildHinzufuegen(bildPfad, titel);
-            db.fotoEinfuegen(bildPfad, "", titel);
-            new Foto(db.fotoHolen(titel),true, this, item).Show();
+            try
+            {
+                ListViewItem item = this.bildHinzufuegen(bildPfad, titel);
+                db.fotoEinfuegen(bildPfad, "", titel);
+                new Foto(db.fotoHolen(titel), true, this, item).Show();
+            }
+            catch { }
         }
 
         private String fotoMachen()
@@ -65,7 +73,7 @@ namespace PrototypMIS
         private ListViewItem bildHinzufuegen(String pfad, String titel)
         {
             ListViewItem item = null;
-            if (pfad != "")
+            if (pfad != "" && pfad != "\\Fehler")
             {
                 imageList1.Images.Add(Image.FromHbitmap(new Bitmap(pfad).GetHbitmap()));
                 int i = imageList1.Images.Count -1;
@@ -73,8 +81,9 @@ namespace PrototypMIS
                 item.Text = titel;
                 item.ImageIndex = i;
                 listView1.Items.Add(item);
+                return item;
             }
-            return item;
+            throw new MulticastNotSupportedException();
         }
 
         public void titelAendern(String titelAlt, String titelNeu, ListViewItem item)

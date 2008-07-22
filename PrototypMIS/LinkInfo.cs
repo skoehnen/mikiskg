@@ -35,8 +35,10 @@ namespace PrototypMIS
                     break;
 
                 case Konstanten.kunde:
-                    throw new NotImplementedException();
-                    
+                    System.Data.DataTable table = new DB_Verarbeitung().kunde_suchen(id.ToString(), false);
+                    this.name = table.Rows[3].ToString();
+                    break;
+
                 case Konstanten.notiz:
                     NotizInfo notiz = new DB_Verarbeitung().notizHolen(id);
                     this.name = notiz.getTitel();
