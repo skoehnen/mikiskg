@@ -95,6 +95,8 @@ namespace PrototypMIS
                 int ziel = Convert.ToInt32(this.dataGridLinks[row, 2].ToString());
                 int zielTyp = MikiConverter.stringToMikiObjectTyp(this.dataGridLinks[row, 1].ToString());
                 new DB_Verarbeitung().einzelverknuepfung_loeschen(this.notiz.getId(), ziel, Konstanten.notiz, zielTyp);
+                Dispose();
+                new Notiz(this.notiz).Show();
             }
         }
 
