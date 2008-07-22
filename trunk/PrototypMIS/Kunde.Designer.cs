@@ -70,6 +70,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGrid2 = new System.Windows.Forms.DataGrid();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemLinkToItem = new System.Windows.Forms.MenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,6 +83,7 @@
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.Add(this.menuItemBack);
+            this.mainMenu1.MenuItems.Add(this.menuItemMenu);
             // 
             // menuItemBack
             // 
@@ -223,14 +226,14 @@
             this.textBox_anrede.Name = "textBox_anrede";
             this.textBox_anrede.Size = new System.Drawing.Size(140, 25);
             this.textBox_anrede.TabIndex = 0;
-            this.textBox_anrede.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGrid1);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(232, 236);
+            this.tabPage2.Size = new System.Drawing.Size(240, 238);
             this.tabPage2.Text = "Verbindungen";
             // 
             // dataGrid1
@@ -249,7 +252,7 @@
             // menuItem2
             // 
             this.menuItem2.Text = "anzeigen";
-            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
+            
             // 
             // tabPage5
             // 
@@ -266,7 +269,7 @@
             this.dataGrid_kundenauftraege.Name = "dataGrid_kundenauftraege";
             this.dataGrid_kundenauftraege.Size = new System.Drawing.Size(229, 226);
             this.dataGrid_kundenauftraege.TabIndex = 0;
-            this.dataGrid_kundenauftraege.CurrentCellChanged += new System.EventHandler(this.dataGrid_kundenauftraege_CurrentCellChanged);
+            
             // 
             // tabPage3
             // 
@@ -411,6 +414,16 @@
             this.dataGrid2.Size = new System.Drawing.Size(240, 239);
             this.dataGrid2.TabIndex = 0;
             // 
+            // menuItemMenu
+            // 
+            this.menuItemMenu.MenuItems.Add(this.menuItemLinkToItem);
+            this.menuItemMenu.Text = "Menu";
+            // 
+            // menuItemLinkToItem
+            // 
+            this.menuItemLinkToItem.Text = "verlinken";
+            this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
+            // 
             // Kunde
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -473,5 +486,7 @@
         private System.Windows.Forms.DataGrid dataGrid2;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.DataGrid dataGrid_kundenauftraege;
+        private System.Windows.Forms.MenuItem menuItemMenu;
+        private System.Windows.Forms.MenuItem menuItemLinkToItem;
     }
 }
