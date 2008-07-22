@@ -110,6 +110,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6E70940AD08E48758019DCFA24966E79"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_724AB497CA525DC536245FD2F282843F"
         "OwnerKey" = "8:_9F0B40BD05963938508100753B54CEAB"
         "MsmSig" = "8:_UNDEFINED"
@@ -478,6 +484,24 @@
             "Register" = "3:0"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_6E70940AD08E48758019DCFA24966E79"
+            {
+            "SourcePath" = "8:..\\PrototypMIS\\bin\\Debug\\AppDatabase1.sdf"
+            "TargetName" = "8:AppDatabase1.sdf"
+            "Tag" = "8:"
+            "Folder" = "8:_5D2889E84B974DD58FCB6195AD0DA1C1"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_724AB497CA525DC536245FD2F282843F"
