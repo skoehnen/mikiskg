@@ -91,6 +91,10 @@ namespace PrototypMIS
                 case "Notiz":
                     new Notiz(new DB_Verarbeitung().notizHolen(Convert.ToInt32(this.dataGridLinks[row, 2].ToString()))).Show();
                     break;
+
+                case "Kunde":
+                    new Kunde(new DB_Verarbeitung().kunde_suchen(this.dataGridLinks[row, 2].ToString(), false)).Show();
+                    break;
             }
         }
 

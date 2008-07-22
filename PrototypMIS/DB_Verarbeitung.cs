@@ -30,10 +30,8 @@ namespace PrototypMIS
             {
                 sqlcommand.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
-               
-            }
+            catch { }
+
         }
 
 
@@ -79,10 +77,8 @@ namespace PrototypMIS
                 kunde = null;
             }
         }
-         catch (Exception e)
-         {
-             
-         }
+         catch { }
+
         conn.Close();
          return kunde;
     }
@@ -152,7 +148,7 @@ namespace PrototypMIS
             {
                 sqlcommand.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch
             {
                 MessageBox.Show("Verknüpfung vorhanden");
             }
@@ -161,7 +157,7 @@ namespace PrototypMIS
             {
                 sqlcommand.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch 
             {
                 MessageBox.Show("Verknüpfung vorhanden");
             }
