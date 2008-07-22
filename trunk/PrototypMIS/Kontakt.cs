@@ -61,7 +61,6 @@ namespace PrototypMIS
             }
             Dispose();
             new KontakteListe().Show();
-            //new Kontakte().Show();
         }
 
         private void menuItemLink_Click(object sender, EventArgs e)
@@ -137,7 +136,9 @@ namespace PrototypMIS
                 int row = this.dataGridLinks.CurrentCell.RowNumber;
                 int ziel = Convert.ToInt32(this.dataGridLinks[row, 2].ToString());
                 int zielTyp = MikiConverter.stringToMikiObjectTyp(this.dataGridLinks[row, 1].ToString());
-                new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.kontakt.ItemId), ziel, Konstanten.aufgabe, zielTyp);
+                new DB_Verarbeitung().einzelverknuepfung_loeschen(MikiConverter.itemIdToInt(this.kontakt.ItemId), ziel, Konstanten.kontakt, zielTyp);
+                Dispose();
+                new Kontakt(this.kontakt.ItemId).Show();
             }
         }
 

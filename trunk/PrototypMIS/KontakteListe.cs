@@ -76,7 +76,8 @@ namespace PrototypMIS
                 int itemIndex = this.listView1.SelectedIndices[0];
                 ListViewItem item = this.listView1.Items[itemIndex];
                 MikiDuo auswahl = (MikiDuo)item.Tag;
-                oc.deleteTask(MikiConverter.objectToItemId(auswahl.id));
+                oc.deleteContact(MikiConverter.objectToItemId(auswahl.id));
+                //oc.deleteTask(MikiConverter.objectToItemId(auswahl.id));
                 this.update();
             }
         }
