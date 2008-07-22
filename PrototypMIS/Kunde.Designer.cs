@@ -31,6 +31,8 @@
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItemBack = new System.Windows.Forms.MenuItem();
+            this.menuItemMenu = new System.Windows.Forms.MenuItem();
+            this.menuItemLinkToItem = new System.Windows.Forms.MenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGrid2 = new System.Windows.Forms.DataGrid();
-            this.menuItemMenu = new System.Windows.Forms.MenuItem();
-            this.menuItemLinkToItem = new System.Windows.Forms.MenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -89,6 +89,16 @@
             // 
             this.menuItemBack.Text = "zurück";
             this.menuItemBack.Click += new System.EventHandler(this.menuItemBack_Click);
+            // 
+            // menuItemMenu
+            // 
+            this.menuItemMenu.MenuItems.Add(this.menuItemLinkToItem);
+            this.menuItemMenu.Text = "Menu";
+            // 
+            // menuItemLinkToItem
+            // 
+            this.menuItemLinkToItem.Text = "verlinken";
+            this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
             // 
             // tabControl1
             // 
@@ -226,7 +236,6 @@
             this.textBox_anrede.Name = "textBox_anrede";
             this.textBox_anrede.Size = new System.Drawing.Size(140, 25);
             this.textBox_anrede.TabIndex = 0;
-            
             // 
             // tabPage2
             // 
@@ -252,14 +261,13 @@
             // menuItem2
             // 
             this.menuItem2.Text = "anzeigen";
-            
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.dataGrid_kundenauftraege);
             this.tabPage5.Location = new System.Drawing.Point(0, 0);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(240, 238);
+            this.tabPage5.Size = new System.Drawing.Size(232, 236);
             this.tabPage5.Text = "Aufträge";
             // 
             // dataGrid_kundenauftraege
@@ -269,7 +277,6 @@
             this.dataGrid_kundenauftraege.Name = "dataGrid_kundenauftraege";
             this.dataGrid_kundenauftraege.Size = new System.Drawing.Size(229, 226);
             this.dataGrid_kundenauftraege.TabIndex = 0;
-            
             // 
             // tabPage3
             // 
@@ -414,16 +421,6 @@
             this.dataGrid2.Size = new System.Drawing.Size(240, 239);
             this.dataGrid2.TabIndex = 0;
             // 
-            // menuItemMenu
-            // 
-            this.menuItemMenu.MenuItems.Add(this.menuItemLinkToItem);
-            this.menuItemMenu.Text = "Menu";
-            // 
-            // menuItemLinkToItem
-            // 
-            this.menuItemLinkToItem.Text = "verlinken";
-            this.menuItemLinkToItem.Click += new System.EventHandler(this.menuItemLinkToItem_Click);
-            // 
             // Kunde
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -434,6 +431,7 @@
             this.Menu = this.mainMenu1;
             this.Name = "Kunde";
             this.Text = "Kunde";
+            this.GotFocus += new System.EventHandler(this.gotFocus);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
