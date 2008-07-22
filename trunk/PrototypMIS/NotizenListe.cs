@@ -61,6 +61,7 @@ namespace PrototypMIS
             ListViewItem item = this.listViewNotes.Items[itemIndex];
             MikiDuo auswahl = (MikiDuo)item.Tag;
             new Notiz(new NotizInfo(item.Text, item.Text)).Show();
+            //new Notiz(new NotizInfo(item.Text, item.Text)).Show();
             this.Dispose();
         }
 
