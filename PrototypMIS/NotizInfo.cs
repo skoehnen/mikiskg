@@ -15,6 +15,9 @@ namespace PrototypMIS
         {
             this.titel = titel;
             this.text = text;
+            DB_Verarbeitung db = new DB_Verarbeitung();
+            NotizInfo notiz = db.notizHolenTitel(titel);
+            this.id = notiz.id;
         }
 
         public NotizInfo(String titel, String text, int id)
